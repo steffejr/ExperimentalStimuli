@@ -17,7 +17,7 @@ import os  # handy system and path functions
 from psychopy.hardware.emulator import launchScan
 
 # EXPERIMENTAL INFORMATION
-expName = u'FlashCB'  # from the Builder filename that created this script
+expName = u'FlashCB'  # <<< This is where you specify the name of the experiment which makes it easier to differentiate the results files.
 expInfo = {u'session': u'001', u'participant': u''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False: core.quit()  # user pressed cancel
@@ -77,12 +77,14 @@ grating1 = visual.GratingStim(win=win, name='grating1',
     ori=0, pos=[0, 0], size=[0.9, 0.9], sf=5, phase=0.0,
     color=[1,1,1], colorSpace=u'rgb', opacity=1,
     texRes=128, interpolate=True, depth=-1.0)
+
 grating2 = visual.GratingStim(win=win, name='grating2',
     tex=u'sqrXsqr', mask=None,
     ori=0, pos=[0, 0], size=[0.9, 0.9], sf=5, phase=0.0,
     color=[-1,-1,-1], colorSpace=u'rgb', opacity=1,
     texRes=128, interpolate=True, depth=-2.0)
-text = visual.TextStim(win=win, ori=0, name='text',
+
+CrossHair = visual.TextStim(win=win, ori=0, name='text',
     text=u'+',    font=u'Arial',
     pos=[0, 0], height=0.2, wrapWidth=None,
     color=u'red', colorSpace=u'rgb', opacity=1,
@@ -90,12 +92,14 @@ text = visual.TextStim(win=win, ori=0, name='text',
    
 
 # TIMERS
-globalClock = core.Clock()
-routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+globalClock = core.CountdownTimer()
+ElapsedTimeClock = core.Clock()
+FlashClock = core.Clock()
 # EXPERIMENTAL PARAMETERS USED 
 ExpParamaters = {
-    'RestDuration' : 5,
-    'OnTimeDuration' : 5,
+    'IntroOffDuration': 5,
+    'OffDuration' : 5,
+    'OnDuration' : 5,
     'NBlocks' : 2,
     'flashRate' : 4 # Hertz
     }
@@ -104,32 +108,43 @@ infoDlg = gui.DlgFromDict(ExpParamaters, title='Experimental Parameters')
 
 # CALCULATED PARAMETERS
 flashPeriod = 1/ExpParamaters['flashRate'] #seconds for one B-W cycle (ie 1/Hz)
-BlockDur = ExpParamaters['RestDuration'] + ExpParamaters['OnTimeDuration']
+BlockDur = ExpParamaters['OffDuration'] + ExpParamaters['OnDuration']
 
 # PRESENT THE SCREEN TO WAIT FOR THE MRI TRIGGER
 vol = launchScan(win, MR_settings,  mode='Scan')
 #vol = launchScan(win, MR_settings, globalClock=globalClock)
 
+# Reset the clocks
+globalClock.reset()
+ElapsedTimeClock.reset()
+globalClock.add(ExpParamaters['IntroOffDuration'])
+FlashClock.reset()
+ElapsedTime = 0
 
-# CYCLE OVER THE EXPERIMENTAL BLOCKS
-for BlockIndex in range(0,ExpParamaters['NBlocks'],1):
-    # Start the timer
-    globalClock.reset()
-    # Start block with a cross-hair
-    ElapsedTime = (BlockIndex*BlockDur) + ExpParamaters['RestDuration']
-    # Write the elapsed time to the log file
-    thisExp.addData('ActualStartOffPeriod',globalClock.getTime())
-    thisExp.addData('ExpectedStartOffPeriod',ElapsedTime-ExpParamaters['RestDuration'])
-    while globalClock.getTime() < ElapsedTime:
-        text.draw()
-        win.flip()
+# INTRO OFF PERIOD
+# Prepare the screen before the timing sequence starts
+CrossHair.draw()
+win.flip()
+while globalClock.getTime() > 0:
+    if event.getKeys(keyList=["escape"]):
+        core.quit()    
+ElapsedTime += ExpParamaters['IntroOffDuration']
 
-    ElapsedTime += ExpParamaters['OnTimeDuration']
-    thisExp.addData('ActualStartOnPeriod',globalClock.getTime())
-    thisExp.addData('ExpectedStartOnPeriod',ElapsedTime-ExpParamaters['OnTimeDuration'])
+# CYCLE OVER BLOCKS
+for i in range(0,ExpParamaters['NBlocks'],1):
+    # ON BLOCK
+    # Write to the file when this event started
+    thisExp.addData('Event','StartOnBlock_%03d'%(i+1))
+    thisExp.addData('ExpectedElapsedTime',ElapsedTime)
+    thisExp.addData('ActualElapsedTime',ElapsedTimeClock.getTime())
     thisExp.nextEntry()
-    while globalClock.getTime() < ElapsedTime and not 'escape' in event.getKeys():
-        if (globalClock.getTime()%flashPeriod) < (flashPeriod/2.0):# (NB more accurate to use number of frames)
+
+    # reset the global clock, than add the needed time to it
+    globalClock.add(ExpParamaters['OnDuration'])
+    # reset the clock used for the flashing
+    FlashClock.reset()
+    while globalClock.getTime() > 0:
+        if (FlashClock.getTime()%flashPeriod) < (flashPeriod/2.0):# (NB more accurate to use number of frames)
             stim = grating1
         else:
             stim = grating2
@@ -139,15 +154,23 @@ for BlockIndex in range(0,ExpParamaters['NBlocks'],1):
         win.flip()
         if event.getKeys(keyList=["escape"]):
             core.quit()
-ElaspedTime = (ExpParamaters['NBlocks']*BlockDur) + ExpParamaters['RestDuration']    
-while globalClock.getTime() < ElapsedTime:
-    text.draw()
+    # update the expected elapsed time
+    ElapsedTime += ExpParamaters['OnDuration']
+    # OFF BLOCK
+    # Write to the file whenthis event started
+    thisExp.addData('Event','StartOffBlock_%03d'%(i+1))
+    thisExp.addData('ExpectedElapsedTime',ElapsedTime)
+    thisExp.addData('ActualElapsedTime',ElapsedTimeClock.getTime())
+    thisExp.nextEntry()
+    # Present the off period now
+    globalClock.add(ExpParamaters['OffDuration'])
+    CrossHair.draw()
     win.flip()
-    if event.getKeys(keyList=["escape"]):
-        core.quit()   
-    
-    
-# completed 5 repeats of 'BlockLoop'
+    while globalClock.getTime() > 0:
+        if event.getKeys(keyList=["escape"]):
+            core.quit() 
+    # update the expected elapsed time
+    ElapsedTime += ExpParamaters['OffDuration']
 
 win.close()
 core.quit()

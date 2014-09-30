@@ -7,15 +7,23 @@ from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 from psychopy.hardware.emulator import launchScan
 
-
-trialClock = core.Clock()
-continueRoutine = True
-while continueRoutine and not 'escape' in event.getKeys():
-    # get current time
-    t1 = trialClock.getTime()
-
-    t2 = globalClock.getTime()
-    print 'Trial time is: %0.6f'%(t1)
-    print 'Global time is: %0.6f'%(t2)
-    if t1 > 0.1:
-        continueRoutine = False
+win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+    blendMode=u'avg', useFBO=True,
+    )
+   
+text1 = visual.TextStim(win=win, ori=0, name='text',
+    text=u'+',    font=u'Arial',
+    pos=[0, 0], height=0.2, wrapWidth=None,
+    color=u'red', colorSpace=u'rgb', opacity=1,
+    depth=0.0) 
+text2 = visual.TextStim(win=win, ori=0, name='text',
+    text=u'XXX',    font=u'Arial',
+    pos=[0, 0], height=0.2, wrapWidth=None,
+    color=u'red', colorSpace=u'rgb', opacity=1,
+    depth=0.0)
+   
+text1.draw() 
+text2.draw()
+globalClock = core.Clock()
+win.flip()
