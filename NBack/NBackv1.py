@@ -1,14 +1,22 @@
-
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
+import sys
+import os  # handy system and path functions
+ThisScript = sys.argv[0]
+ThisFolder = os.path.dirname(ThisScript)
+sys.path.append(ThisFolder)
+
+
 from psychopy import visual, core, data, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
 from numpy.random import random, randint, normal, shuffle
-import os  # handy system and path functions
+
 from psychopy.hardware.emulator import launchScan
 import numpy as np
 from NBackFunctions import *
+
+
 
 
 # EXPERIMENTAL INFORMATION
@@ -64,46 +72,51 @@ else:
 
 # Create an N-back task
 ExpParameters = {
-    'NTrials': 60,
-    'NBlocks': 2,
+    'NBlocks': 4,
     'LoadLevels': range(0,3),
     'TimePerTrial': 2, # seconds
     'TrialPerBlock': 12,
     'StimList': 'ABCDEFGHJKLMNPRSTVWXYZ',
     'ResponseKeys':['1','2','3','4','5','6','7','8','9','0'],
     'NumCorrectPerBlock': 4,
-    'IntroOffDuration': 5,
-    'OffDuration' : 5,
-    'OnDuration' : 5,
-    'InstrTime': 6
+    'IntroOffDuration': 36,
+    'OffDuration' : 30,
+    'InstrTime': 5,
+    'TextSize': 0.2
 }
-
-TextSize = 0.2
+# DISPLAY PARAMETERS FOR THE USER TO CONFIRM
+infoDlg = gui.DlgFromDict(ExpParameters, title='Experimental Parameters')
+ExpectedTotalTime = ExpParameters['IntroOffDuration'] + ExpParameters['NBlocks'] * (ExpParameters['OffDuration'] + ExpParameters['InstrTime'] + ExpParameters['TimePerTrial']*ExpParameters['TrialPerBlock'])
+print "Expected Duration: %d"%ExpectedTotalTime
 
 StimulusText = visual.TextStim(win=win, ori=0, name='text',
     text=u'+',    font=u'Arial',
-    pos=[0, 0], height=TextSize, wrapWidth=None,
+    pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=0.0)
 
 CrossHair = visual.TextStim(win=win, ori=0, name='text',
     text=u'+',    font=u'Arial',
-    pos=[0, 0], height=TextSize, wrapWidth=None,
+    pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
     color=u'red', colorSpace=u'rgb', opacity=1,
     depth=0.0)
     
-InstrLevel2 = visual.ImageStim(win,image='2BackInstructions.jpg',
+InstrLevel2 = visual.ImageStim(win,image=os.path.join(ThisFolder,'2BackInstructions.jpg'),
     mask=None,
     pos=(0.0,0.0),
     size=(1.0,1.0))
 
 
 resp = event.BuilderKeyResponse()  # create an object of type KeyResponse
-#Instructions
+
+# Set up the clocks
 TrialClock = core.Clock()
-TrialClock.reset()
 CountDownClock = core.CountdownTimer()
 ElapsedTimeClock = core.Clock()
+
+
+# PRESENT THE SCREEN TO WAIT FOR THE MRI TRIGGER
+vol = launchScan(win, MR_settings,  mode='Scan')
 
 # Cross hair
 ElapsedTimeClock.reset()
@@ -145,7 +158,7 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
         CountDownClock.add(ExpParameters['TimePerTrial'])
         StimulusText = visual.TextStim(win=win, ori=0, name='text',
                 text=item,    font=u'Arial',
-                pos=[0, 0], height=TextSize, wrapWidth=None,
+                pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
                 color=u'white', colorSpace=u'rgb', opacity=1,
                 depth=0.0)    
         StimulusText.draw()
@@ -163,7 +176,7 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
                 CurrentRT = TrialClock.getTime()
                 thisExp.addData('KeyPress',theseKeys[-1])
                 thisExp.addData('RT',CurrentRT)
-                if count in CorrectLocations:
+                if (count + 1) in CorrectLocations:
                     print "TRUE"
                     thisExp.addData('Correct','Y')
                 else:
@@ -174,7 +187,7 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
                 print "%02d: %s Key press: %s in %0.4f sec"%(count,item,theseKeys[-1],CurrentRT)
         count += 1
         thisExp.addData('count',count)
-        thisExp.addData('Block',BlockNumber)
+        thisExp.addData('Block',BlockNumber+1)
         thisExp.addData('Stimulus',item)
         thisExp.addData('LoadLevel',LoadLevel)
         thisExp.nextEntry()
@@ -182,7 +195,7 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
     CountDownClock.add(ExpParameters['OffDuration'])        
     CrossHair.draw()
     win.flip()
-    while TrialClock.getTime() < 4:
+    while CountDownClock.getTime() > 0:
         theseKeys = event.getKeys()
         if "escape" in theseKeys:
             win.flip()
