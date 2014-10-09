@@ -9,7 +9,7 @@ sys.path.append(ThisFolder)
 from psychopy import visual, core, data, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
-from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
+from numpy import sin, cos, tan, log, log10, pi, average, sq66666666666666666666666666666666666666666666666666666666666666666666666666669a68751423rt, std, deg2rad, rad2deg, linspace, asarray
 from numpy.random import random, randint, normal, shuffle
 
 from psychopy.hardware.emulator import launchScan
@@ -51,17 +51,46 @@ MR_settings = {
     'sound': False # in test mode only, play a tone as a reminder of scanner noise
     }
 
+# DISPLAY PARAMETERS FOR THE USER TO CONFIRM
+infoDlg = gui.DlgFromDict(MR_settings, title='MRI Settings')
+
+# Create an N-back task
+ExpParameters = {
+    'NBlocks': 4,
+    'LoadLevel': 1,
+    'TimePerTrial': 1.5, # seconds
+    'TrialPerBlock': 14,
+    'StimList': 'ABCDEFGHJKLMNPRSTVWXYZ',
+    'ResponseKeys':['1','2','3','4','5','6','7','8','9','0'],
+    'NumCorrectPerBlock': 4,
+    'IntroOffDuration': 36,
+    'OffDuration' : 28,
+    'InstrTime': 6,
+    'TextSize': 0.2,
+    'InterStimulusDelay': 0.5
+}
+# DISPLAY PARAMETERS FOR THE USER TO CONFIRM
+infoDlg = gui.DlgFromDict(ExpParameters, title='Experimental Parameters')
+ExpectedTotalTime = ExpParameters['IntroOffDuration'] + ExpParameters['NBlocks'] * (ExpParameters['OffDuration'] + ExpParameters['InstrTime'] + (ExpParameters['InterStimulusDelay']+ExpParameters['TimePerTrial'])*ExpParameters['TrialPerBlock'])
+print "Expected Duration: %d"%ExpectedTotalTime
+
+TotalDurDLG = gui.Dlg(title='Time')
+TotalDurDLG.addText('Total Duration of Experiment')
+TotalDurDLG.addText('%d seconds'%ExpectedTotalTime)
+TotalDurDLG.show()
+
+
 # FULL SCREEN WINDOW
-#win = visual.Window(size=(1920, 1080), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
-#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-#    blendMode=u'avg', useFBO=True,
-#    )
-    
-# PARTIAL SCREEN WINDOW
-win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
     monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
     blendMode=u'avg', useFBO=True,
     )
+    
+# PARTIAL SCREEN WINDOW
+#win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+#    blendMode=u'avg', useFBO=True,
+#    )
 
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
@@ -70,24 +99,6 @@ if expInfo['frameRate']!=None:
 else:
     frameDur = 1.0/60.0 # couldn't get a reliable measure so guess
 
-# Create an N-back task
-ExpParameters = {
-    'NBlocks': 4,
-    'LoadLevels': range(0,3),
-    'TimePerTrial': 2, # seconds
-    'TrialPerBlock': 12,
-    'StimList': 'ABCDEFGHJKLMNPRSTVWXYZ',
-    'ResponseKeys':['1','2','3','4','5','6','7','8','9','0'],
-    'NumCorrectPerBlock': 4,
-    'IntroOffDuration': 36,
-    'OffDuration' : 30,
-    'InstrTime': 5,
-    'TextSize': 0.2
-}
-# DISPLAY PARAMETERS FOR THE USER TO CONFIRM
-infoDlg = gui.DlgFromDict(ExpParameters, title='Experimental Parameters')
-ExpectedTotalTime = ExpParameters['IntroOffDuration'] + ExpParameters['NBlocks'] * (ExpParameters['OffDuration'] + ExpParameters['InstrTime'] + ExpParameters['TimePerTrial']*ExpParameters['TrialPerBlock'])
-print "Expected Duration: %d"%ExpectedTotalTime
 
 StimulusText = visual.TextStim(win=win, ori=0, name='text',
     text=u'+',    font=u'Arial',
@@ -101,12 +112,26 @@ CrossHair = visual.TextStim(win=win, ori=0, name='text',
     color=u'red', colorSpace=u'rgb', opacity=1,
     depth=0.0)
     
-InstrLevel2 = visual.ImageStim(win,image=os.path.join(ThisFolder,'2BackInstructions.jpg'),
+InstrLevel1 = visual.ImageStim(win,image=os.path.join(ThisFolder,'1BackInstructions.png'),
+    mask=None,
+    pos=(0.0,0.0),
+    size=(1.5,1.5))
+InstrLevel2 = visual.ImageStim(win,image=os.path.join(ThisFolder,'2BackInstructions.png'),
     mask=None,
     pos=(0.0,0.0),
     size=(1.0,1.0))
+    
+ThankYouScreen = visual.TextStim(win=win, ori=0, name='text',
+    text=u'Merci',    font=u'Arial',
+    pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
+    color=u'white', colorSpace=u'rgb', opacity=1,
+    depth=0.0)
 
-
+if ExpParameters['LoadLevel'] == 2:
+    Instructions = InstrLevel2
+elif ExpParameters['LoadLevel'] == 1:
+    Instructions = InstrLevel1
+    
 resp = event.BuilderKeyResponse()  # create an object of type KeyResponse
 
 # Set up the clocks
@@ -131,17 +156,17 @@ while CountDownClock.getTime() > 0:
         win.close()
         core.quit() 
 for BlockNumber in range(0,ExpParameters['NBlocks'],1):
-    LoadLevel = 2
-    CorrectLocations = CreateStim(LoadLevel,ExpParameters['TrialPerBlock'],ExpParameters['NumCorrectPerBlock'])
-    List = AssignStimuli(CorrectLocations,ExpParameters['TrialPerBlock'],ExpParameters['StimList'],LoadLevel)
-                            
+    CorrectLocations = CreateStim(ExpParameters['LoadLevel'],ExpParameters['TrialPerBlock'],ExpParameters['NumCorrectPerBlock'])
+    List = AssignStimuli(CorrectLocations,ExpParameters['TrialPerBlock'],ExpParameters['StimList'],ExpParameters['LoadLevel'])
+    print List                        
     # Instructions
     CountDownClock.add(ExpParameters['InstrTime'])
     thisExp.addData('Stimulus','Instructions')
     thisExp.addData('ElapsedTime',ElapsedTimeClock.getTime())
     thisExp.nextEntry()
     TrialClock.reset()
-    InstrLevel2.draw()   
+    # Present the instructions
+    Instructions.draw()   
     win.flip()
     while CountDownClock.getTime() > 0:
         theseKeys = event.getKeys()
@@ -156,6 +181,7 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
     print CorrectLocations
     for item in List:
         CountDownClock.add(ExpParameters['TimePerTrial'])
+        # Present the stimulus
         StimulusText = visual.TextStim(win=win, ori=0, name='text',
                 text=item,    font=u'Arial',
                 pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
@@ -189,9 +215,20 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
         thisExp.addData('count',count)
         thisExp.addData('Block',BlockNumber+1)
         thisExp.addData('Stimulus',item)
-        thisExp.addData('LoadLevel',LoadLevel)
+        thisExp.addData('LoadLevel',ExpParameters['LoadLevel'])
         thisExp.nextEntry()
-    
+        # Remove the stimulus and present the crosshair. This tells the participant that 
+        # the stimulus letter has changed. Otherwise, it is not possible to tell apart
+        # consecutive identical stimuli.
+        CountDownClock.add(ExpParameters['InterStimulusDelay'])        
+        CrossHair.draw()
+        win.flip()
+        while CountDownClock.getTime() > 0:
+            theseKeys = event.getKeys()
+            if "escape" in theseKeys:
+                win.flip()
+                core.quit() 
+                
     CountDownClock.add(ExpParameters['OffDuration'])        
     CrossHair.draw()
     win.flip()
@@ -200,6 +237,16 @@ for BlockNumber in range(0,ExpParameters['NBlocks'],1):
         if "escape" in theseKeys:
             win.flip()
             core.quit() 
+
+# Thank you screen
+CountDownClock.add(20)
+ThankYouScreen.draw()
+win.flip()
+while CountDownClock.getTime() > 0:
+    theseKeys = event.getKeys()
+    if "escape" in theseKeys:
+        win.flip()
+        core.quit() 
 
 win.close()
 core.quit()

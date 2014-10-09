@@ -48,17 +48,43 @@ MR_settings = {
     'sound': False # in test mode only, play a tone as a reminder of scanner noise
     }
 
+# TIMERS
+globalClock = core.CountdownTimer()
+ElapsedTimeClock = core.Clock()
+FlashClock = core.Clock()
+# EXPERIMENTAL PARAMETERS USED 
+ExpParameters = {
+    'IntroOffDuration': 36,
+    'OffDuration' : 28,
+    'OnDuration' : 14,
+    'NBlocks' : 4,
+    'flashRate' : 4 # Hertz
+    }
+# DISPLAY PARAMETERS FOR THE USER TO CONFIRM
+infoDlg = gui.DlgFromDict(ExpParameters, title='Experimental Parameters')
+
+ExpectedTotalTime = ExpParameters['IntroOffDuration'] + ExpParameters['NBlocks'] * (ExpParameters['OffDuration'] + ExpParameters['OnDuration'])
+print "Expected Duration: %d"%ExpectedTotalTime
+
+TotalDurDLG = gui.Dlg(title='Time')
+TotalDurDLG.addText('Total Duration of Experiment')
+TotalDurDLG.addText('%d seconds'%ExpectedTotalTime)
+TotalDurDLG.show()
+
+
+
 # FULL SCREEN WINDOW
-#win = visual.Window(size=(1920, 1080), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
-#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-#    blendMode=u'avg', useFBO=True,
-#    )
-    
-# PARTIAL SCREEN WINDOW
-win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+win = visual.Window(size=(1920, 1080), fullscr=True, screen=1, allowGUI=False, allowStencil=False,
     monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
     blendMode=u'avg', useFBO=True,
     )
+
+    
+# PARTIAL SCREEN WINDOW
+#win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+#    blendMode=u'avg', useFBO=True,
+#    )
 
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
@@ -85,30 +111,20 @@ grating2 = visual.GratingStim(win=win, name='grating2',
     texRes=128, interpolate=True, depth=-2.0)
 
 CrossHair = visual.TextStim(win=win, ori=0, name='text',
-    text=u'+',    font=u'Arial',
+    text=u'UP^+vDOWN',    font=u'Arial',
     pos=[0, 0], height=0.2, wrapWidth=None,
     color=u'red', colorSpace=u'rgb', opacity=1,
     depth=0.0)
    
-
-# TIMERS
-globalClock = core.CountdownTimer()
-ElapsedTimeClock = core.Clock()
-FlashClock = core.Clock()
-# EXPERIMENTAL PARAMETERS USED 
-ExpParamaters = {
-    'IntroOffDuration': 5,
-    'OffDuration' : 5,
-    'OnDuration' : 5,
-    'NBlocks' : 2,
-    'flashRate' : 4 # Hertz
-    }
-# DISPLAY PARAMETERS FOR THE USER TO CONFIRM
-infoDlg = gui.DlgFromDict(ExpParamaters, title='Experimental Parameters')
+ThankYouScreen = visual.TextStim(win=win, ori=0, name='text',
+    text=u'Merci',    font=u'Arial',
+    pos=[0, 0], height=0.2, wrapWidth=None,
+    color=u'white', colorSpace=u'rgb', opacity=1,
+    depth=0.0)
 
 # CALCULATED PARAMETERS
-flashPeriod = 1/ExpParamaters['flashRate'] #seconds for one B-W cycle (ie 1/Hz)
-BlockDur = ExpParamaters['OffDuration'] + ExpParamaters['OnDuration']
+flashPeriod = 1/ExpParameters['flashRate'] #seconds for one B-W cycle (ie 1/Hz)
+BlockDur = ExpParameters['OffDuration'] + ExpParameters['OnDuration']
 
 # PRESENT THE SCREEN TO WAIT FOR THE MRI TRIGGER
 vol = launchScan(win, MR_settings,  mode='Scan')
@@ -117,7 +133,7 @@ vol = launchScan(win, MR_settings,  mode='Scan')
 # Reset the clocks
 globalClock.reset()
 ElapsedTimeClock.reset()
-globalClock.add(ExpParamaters['IntroOffDuration'])
+globalClock.add(ExpParameters['IntroOffDuration'])
 FlashClock.reset()
 ElapsedTime = 0
 
@@ -128,10 +144,10 @@ win.flip()
 while globalClock.getTime() > 0:
     if event.getKeys(keyList=["escape"]):
         core.quit()    
-ElapsedTime += ExpParamaters['IntroOffDuration']
+ElapsedTime += ExpParameters['IntroOffDuration']
 
 # CYCLE OVER BLOCKS
-for i in range(0,ExpParamaters['NBlocks'],1):
+for i in range(0,ExpParameters['NBlocks'],1):
     # ON BLOCK
     # Write to the file when this event started
     thisExp.addData('Event','StartOnBlock_%03d'%(i+1))
@@ -140,7 +156,7 @@ for i in range(0,ExpParamaters['NBlocks'],1):
     thisExp.nextEntry()
 
     # reset the global clock, than add the needed time to it
-    globalClock.add(ExpParamaters['OnDuration'])
+    globalClock.add(ExpParameters['OnDuration'])
     # reset the clock used for the flashing
     FlashClock.reset()
     while globalClock.getTime() > 0:
@@ -155,7 +171,7 @@ for i in range(0,ExpParamaters['NBlocks'],1):
         if event.getKeys(keyList=["escape"]):
             core.quit()
     # update the expected elapsed time
-    ElapsedTime += ExpParamaters['OnDuration']
+    ElapsedTime += ExpParameters['OnDuration']
     # OFF BLOCK
     # Write to the file whenthis event started
     thisExp.addData('Event','StartOffBlock_%03d'%(i+1))
@@ -163,14 +179,22 @@ for i in range(0,ExpParamaters['NBlocks'],1):
     thisExp.addData('ActualElapsedTime',ElapsedTimeClock.getTime())
     thisExp.nextEntry()
     # Present the off period now
-    globalClock.add(ExpParamaters['OffDuration'])
+    globalClock.add(ExpParameters['OffDuration'])
     CrossHair.draw()
     win.flip()
     while globalClock.getTime() > 0:
         if event.getKeys(keyList=["escape"]):
             core.quit() 
     # update the expected elapsed time
-    ElapsedTime += ExpParamaters['OffDuration']
-
+    ElapsedTime += ExpParameters['OffDuration']
+# Thank you screen
+CountDownClock.add(20)
+ThankYouScreen.draw()
+win.flip()
+while CountDownClock.getTime() > 0:
+    theseKeys = event.getKeys()
+    if "escape" in theseKeys:
+        win.flip()
+        core.quit() 
 win.close()
 core.quit()
