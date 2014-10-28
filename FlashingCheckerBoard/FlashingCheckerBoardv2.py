@@ -74,17 +74,17 @@ TotalDurDLG.show()
 
 
 # FULL SCREEN WINDOW
-#win = visual.Window(size=(1920, 1080), fullscr=True, screen=1, allowGUI=False, allowStencil=False,
-#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-#    blendMode=u'avg', useFBO=True,
-#    )
+win = visual.Window(size=(1920, 1080), fullscr=True, screen=1, allowGUI=False, allowStencil=False,
+    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+    blendMode=u'avg', useFBO=False,
+    )
 
     
 # PARTIAL SCREEN WINDOW
-win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
-    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-    blendMode=u'avg', useFBO=True,
-    )
+#win = visual.Window(size=[800,600], fullscr=False, screen=1, allowGUI=True, allowStencil=False,
+#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+#    blendMode=u'avg', useFBO=False,
+#    )
 
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()

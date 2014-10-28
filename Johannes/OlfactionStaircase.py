@@ -14,6 +14,7 @@ from numpy.random import random, randint, normal, shuffle
 
 from psychopy.hardware.emulator import launchScan
 import numpy as np
+import pandas as pd
 from StaircaseFunctions import *
 
 
@@ -58,31 +59,30 @@ infoDlg = gui.DlgFromDict(MR_settings, title='MRI Settings')
 
 # Create an N-back task
 ExpParameters = {
-    'TextSize': 0.2
+    'TextSize': 0.2,
+    'DelayBetweenTrials': 4,
+    'RedCrosshairTime':1,
+    'LeftChannel':6,
+    'RightChannel':9,
+    'StepSize':0.200,
+    'TurnPointLimit':2
 }
 
 # DISPLAY PARAMETERS FOR THE USER TO CONFIRM
 infoDlg = gui.DlgFromDict(ExpParameters, title='Experimental Parameters')
-ExpectedTotalTime = ExpParameters['IntroOffDuration'] + ExpParameters['NBlocks'] * (ExpParameters['OffDuration'] + ExpParameters['InstrTime'] + (ExpParameters['InterStimulusDelay']+ExpParameters['TimePerTrial'])*ExpParameters['TrialPerBlock'])
-print "Expected Duration: %d"%ExpectedTotalTime
-
-TotalDurDLG = gui.Dlg(title='Time')
-TotalDurDLG.addText('Total Duration of Experiment')
-TotalDurDLG.addText('%d seconds'%ExpectedTotalTime)
-TotalDurDLG.show()
 
 
 # FULL SCREEN WINDOW
-win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
-    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-    blendMode=u'avg', useFBO=True,
-    )
+#win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+#    blendMode=u'avg', useFBO=False,
+#    )
     
 # PARTIAL SCREEN WINDOW
-#win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
-#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-#    blendMode=u'avg', useFBO=True,
-#    )
+win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+    blendMode=u'avg', useFBO=False,
+    )
 
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
@@ -116,51 +116,138 @@ WhiteCrossHair = visual.TextStim(win=win, ori=0, name='text',
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=0.0)   
 
+OrangeCrossHair = visual.TextStim(win=win, ori=0, name='text',
+    text=u'+',    font=u'Arial',
+    pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
+    color=u'orange', colorSpace=u'rgb', opacity=1,
+    depth=0.0)   
+
 ThankYouScreen = visual.TextStim(win=win, ori=0, name='text',
     text=u'It is over.\nThanks',    font=u'Arial',
     pos=[0, 0], height=ExpParameters['TextSize'], wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=0.0)
 
-ParallelPort = parallel.ParallelPort(address='0x0378')
-# Prepare the data frame used for keeping track of what has been done
+#ParallelPort = parallel.ParallelPort(address='0x0378')
 
+# Set up the clocks
+TrialClock = core.Clock()
+CountDownClock = core.CountdownTimer()
+ElapsedTimeClock = core.Clock()
+ElapsedTimeClock.reset()
+
+# Prepare the data frame used for keeping track of what has been done
 Data = pd.DataFrame(columns=('StimSide','Response','Correct','Duration','TurnPoint','ResponseTime'))
 StopFlag = False
+
+
+CountDownClock.reset()
 while StopFlag == False:
-    # present odor
-    # Which side will the odor be presented on?
-    SS = ChooseSide()
-    # map the left/right coding of 0/1 onto the appropriate channels
-    # decide on the duration for the trial
-    DUR = DecDur(Data,SS,StepSize,StartDur)
+    # present white cross hair for forty seconds
+    # Reset the countdown timer here because the time for response is variable
     
-    # Start a timer
-    # trigger the odorant
+    CountDownClock.add(ExpParameters['DelayBetweenTrials'])
+    WhiteCrossHair.draw()
+    win.flip()
+    while CountDownClock.getTime() > 0:
+        theseKeys = event.getKeys()
+        if "escape" in theseKeys:
+            win.flip()
+            win.close()
+            core.quit()
     
-    win.callOnFlip(p_port.setData, int(channel))
     # present red cross hair for one second
-    # present green cross hair for two seconds
+    CountDownClock.add(ExpParameters['RedCrosshairTime'])
+    RedCrossHair.draw()
+    win.flip()
+    # Here is when I can prepare for the next presentation
+    # Decide how long to wait in seconds
+    DelayBeforeOdor = np.round(np.random.rand()*1000 + 500)/1000
+    # Decide which nostril to send to
+    # This uses a function from the StaircaseFunctions code
+    StimulusSide = ChooseSide()
+    while CountDownClock.getTime() > 0:
+        theseKeys = event.getKeys()
+        if "escape" in theseKeys:
+            win.flip()
+            win.close()
+            core.quit()
+    # present green cross hair
+    CountDownClock.add(DelayBeforeOdor)
+    GreenCrossHair.draw()
+    win.flip()
+    # Here is when I can prepare for the next presentation
+    # map the left/right coding of 0/1 onto the appropriate channels
+    if StimulusSide == 0: #Left
+        channel = ExpParameters['LeftChannel']
+    elif StimulusSide == 1: #Right
+        channel = ExpParameters['RightChannel']
+    else:
+        # received unknown response and sending a close signal
+        channel = 0
+    # decide on the duration for the trial
+    DUR = DecDur(Data,StimulusSide,ExpParameters['StepSize'],0.500)
+
+    # wait for between 500 and 1500ms
+    while CountDownClock.getTime() > 0:
+        theseKeys = event.getKeys()
+        if "escape" in theseKeys:
+            win.flip()
+            win.close()
+            core.quit()
     
-    # Record response
-    # Map the response to 0/1
-    # Was the response correct?
-    CC = IsResponseCorrect(SS,RR)
+    # trigger odor to start
+    print "Sending to channel %d"%(channel)
+    
+    # Wait for duration of odorant presentation time
+    print "Odor presentation: %0.4f"%(DUR)
+    CountDownClock.add(DUR)
+    while CountDownClock.getTime() > 0:
+        theseKeys = event.getKeys()
+        if "escape" in theseKeys:
+            win.flip()
+            win.close()
+            # if an escape key is pressed here make sure to turn off the odors
+            print "Sending to channel %d"%(0)
+            core.quit()    
 
-    Data.loc[len(Data.index)+1] = [SS,RR,CC,DUR,-9999]
-        # It is not efficient to check the full file each time for turning points.
-        # It woudl be better to just check the last trial.
-        # Oh well!
-        Data = FindTurningPoints(Data)
-        StopFlag = FindNumberOfTurnPoints(Data,TurnPointLimit)
-
-# Parallel port info
-        if t >= 1.2 and p_port.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            p_port.tStart = t  # underestimates by a little under one frame
-            p_port.frameNStart = frameN  # exact frame index
-            p_port.status = STARTED
-            win.callOnFlip(p_port.setData, int(channel))
-        elif p_port.status == STARTED and t >= (1.2 + (level-win.monitorFramePeriod*0.75)): #most of one frame period left
-            p_port.status = STOPPED
-            win.callOnFlip(p_port.setData, int(0))
+    # trigger odor to stop
+    print "Sending to channel %d"%(0)
+    # present orange cross hair
+    OrangeCrossHair.draw()
+    win.flip()
+    # wait for user to respond
+    UserResponseFlag = False
+    while not UserResponseFlag:
+        theseKeys = event.getKeys()
+        if "escape" in theseKeys:
+            win.flip()
+            win.close()
+            core.quit() 
+        elif len(theseKeys) > 0:
+            # This must be a response
+            CurrentRT = TrialClock.getTime()
+            print theseKeys
+            if theseKeys[-1] == 'left':
+                Response = 0
+                UserResponseFlag = True
+            elif theseKeys[-1] == 'right':
+                Response = 1
+                UserResponseFlag = True
+    # The post stimulus calculcations and decisions may take some time, less than a second. 
+    # But since there is a long inter-trial interval, they will take place during this time.
+    # To do this the count down clock is reset here. Then the amount of time it take to do the 
+    # following is subtracted from the clock and therefore take from the ITI.
+    CountDownClock.reset()
+    # Is response correct?
+    Correct = IsResponseCorrect(StimulusSide,Response)
+    Data.loc[len(Data.index)+1] = [StimulusSide,Response,Correct,DUR,-9999,'RT']
+    # It is not efficient to check the full file each time for turning points.
+    # It would be better to just check the last trial.
+    # Oh well!
+    Data = FindTurningPoints(Data)
+    StopFlag = FindNumberOfTurnPoints(Data,ExpParameters['TurnPointLimit'])
+    
+    
+    
+ 

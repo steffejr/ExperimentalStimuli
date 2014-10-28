@@ -63,6 +63,8 @@ def DecDur(Data,StimSide,StepSize,StartDur):
     # duration of the stimulus.
     # AKA this is the hard part
     #
+    MinimumDuration = 0.100
+    MaximumDuration = 2.100
     # Is there a trial on this side before the current one?
     OneBackIndex = FindPreviousIndex(Data, StimSide, -1)
     if OneBackIndex != -9999:
@@ -75,7 +77,7 @@ def DecDur(Data,StimSide,StepSize,StartDur):
                 if Data.iloc[TwoBackIndex]['Correct'] == 1:                
                     # The last two trials were both correct
                     # Make sure the Duration does not get smaller than the step size
-                    if Data.iloc[OneBackIndex]['Duration'] > StepSize:
+                    if Data.iloc[OneBackIndex]['Duration'] > MinimumDuration:
                         Duration = Data.iloc[OneBackIndex]['Duration'] - StepSize
                     else:
                         Duration = Data.iloc[OneBackIndex]['Duration']
