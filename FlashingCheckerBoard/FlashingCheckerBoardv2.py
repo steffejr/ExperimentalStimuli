@@ -43,7 +43,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 MR_settings = { 
     'TR': 2.000, # duration (sec) per volume
     'volumes': 5, # number of whole-brain 3D volumes / frames
-    'sync': '5', # character to use as the sync timing event; assumed to come at start of a volume
+    'sync': 'equal', # character to use as the sync timing event; assumed to come at start of a volume
     'skip': 0, # number of volumes lacking a sync pulse at start of scan (for T1 stabilization)
     'sound': False # in test mode only, play a tone as a reminder of scanner noise
     }
@@ -74,17 +74,17 @@ TotalDurDLG.show()
 
 
 # FULL SCREEN WINDOW
-win = visual.Window(size=(1920, 1080), fullscr=True, screen=1, allowGUI=False, allowStencil=False,
-    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
-    blendMode=u'avg', useFBO=True,
-    )
-
-    
-# PARTIAL SCREEN WINDOW
-#win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+#win = visual.Window(size=(1920, 1080), fullscr=True, screen=1, allowGUI=False, allowStencil=False,
 #    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
 #    blendMode=u'avg', useFBO=True,
 #    )
+
+    
+# PARTIAL SCREEN WINDOW
+win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+    blendMode=u'avg', useFBO=True,
+    )
 
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()

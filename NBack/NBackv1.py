@@ -9,7 +9,7 @@ sys.path.append(ThisFolder)
 from psychopy import visual, core, data, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
-from numpy import sin, cos, tan, log, log10, pi, average, sq66666666666666666666666666666666666666666666666666666666666666666666666666669a68751423rt, std, deg2rad, rad2deg, linspace, asarray
+from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
 from numpy.random import random, randint, normal, shuffle
 
 from psychopy.hardware.emulator import launchScan
@@ -46,7 +46,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 MR_settings = { 
     'TR': 2.000, # duration (sec) per volume
     'volumes': 5, # number of whole-brain 3D volumes / frames
-    'sync': '5', # character to use as the sync timing event; assumed to come at start of a volume
+    'sync': 'equal', # character to use as the sync timing event; assumed to come at start of a volume
     'skip': 0, # number of volumes lacking a sync pulse at start of scan (for T1 stabilization)
     'sound': False # in test mode only, play a tone as a reminder of scanner noise
     }
