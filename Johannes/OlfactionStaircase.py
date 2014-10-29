@@ -22,7 +22,7 @@ from StaircaseFunctions import *
 
 
 # EXPERIMENTAL INFORMATION
-expName = u'NBack'  # <<< This is where you specify the name of the experiment which makes it easier to differentiate the results files.
+expName = u'OlfactStaircase'  # <<< This is where you specify the name of the experiment which makes it easier to differentiate the results files.
 expInfo = {u'session': u'001', u'participant': u''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False: core.quit()  # user pressed cancel
@@ -30,14 +30,14 @@ expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
 # OUTPUT FILENAME
-filename = 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
+filename = 'data/%s_%s_%s.csv' %(expInfo['participant'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
-thisExp = data.ExperimentHandler(name=expName, version='',
-    extraInfo=expInfo, runtimeInfo=None,
-    originPath=None,
-    savePickle=False, saveWideText=True,
-    dataFileName=filename)
+#thisExp = data.ExperimentHandler(name=expName, version='',
+#    extraInfo=expInfo, runtimeInfo=None,
+#    originPath=None,
+#    savePickle=False, saveWideText=True,
+#    dataFileName=filename)
 
 #save a log file for detail verbose info
 logFile = logging.LogFile(filename+'.log', level=logging.EXP)
@@ -134,14 +134,28 @@ ThankYouScreen = visual.TextStim(win=win, ori=0, name='text',
 TrialClock = core.Clock()
 CountDownClock = core.CountdownTimer()
 ElapsedTimeClock = core.Clock()
-ElapsedTimeClock.reset()
+
 
 # Prepare the data frame used for keeping track of what has been done
-Data = pd.DataFrame(columns=('StimSide','Response','Correct','Duration','TurnPoint','ResponseTime'))
+Data = pd.DataFrame(columns=('StimSide','Response','Correct','Duration','TurnPoint','ResponseTime','TrialStartTime','TrialDelay'))
 StopFlag = False
 
-
+# Present Instructions
+InstructionFlag = True
+Instructions.draw()
+win.flip()
+while InstructionFlag is True:
+    theseKeys = event.getKeys()
+    if 'escape' in theseKeys:
+        win.flip()
+        win.close()
+        core.quit()
+    if len(theseKeys) > 0: 
+        # user pressed a key
+        InstructionFlag = False
+    
 CountDownClock.reset()
+ElapsedTimeClock.reset()
 while StopFlag == False:
     # present white cross hair for forty seconds
     # Reset the countdown timer here because the time for response is variable
@@ -197,6 +211,7 @@ while StopFlag == False:
             core.quit()
     
     # trigger odor to start
+    TrialStartTime = ElapsedTimeClock.getTime()
     print "Sending to channel %d"%(channel)
     
     # Wait for duration of odorant presentation time
@@ -226,7 +241,7 @@ while StopFlag == False:
             core.quit() 
         elif len(theseKeys) > 0:
             # This must be a response
-            CurrentRT = TrialClock.getTime()
+            CurrentRT = ElapsedTimeClock.getTime() - TrialStartTime
             print theseKeys
             if theseKeys[-1] == 'left':
                 Response = 0
@@ -241,7 +256,9 @@ while StopFlag == False:
     CountDownClock.reset()
     # Is response correct?
     Correct = IsResponseCorrect(StimulusSide,Response)
-    Data.loc[len(Data.index)+1] = [StimulusSide,Response,Correct,DUR,-9999,'RT']
+    # Put all data from this trial into the data frame
+    # columns=('StimSide','Response','Correct','Duration','TurnPoint','ResponseTime','TrialStartTime','TrialDelay'))
+    Data.loc[len(Data.index)+1] = [StimulusSide,Response,Correct,DUR,-9999,CurrentRT,TrialStartTime,DelayBeforeOdor]
     # It is not efficient to check the full file each time for turning points.
     # It would be better to just check the last trial.
     # Oh well!
@@ -249,5 +266,15 @@ while StopFlag == False:
     StopFlag = FindNumberOfTurnPoints(Data,ExpParameters['TurnPointLimit'])
     
     
-    
+# The program is done!
+# Calculate turning point average thresholds
+LeftThreshold, RightThreshold = AverageTurningPoints(Data, ExpParameters['TurnPointLimit'])
+# add this info to the bottom of the data frame
+Data = Data.append(['LeftThreshold',LeftThreshold,'RightThreshold',RightThreshold],ignore_index=True)
+
+# Save the data
+Data.to_csv(filename)
+
+
+
  
