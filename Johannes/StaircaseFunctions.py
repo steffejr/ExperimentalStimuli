@@ -2,7 +2,10 @@ import numpy as np
 import pandas as pd
 # stairCase
 
-def RunExample(StartDur = 500, StepSize = 200,TurnPointLimit = 4):
+StartDur = 500
+StepSize = 200
+TurnPointLimit = 6
+def RunExample(StartDur = 500, StepSize = 200,TurnPointLimit = 6):
     # Here is a little simulated example
     Data = pd.DataFrame(columns=('StimSide','Response','Correct','Duration','TurnPoint'))
     StopFlag = False
@@ -14,9 +17,9 @@ def RunExample(StartDur = 500, StepSize = 200,TurnPointLimit = 4):
         DUR = DecDur(Data,SS,StepSize,StartDur)
         Data.loc[len(Data.index)+1] = [SS,RR,CC,DUR,-9999]
         # It is not efficient to check the full file each time for turning points.
-        # It woudl be better to just check the last trial.
+        # It would be better to just check the last trial.
         # Oh well!
-        Data = FindTurningPoints(Data)
+        Data = FindTurningPoints(Data,SS)
         StopFlag = FindNumberOfTurnPoints(Data,TurnPointLimit)
     
     LeftThreshold, RightThreshold = AverageTurningPoints(Data, TurnPointLimit)
@@ -35,15 +38,24 @@ def AverageTurningPoints(Data, TurnPointLimit):
     return LeftThreshold, RightThreshold
 
 
-def FindTurningPoints(Data):
+def FindTurningPoints(Data, StimSide):
     # Find the turning points in the data and set them accordingly
     # Right Side turning points
-    R = Data[Data['StimSide'] == 1]
-    Data.loc[R.loc[R['Duration'].diff().abs()>0].index,'TurnPoint'] = 1   
-    # Left Side turning points
-    L = Data[Data['StimSide'] == 0]
-    Data.loc[L.loc[L['Duration'].diff().abs()>0].index,'TurnPoint'] = 0   
-
+    Side = Data[Data['StimSide'] == StimSide]
+    if len(Side) > 3:
+        Last = Side.loc[Side['Correct'].index[-1]]
+        OneBack = Side.loc[Side['Correct'].index[-2]]
+        TwoBack = Side.loc[Side['Correct'].index[-3]]
+        # A turning point occurs when a string of at least two correct responses
+        # is followed by 
+        # an incorrect response
+        if (Last['Correct'] == 0) & (OneBack['Correct'] == 1) & (TwoBack['Correct'] == 1):
+            Data.loc[Side.index[-1],'TurnPoint'] = StimSide
+        # OR a turning point occurs when an incorrect response is followed by at two correct 
+        # responses
+        elif (Last['Correct'] == 1) & (OneBack['Correct'] == 1) & (TwoBack['Correct'] == 0):
+            Data.loc[Side.index[-1],'TurnPoint'] = StimSide
+       # print "<<<<< TURNING POINT <<<<<<"
     return Data
 
 def FindNumberOfTurnPoints(Data,TurnPointLimit):
@@ -74,11 +86,17 @@ def DecDur(Data,StimSide,StepSize,StartDur):
             TwoBackIndex = FindPreviousIndex(Data, StimSide, OneBackIndex-1)
             if TwoBackIndex != -9999:
                 # There are at least two previous trials on this side
-                if Data.iloc[TwoBackIndex]['Correct'] == 1:                
+                if Data.iloc[TwoBackIndex]['Correct'] == 1:             
+                    
                     # The last two trials were both correct
-                    # Make sure the Duration does not get smaller than the step size
-                    if Data.iloc[OneBackIndex]['Duration'] > MinimumDuration:
-                        Duration = Data.iloc[OneBackIndex]['Duration'] - StepSize
+                    # Make sure the last two correct trials are the SAME Duration
+                    if Data.iloc[TwoBackIndex]['Duration'] == Data.iloc[OneBackIndex]['Duration']:
+                        print Data.iloc[TwoBackIndex]['Duration']
+                        # Make sure the Duration does not get smaller than the step size
+                        if Data.iloc[OneBackIndex]['Duration'] > MinimumDuration:
+                            Duration = Data.iloc[OneBackIndex]['Duration'] - StepSize
+                        else:
+                            Duration = Data.iloc[OneBackIndex]['Duration']
                     else:
                         Duration = Data.iloc[OneBackIndex]['Duration']
                 else:

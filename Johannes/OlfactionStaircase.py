@@ -17,10 +17,6 @@ import numpy as np
 import pandas as pd
 from StaircaseFunctions import *
 
-
-
-
-
 # EXPERIMENTAL INFORMATION
 expName = u'OlfactStaircase'  # <<< This is where you specify the name of the experiment which makes it easier to differentiate the results files.
 expInfo = {u'session': u'001', u'participant': u''}
@@ -60,7 +56,7 @@ infoDlg = gui.DlgFromDict(MR_settings, title='MRI Settings')
 # Create an N-back task
 ExpParameters = {
     'TextSize': 0.2,
-    'DelayBetweenTrials': 4,
+    'DelayBetweenTrials': 1,
     'RedCrosshairTime':1,
     'LeftChannel':6,
     'RightChannel':9,
@@ -259,20 +255,27 @@ while StopFlag == False:
     # Put all data from this trial into the data frame
     # columns=('StimSide','Response','Correct','Duration','TurnPoint','ResponseTime','TrialStartTime','TrialDelay'))
     Data.loc[len(Data.index)+1] = [StimulusSide,Response,Correct,DUR,-9999,CurrentRT,TrialStartTime,DelayBeforeOdor]
-    # It is not efficient to check the full file each time for turning points.
-    # It would be better to just check the last trial.
-    # Oh well!
-    Data = FindTurningPoints(Data)
+    #  Check to see if the last trial was a turning point
+    Data = FindTurningPoints(Data,0)
+    Data = FindTurningPoints(Data,1)
     StopFlag = FindNumberOfTurnPoints(Data,ExpParameters['TurnPointLimit'])
     
     
 # The program is done!
+
+
 # Calculate turning point average thresholds
 LeftThreshold, RightThreshold = AverageTurningPoints(Data, ExpParameters['TurnPointLimit'])
 # add this info to the bottom of the data frame
 Data = Data.append(['LeftThreshold',LeftThreshold,'RightThreshold',RightThreshold],ignore_index=True)
 
+# reformat the float values
+Data['ResponseTime'] = Data['ResponseTime'].map('{:.3f}'.format)
+Data['TrialStartTime'] = Data['TrialStartTime'].map('{:.3f}'.format)
+Data['TrialDelay'] = Data['TrialDelay'].map('{:.3f}'.format)
+
 # Save the data
+
 Data.to_csv(filename)
 
 
