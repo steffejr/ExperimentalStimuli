@@ -1,14 +1,11 @@
 import numpy as np
 import pandas as pd
-# stairCase
 
-StartDur = 500
-StepSize = 200
-TurnPointLimit = 6
+# This is a collection of functions used by the staircase program
 
-def TriggerOdorant(UseParallelPortFlag,channel,win,p_port):
+def TriggerOdorant(UseParallelPortFlag,channel,win,ParallelPort):
     if UseParallelPortFlag is True:
-        win.callOnFlip(p_port.setData, int(channel))
+        win.callOnFlip(ParallelPort.setData, int(channel))
     else:
         print "Sending to channel %d"%(channel)
         
