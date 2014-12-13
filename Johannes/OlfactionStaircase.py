@@ -17,6 +17,12 @@ import numpy as np
 import pandas as pd
 from StaircaseFunctions import *
 
+UseParallelPortFlag = False
+if UseParallelPortFlag:
+    ParallelPort = parallel.ParallelPort(address='0x0378')
+else:
+    ParallelPort = False
+
 # EXPERIMENTAL INFORMATION
 expName = u'OlfactStaircase'  # <<< This is where you specify the name of the experiment which makes it easier to differentiate the results files.
 expInfo = {u'session': u'001', u'participant': u''}
@@ -42,6 +48,7 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # MRI INFORMATION FOR SYNCHRONIZATION
+# This is currently unused. It gets used when synchronizing an experiemnt to an MRI
 MR_settings = { 
     'TR': 2.000, # duration (sec) per volume
     'volumes': 5, # number of whole-brain 3D volumes / frames
@@ -51,9 +58,9 @@ MR_settings = {
     }
 
 # DISPLAY PARAMETERS FOR THE USER TO CONFIRM
-infoDlg = gui.DlgFromDict(MR_settings, title='MRI Settings')
+# infoDlg = gui.DlgFromDict(MR_settings, title='MRI Settings')
 
-# Create an N-back task
+# Present experimental parameters to user to confirm
 ExpParameters = {
     'TextSize': 0.2,
     'DelayBetweenTrials': 1,
@@ -61,12 +68,13 @@ ExpParameters = {
     'LeftChannel':6,
     'RightChannel':9,
     'StepSize':0.200,
-    'TurnPointLimit':2
+    'TurnPointLimit':4
 }
 
 # DISPLAY PARAMETERS FOR THE USER TO CONFIRM
 infoDlg = gui.DlgFromDict(ExpParameters, title='Experimental Parameters')
-
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Decide which screen you would like to use. I prefer the partial screen for testing.
 
 # FULL SCREEN WINDOW
 #win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
@@ -79,6 +87,7 @@ win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allo
     monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
     blendMode=u'avg', useFBO=False,
     )
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
@@ -124,13 +133,12 @@ ThankYouScreen = visual.TextStim(win=win, ori=0, name='text',
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=0.0)
 
-#ParallelPort = parallel.ParallelPort(address='0x0378')
+
 
 # Set up the clocks
 TrialClock = core.Clock()
 CountDownClock = core.CountdownTimer()
 ElapsedTimeClock = core.Clock()
-
 
 # Prepare the data frame used for keeping track of what has been done
 Data = pd.DataFrame(columns=('StimSide','Response','Correct','Duration','TurnPoint','ResponseTime','TrialStartTime','TrialDelay'))
@@ -208,7 +216,9 @@ while StopFlag == False:
     
     # trigger odor to start
     TrialStartTime = ElapsedTimeClock.getTime()
-    print "Sending to channel %d"%(channel)
+    # trigger odorant
+    TriggerOdorant(UseParallelPortFlag,channel,win,ParallelPort)
+
     
     # Wait for duration of odorant presentation time
     print "Odor presentation: %0.4f"%(DUR)
@@ -219,11 +229,11 @@ while StopFlag == False:
             win.flip()
             win.close()
             # if an escape key is pressed here make sure to turn off the odors
-            print "Sending to channel %d"%(0)
+            TriggerOdorant(UseParallelPortFlag,0,win,ParallelPort)
             core.quit()    
 
     # trigger odor to stop
-    print "Sending to channel %d"%(0)
+    TriggerOdorant(UseParallelPortFlag,0,win,ParallelPort)
     # present orange cross hair
     OrangeCrossHair.draw()
     win.flip()

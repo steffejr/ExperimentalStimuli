@@ -5,6 +5,13 @@ import pandas as pd
 StartDur = 500
 StepSize = 200
 TurnPointLimit = 6
+
+def TriggerOdorant(UseParallelPortFlag,channel,win,p_port):
+    if UseParallelPortFlag is True:
+        win.callOnFlip(p_port.setData, int(channel))
+    else:
+        print "Sending to channel %d"%(channel)
+        
 def RunExample(StartDur = 500, StepSize = 200,TurnPointLimit = 6):
     # Here is a little simulated example
     Data = pd.DataFrame(columns=('StimSide','Response','Correct','Duration','TurnPoint'))
