@@ -141,7 +141,7 @@ ElapsedTimeClock = core.Clock()
 
 
 # PRESENT THE SCREEN TO WAIT FOR THE MRI TRIGGER
-vol = launchScan(win, MR_settings,  mode='Scan')
+#vol = launchScan(win, MR_settings,  mode='Scan')
 
 # Cross hair
 ElapsedTimeClock.reset()

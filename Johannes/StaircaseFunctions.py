@@ -5,7 +5,8 @@ import pandas as pd
 
 def TriggerOdorant(UseParallelPortFlag,channel,win,ParallelPort):
     if UseParallelPortFlag is True:
-        win.callOnFlip(ParallelPort.setData, int(channel))
+        #print "Sending to parallel port, channel %d"%(channel)
+        ParallelPort.setData(int(channel))
     else:
         print "Sending to channel %d"%(channel)
         
@@ -35,10 +36,11 @@ def AverageTurningPoints(Data, TurnPointLimit):
     # average the first set of turning points even if there are more than needed
     # on one side.
     # Left Side
+    #print TurnPointLimit
     LeftThreshold = Data[Data['TurnPoint']==0]['Duration'][0:TurnPointLimit].mean()
     # Right Side
     RightThreshold = Data[Data['TurnPoint']==1]['Duration'][0:TurnPointLimit].mean()
-    
+    #print 'LT=%0.3f'%(LeftThreshold)
     return LeftThreshold, RightThreshold
 
 
@@ -54,11 +56,13 @@ def FindTurningPoints(Data, StimSide):
         # is followed by 
         # an incorrect response
         if (Last['Correct'] == 0) & (OneBack['Correct'] == 1) & (TwoBack['Correct'] == 1):
-            Data.loc[Side.index[-1],'TurnPoint'] = StimSide
+            Data = Data.set_value(Side.index[-1],'TurnPoint',StimSide)
+            #Data.loc[Side.index[-1],'TurnPoint'] = StimSide
         # OR a turning point occurs when an incorrect response is followed by at two correct 
         # responses
         elif (Last['Correct'] == 1) & (OneBack['Correct'] == 1) & (TwoBack['Correct'] == 0):
-            Data.loc[Side.index[-1],'TurnPoint'] = StimSide
+            Data = Data.set_value(Side.index[-1],'TurnPoint',StimSide)
+            #Data.loc[Side.index[-1],'TurnPoint'] = StimSide
        # print "<<<<< TURNING POINT <<<<<<"
     return Data
 
@@ -79,6 +83,7 @@ def DecDur(Data,StimSide,StepSize,StartDur):
     # duration of the stimulus.
     # AKA this is the hard part
     #
+    #print StimSide, StepSize,StartDur
     MinimumDuration = 0.100
     MaximumDuration = 2.100
     # Is there a trial on this side before the current one?
@@ -95,7 +100,7 @@ def DecDur(Data,StimSide,StepSize,StartDur):
                     # The last two trials were both correct
                     # Make sure the last two correct trials are the SAME Duration
                     if Data.iloc[TwoBackIndex]['Duration'] == Data.iloc[OneBackIndex]['Duration']:
-                        print Data.iloc[TwoBackIndex]['Duration']
+                        #print Data.iloc[TwoBackIndex]['Duration']
                         # Make sure the Duration does not get smaller than the step size
                         if Data.iloc[OneBackIndex]['Duration'] > MinimumDuration:
                             Duration = Data.iloc[OneBackIndex]['Duration'] - StepSize
@@ -168,4 +173,16 @@ def AskForResponse():
             Response = 1
     return Response
     
-    
+def AddDataRow(DataFrame,dataToEnter):
+   NColDF = len(DataFrame.columns)
+   NColData = len(dataToEnter)
+   NRowDF = len(DataFrame)
+   if NColDF == NColData:
+        #print 'The data is the correct size'
+        for i in range(0,NColDF,1):
+            DataFrame = DataFrame.set_value(NRowDF+1,DataFrame.columns[i],dataToEnter[i])
+        return DataFrame
+   #else:
+        #print 'Data and DataFrame are not the same length'
+   
+   

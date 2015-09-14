@@ -1,0 +1,17 @@
+L=`ls *_ECF_DmS.img`
+for i in $L;
+do
+	# get subid 
+	subid=${i%%_ECF*}
+	echo $subid
+	fslmaths $i -nan -abs -thr 0 -bin $subid"_mask"
+done
+
+L=`ls *_mask.nii.gz`
+OutName='fslmerge -t MergeMask ' 
+for i in $L; 
+do 
+	OutName=$OutName$i" ";
+done
+`echo $OutName`
+fsl
