@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.80.03), Tue Sep  8 21:09:41 2015
+This experiment was created using PsychoPy2 Experiment Builder (v1.80.03), Mon Sep 14 18:33:55 2015
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -81,7 +81,7 @@ globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=5, method=u'sequential', 
+trials = data.TrialHandler(nReps=5, method='sequential', 
     extraInfo=expInfo, originPath=None,
     trialList=data.importConditions('LetterSternbergConditions.xlsx'),
     seed=None, name='trials')

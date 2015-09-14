@@ -65,7 +65,7 @@ BlankRetention = visual.TextStim(win=win, ori=0, name='BlankRetention',
     pos=[0, 0], height=0.1, wrapWidth=None,
     color='white', colorSpace='rgb', opacity=1,
     depth=-2.0)
-ProbeLetter = visual.TextStim(win=win, ori=0, name='ProbeLetter',
+Probe = visual.TextStim(win=win, ori=0, name='Probe',
     text='default text',    font='Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
     color='white', colorSpace='rgb', opacity=1,
@@ -81,22 +81,27 @@ globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=5, method=u'sequential', 
+trials = data.TrialHandler(nReps=1, method=u'sequential', 
     extraInfo=expInfo, originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/LetterSternberg/LetSternberg.psyexp',
-    trialList=data.importConditions('LetterSternbergConditions.xlsx'),
+    trialList=data.importConditions('/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/LetterSternberg/LetterSternbergConditions.xlsx'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
 if thisTrial != None:
     for paramName in thisTrial.keys():
+        print paramName
         exec(paramName + '= thisTrial.' + paramName)
+# Need to add trial times
+# probe letters are not being presented.
+
 
 for thisTrial in trials:
     currentLoop = trials
     # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
     if thisTrial != None:
         for paramName in thisTrial.keys():
+            print paramName
             exec(paramName + '= thisTrial.' + paramName)
     
     #------Prepare to start Routine "trial"-------
@@ -105,7 +110,7 @@ for thisTrial in trials:
     frameN = -1
     # update component parameters for each repeat
     LetterStimulus.setText(StimLetters)
-    ProbeLetter.setText(ProbeLetter)
+    Probe.setText(ProbeLetter)
     # keep track of which components have finished
     trialComponents = []
     trialComponents.append(ISI)
@@ -146,11 +151,11 @@ for thisTrial in trials:
         # *ProbeLetter* updates
         if t >= 8 and ProbeLetter.status == NOT_STARTED:
             # keep track of start time/frame for later
-            ProbeLetter.tStart = t  # underestimates by a little under one frame
-            ProbeLetter.frameNStart = frameN  # exact frame index
-            ProbeLetter.setAutoDraw(True)
-        elif ProbeLetter.status == STARTED and t >= (8 + (3-win.monitorFramePeriod*0.75)): #most of one frame period left
-            ProbeLetter.setAutoDraw(False)
+            Probe.tStart = t  # underestimates by a little under one frame
+            Probe.frameNStart = frameN  # exact frame index
+            Probe.setAutoDraw(True)
+        elif Probe.status == STARTED and t >= (8 + (3-win.monitorFramePeriod*0.75)): #most of one frame period left
+            Probe.setAutoDraw(False)
         
         # *BlankITI* updates
         if t >= 0.0 and BlankITI.status == NOT_STARTED:
