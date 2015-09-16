@@ -1,17 +1,12 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.80.03), Tue Sep  8 21:08:42 2015
+This experiment was created using PsychoPy2 Experiment Builder (v1.80.06), Tue Sep 15 20:30:29 2015
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
 """
 
-"""
-What is needed?
-The cues for the differnt partial trials. Are they considered dieferent conditions?
-
-"""
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
 from psychopy import visual, core, data, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
@@ -21,7 +16,7 @@ from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 
 # Store info about the experiment session
-expName = 'LetSternberg'  # from the Builder filename that created this script
+expName = u'untitled'  # from the Builder filename that created this script
 expInfo = {u'session': u'001', u'participant': u''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False: core.quit()  # user pressed cancel
@@ -34,7 +29,7 @@ filename = 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/LetterSternberg/LetSternberg.psyexp',
+    originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/Johannes/untitled.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info
@@ -46,9 +41,9 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=[800,600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
-    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
-    blendMode='avg', useFBO=True,
+win = visual.Window(size=[600,400], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+    blendMode=u'avg', useFBO=True,
     )
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
@@ -59,138 +54,104 @@ else:
 
 # Initialize components for Routine "trial"
 trialClock = core.Clock()
-#ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
-LetterStimulus = visual.TextStim(win=win, ori=0, name='LetterStimulus',
-    text='default text',    font='Arial',
-    pos=[0, 0], height=0.2, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
+text = visual.TextStim(win=win, ori=0, name='text',
+    text=u'Any text\n\nincluding line breaks',    font=u'Arial',
+    pos=[0, 0], height=0.1, wrapWidth=None,
+    color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-1.0)
-BlankRetention = visual.TextStim(win=win, ori=0, name='BlankRetention',
-    text=' ',    font='Arial',
+text_2 = visual.TextStim(win=win, ori=0, name='text_2',
+    text=u'+',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+    color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-2.0)
-Probe = visual.TextStim(win=win, ori=0, name='Probe',
-    text='default text',    font='Arial',
+text_3 = visual.TextStim(win=win, ori=0, name='text_3',
+    text=u'///////',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+    color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-3.0)
-BlankITI = visual.TextStim(win=win, ori=0, name='BlankITI',
-    text=' ',    font='Arial',
-    pos=[0, 0], height=0.1, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
-    depth=-4.0)
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1, method=u'sequential', 
-    extraInfo=expInfo, originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/LetterSternberg/LetSternberg.psyexp',
-    trialList=data.importConditions('/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/LetterSternberg/LetterSternbergConditions.xlsx'),
+trials = data.TrialHandler(nReps=5, method=u'sequential', 
+    extraInfo=expInfo, originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/Johannes/untitled.psyexp',
+    trialList=[None],
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
 if thisTrial != None:
     for paramName in thisTrial.keys():
-        print thisTrial[paramName]
-        
         exec(paramName + '= thisTrial.' + paramName)
-# Need to add trial times
-TrialTimes = {}
-TrialTimes['InitialDelay'] = 0.0
-TrialTimes['StimDur'] = 1.0
-TrialTimes['RetDur'] = 1.0
-TrialTimes['ProbeDur'] = 1.0
-TrialTimes['PostDelay'] = 0.0
-TrialETime = {};
-TrialETime['Stim'] = TrialTimes['InitialDelay']
-TrialETime['Ret'] = TrialETime['Stim'] + TrialTimes['StimDur']
-TrialETime['Probe'] = TrialETime['Ret'] + TrialTimes['RetDur']
-TrialETime['Post'] = TrialETime['Probe'] + TrialTimes['ProbeDur']
-TrialETime
-# probe letters are not being presented.
-
 
 for thisTrial in trials:
     currentLoop = trials
     # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
     if thisTrial != None:
         for paramName in thisTrial.keys():
-            print paramName
             exec(paramName + '= thisTrial.' + paramName)
     
     #------Prepare to start Routine "trial"-------
     t = 0
     trialClock.reset()  # clock 
     frameN = -1
+    routineTimer.add(1.000000)
     # update component parameters for each repeat
-    LetterStimulus.setText(StimLetters)
-    Probe.setText(ProbeLetter)
     # keep track of which components have finished
     trialComponents = []
-#    trialComponents.append(ISI)
-    trialComponents.append(LetterStimulus)
-    trialComponents.append(BlankRetention)
-    trialComponents.append(Probe)
-#    trialComponents.append(BlankITI)
+    trialComponents.append(ISI)
+    trialComponents.append(text)
+    trialComponents.append(text_2)
+    trialComponents.append(text_3)
     for thisComponent in trialComponents:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
     
     #-------Start Routine "trial"-------
     continueRoutine = True
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = trialClock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *LetterStimulus* updates
-        if t >= TrialETime['Stim'] and LetterStimulus.status == NOT_STARTED:
+        # *text* updates
+        if t >= 0.0 and text.status == NOT_STARTED:
             # keep track of start time/frame for later
-            LetterStimulus.tStart = t  # underestimates by a little under one frame
-            LetterStimulus.frameNStart = frameN  # exact frame index
-            LetterStimulus.setAutoDraw(True)
-        elif LetterStimulus.status == STARTED and t >= (TrialETime['Stim'] + (TrialTimes['StimDur']-win.monitorFramePeriod*0.75)): #most of one frame period left
-            LetterStimulus.setAutoDraw(False)
+            text.tStart = t  # underestimates by a little under one frame
+            text.frameNStart = frameN  # exact frame index
+            text.setAutoDraw(True)
+        elif text.status == STARTED and t >= (0.0 + (0.5-win.monitorFramePeriod*0.75)): #most of one frame period left
+            text.setAutoDraw(False)
         
-        # *BlankRetention* updates
-        if t >= TrialETime['Ret'] and BlankRetention.status == NOT_STARTED:
+        # *text_2* updates
+        if t >= 0.5 and text_2.status == NOT_STARTED:
             # keep track of start time/frame for later
-            BlankRetention.tStart = t  # underestimates by a little under one frame
-            BlankRetention.frameNStart = frameN  # exact frame index
-            BlankRetention.setAutoDraw(True)
-        elif BlankRetention.status == STARTED and t >= (TrialETime['Ret'] + (TrialTimes['RetDur']-win.monitorFramePeriod*0.75)): #most of one frame period left
-            BlankRetention.setAutoDraw(False)
+            text_2.tStart = t  # underestimates by a little under one frame
+            text_2.frameNStart = frameN  # exact frame index
+            text_2.setAutoDraw(True)
+        elif text_2.status == STARTED and t >= (0.5 + (0.5-win.monitorFramePeriod*0.75)): #most of one frame period left
+            text_2.setAutoDraw(False)
         
-        # *ProbeLetter* updates
-        if t >= TrialETime['Probe'] and Probe.status == NOT_STARTED:
+        # *text_3* updates
+        if t >= 0.0 and text_3.status == NOT_STARTED:
             # keep track of start time/frame for later
-            Probe.tStart = t  # underestimates by a little under one frame
-            Probe.frameNStart = frameN  # exact frame index
-            Probe.setAutoDraw(True)
-        elif Probe.status == STARTED and t >= (TrialETime['Probe'] + (TrialTimes['ProbeDur']-win.monitorFramePeriod*0.75)): #most of one frame period left
-            Probe.setAutoDraw(False)
-        
-        # *BlankITI* updates
-        if t >= TrialETime['Post'] and BlankITI.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            BlankITI.tStart = t  # underestimates by a little under one frame
-            BlankITI.frameNStart = frameN  # exact frame index
-            BlankITI.setAutoDraw(True)
-        elif BlankITI.status == STARTED and t >= (TrialETime['Post'] + (TrialTimes['PostDelay']-win.monitorFramePeriod*0.75)): #most of one frame period left
-            BlankITI.setAutoDraw(False)
+            text_3.tStart = t  # underestimates by a little under one frame
+            text_3.frameNStart = frameN  # exact frame index
+            text_3.setAutoDraw(True)
+        elif text_3.status == STARTED and t >= (0.0 + (0.5-win.monitorFramePeriod*0.75)): #most of one frame period left
+            text_3.setAutoDraw(False)
         # *ISI* period
-#        if t >= 110.0 and ISI.status == NOT_STARTED:
-#            # keep track of start time/frame for later
-#            ISI.tStart = t  # underestimates by a little under one frame
-#            ISI.frameNStart = frameN  # exact frame index
-#            ISI.start(0.5)
-#        elif ISI.status == STARTED: #one frame should pass before updating params and completing
-#            ISI.complete() #finish the static period
+        if t >= 0.0 and ISI.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            ISI.tStart = t  # underestimates by a little under one frame
+            ISI.frameNStart = frameN  # exact frame index
+            ISI.start(0.5)
+        elif ISI.status == STARTED: #one frame should pass before updating params and completing
+            ISI.complete() #finish the static period
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
@@ -209,8 +170,6 @@ for thisTrial in trials:
         # refresh the screen
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
-        else:  # this Routine was not non-slip safe so reset non-slip timer
-            routineTimer.reset()
     
     #-------Ending Routine "trial"-------
     for thisComponent in trialComponents:
