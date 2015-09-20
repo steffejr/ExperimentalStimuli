@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.80.06), Fri 18 Sep 2015 10:08:10 AM EDT
+This experiment was created using PsychoPy2 Experiment Builder (v1.80.06), Thu Sep 17 20:50:30 2015
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -15,23 +15,19 @@ from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, ra
 from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 
-# Ensure that relative paths start from the same directory as this script
-_thisDir = os.path.dirname(os.path.abspath(__file__))
-os.chdir(_thisDir)
-
 # Store info about the experiment session
 expName = u'PartialTrialDIR'  # from the Builder filename that created this script
 expInfo = {u'session': u'001', u'participant': u'999'}
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
-# Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
+# Setup filename for saving
+filename = 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=u'/home/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
+    originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info
@@ -43,10 +39,10 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=[800, 600], fullscr=False, screen=1, allowGUI=True, allowStencil=False,
-    monitor=u'UbuntoMon', color=[0,0,0], colorSpace=u'rgb',
-    blendMode=u'add', useFBO=True,
-    units=u'pix')
+win = visual.Window(size=[600, 400], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+    blendMode=u'avg', useFBO=True,
+    )
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
 if expInfo['frameRate']!=None:
@@ -59,52 +55,52 @@ trialClock = core.Clock()
 UpperTopLine = visual.Line(win=win, name='UpperTopLine',
     start=(-[0.95, 0.95][0]/2.0, 0), end=(+[0.95, 0.95][0]/2.0, 0),
     ori=0, pos=[0, 0.45],
-    lineWidth=1, lineColor='yellow', lineColorSpace='rgb',
-    fillColor='yellow', fillColorSpace='rgb',
+    lineWidth=1, lineColor=u'yellow', lineColorSpace=u'rgb',
+    fillColor=u'yellow', fillColorSpace=u'rgb',
     opacity=1,interpolate=True)
 ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
 Stimulus = visual.TextStim(win=win, ori=0, name='Stimulus',
-    text='default text',    font='Arial',
+    text='default text',    font=u'Arial',
     pos=[0, 0.7], height=0.2, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+    color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-2.0)
-LeftUpperBracket = visual.TextStim(win=win, ori=0, name='LeftUpperBracket',
-    text='default text',    font='Arial',
-    pos=[0,0], height=0.25, wrapWidth=None,
-    color='yellow', colorSpace='rgb', opacity=1,
+UpperBracket = visual.TextStim(win=win, ori=0, name='UpperBracket',
+    text='default text',    font=u'Arial',
+    pos=[0,0.7], height=0.2, wrapWidth=None,
+    color=u'yellow', colorSpace=u'rgb', opacity=1,
     depth=-3.0)
 LowerTopLine = visual.Line(win=win, name='LowerTopLine',
     start=(-[0.95, 0.95][0]/2.0, 0), end=(+[0.95, 0.95][0]/2.0, 0),
     ori=0, pos=[0.0, 0.9],
-    lineWidth=1, lineColor='yellow', lineColorSpace='rgb',
-    fillColor='yellow', fillColorSpace='rgb',
+    lineWidth=1, lineColor=u'yellow', lineColorSpace=u'rgb',
+    fillColor=u'yellow', fillColorSpace=u'rgb',
     opacity=1,interpolate=True)
 Probe = visual.TextStim(win=win, ori=0, name='Probe',
-    text='default text',    font='Arial',
+    text='default text',    font=u'Arial',
     pos=[0, -0.50], height=0.1, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+    color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-5.0)
 TrialCrossHair = visual.TextStim(win=win, ori=0, name='TrialCrossHair',
-    text='+',    font='Arial',
+    text=u'+',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color='green', colorSpace='rgb', opacity=1,
+    color=u'green', colorSpace=u'rgb', opacity=1,
     depth=-7.0)
 ITICrossHair = visual.TextStim(win=win, ori=0, name='ITICrossHair',
-    text='+',    font='Arial',
+    text=u'+',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color='red', colorSpace='rgb', opacity=1,
+    color=u'red', colorSpace=u'rgb', opacity=1,
     depth=-8.0)
 UpperBotLine = visual.Line(win=win, name='UpperBotLine',
     start=(-[0.95, 0.95][0]/2.0, 0), end=(+[0.95, 0.95][0]/2.0, 0),
     ori=0, pos=[0, -0.450],
-    lineWidth=1, lineColor='cyan', lineColorSpace='rgb',
-    fillColor='cyan', fillColorSpace='rgb',
+    lineWidth=1, lineColor=u'cyan', lineColorSpace=u'rgb',
+    fillColor=u'cyan', fillColorSpace=u'rgb',
     opacity=1,interpolate=True)
 LowerBotLine = visual.Line(win=win, name='LowerBotLine',
     start=(-[0.95, 0.95][0]/2.0, 0), end=(+[0.95, 0.95][0]/2.0, 0),
     ori=0, pos=[0, -0.9],
-    lineWidth=1, lineColor='cyan', lineColorSpace='rgb',
-    fillColor='cyan', fillColorSpace='rgb',
+    lineWidth=1, lineColor=u'cyan', lineColorSpace=u'rgb',
+    fillColor=u'cyan', fillColorSpace=u'rgb',
     opacity=1,interpolate=True)
 
 # Create some handy timers
@@ -113,7 +109,7 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1, method=u'sequential', 
-    extraInfo=expInfo, originPath=u'/home/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
+    extraInfo=expInfo, originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
     trialList=data.importConditions(u'PartialTrial1.xlsx'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
@@ -136,8 +132,7 @@ for thisTrial in trials:
     frameN = -1
     # update component parameters for each repeat
     Stimulus.setText(StimSet)
-    LeftUpperBracket.setText(UpBrackPos)
-    LeftUpperBracket.setPos([0,0.7])
+    UpperBracket.setText(UpBrack)
     Probe.setText(ProbeLet)
     Resp = event.BuilderKeyResponse()  # create an object of type KeyResponse
     Resp.status = NOT_STARTED
@@ -146,7 +141,7 @@ for thisTrial in trials:
     trialComponents.append(UpperTopLine)
     trialComponents.append(ISI)
     trialComponents.append(Stimulus)
-    trialComponents.append(LeftUpperBracket)
+    trialComponents.append(UpperBracket)
     trialComponents.append(LowerTopLine)
     trialComponents.append(Probe)
     trialComponents.append(Resp)
@@ -184,14 +179,14 @@ for thisTrial in trials:
         elif Stimulus.status == STARTED and t >= (0.0 + (2-win.monitorFramePeriod*0.75)): #most of one frame period left
             Stimulus.setAutoDraw(False)
         
-        # *LeftUpperBracket* updates
-        if t >= 0.0 and LeftUpperBracket.status == NOT_STARTED:
+        # *UpperBracket* updates
+        if t >= 0.0 and UpperBracket.status == NOT_STARTED:
             # keep track of start time/frame for later
-            LeftUpperBracket.tStart = t  # underestimates by a little under one frame
-            LeftUpperBracket.frameNStart = frameN  # exact frame index
-            LeftUpperBracket.setAutoDraw(True)
-        elif LeftUpperBracket.status == STARTED and t >= (0.0 + (2-win.monitorFramePeriod*0.75)): #most of one frame period left
-            LeftUpperBracket.setAutoDraw(False)
+            UpperBracket.tStart = t  # underestimates by a little under one frame
+            UpperBracket.frameNStart = frameN  # exact frame index
+            UpperBracket.setAutoDraw(True)
+        elif UpperBracket.status == STARTED and t >= (0.0 + (2-win.monitorFramePeriod*0.75)): #most of one frame period left
+            UpperBracket.setAutoDraw(False)
         
         # *LowerTopLine* updates
         if t >= 0.0 and LowerTopLine.status == NOT_STARTED:
