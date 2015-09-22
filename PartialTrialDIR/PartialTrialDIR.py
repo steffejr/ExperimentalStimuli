@@ -40,9 +40,52 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Setup the Window
 win = visual.Window(size=[800, 600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
-    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+    monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
     blendMode='add', useFBO=True,
     units='use preferences')
+    
+#win = visual.Window(size=(1200, 1920), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+#    monitor=u'testMonitor', color=[0,0,0], colorSpace=u'rgb',
+#    blendMode=u'add', useFBO=True,
+#    units=u'use preferences')
+
+# ######################################################################################
+LetLen = 6
+LetWidth = 0.8 # what portion of the screen to use
+LetPos = arange(-LetWidth,LetWidth+0.001,(LetWidth*2)/(LetLen-1))
+LetSize = 0.2
+UpperLetTopPos = 0.7
+LowerLetTopPos = -0.7
+UpperLetColor = [0,0,0] # This is grey
+UpperBracketColor = [1,1,-1] # This is yellow
+
+LetStartTime = 0
+StimDur = 0.25
+RetDur = 4
+
+ProbeStartTime = 2 #StimDur + RetDur
+ProbeDur = 2
+LowerLetColor = [0,0,0] # This is grey
+LowerBracketColor = [-1,0.875,0.875] # cyan
+
+# The lines above and below the upper letters
+UpperLineColor = [1,1,-1]
+UpperLineWidth = 2
+UpperTopLetLinePos = UpperLetTopPos + 1.5*(LetSize/2)
+UpperBotLetLinePos = UpperLetTopPos - 1.5*(LetSize/2)
+UpperTopLineDur = 2 # Duration of the line
+UpperBotLineDur = 2 # Duration of the line
+
+# The lines above and below the lower letters
+LowerLineColor = [-1,0.875,0.875] # This is supposed to be cyan
+LowerLineWidth = 2
+LowerTopLetLinePos = LowerLetTopPos + 1.5*(LetSize/2)
+LowerBotLetLinePos = LowerLetTopPos - 1.5*(LetSize/2)
+LowerTopLineDur = 2 # Duration of the line
+LowerBotLineDur = 2 # Duration of the line
+
+# ######################################################################################
+
 # store frame rate of monitor if we can measure it successfully
 expInfo['frameRate']=win.getActualFrameRate()
 if expInfo['frameRate']!=None:
@@ -54,22 +97,39 @@ else:
 trialClock = core.Clock()
 Stimulus = visual.TextStim(win=win, ori=0, name='Stimulus',
     text='default text',    font=u'Arial',
-    units=u'norm', pos=[0, 0.9], height=0.2, wrapWidth=None,
+    units=u'norm', pos=[0, 0.7], height=LetSize, wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=0.0)
+Probe = visual.TextStim(win=win, ori=0, name='Probe',
+    text='default text',    font=u'Arial',
+    units=u'norm', pos=[0, 0.7], height=LetSize, wrapWidth=None,
+    color=u'white', colorSpace=u'rgb', opacity=1,
+    depth=0.0)
+
 UpperTopLine = visual.Line(win=win, name='UpperTopLine',units=u'norm', 
-    start=(-[0.95, 0.5][0]/2.0, 0), end=(+[0.95, 0.5][0]/2.0, 0),
-    ori=0, pos=[0, 0.95],
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace=u'rgb',
+    start=(-[-2, 0.9][0]/2.0, 0), end=(+[-2, 0.9][0]/2.0, 0),
+    ori=0, pos=[0, UpperTopLetLinePos],
+    lineWidth=UpperLineWidth, lineColor=UpperLineColor, lineColorSpace=u'rgb',
     fillColor=[1,1,1], fillColorSpace=u'rgb',
     opacity=1,interpolate=True)
 UpperBotLine = visual.Line(win=win, name='UpperBotLine',units=u'norm', 
-    start=(-[0.95, 0.95][0]/2.0, 0), end=(+[0.95, 0.95][0]/2.0, 0),
-    ori=0, pos=[0, 0.7],
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace=u'rgb',
+    start=(-[-2, 0.9][0]/2.0, 0), end=(+[-2, 0.9][0]/2.0, 0),
+    ori=0, pos=[0, UpperBotLetLinePos],
+    lineWidth=UpperLineWidth, lineColor=UpperLineColor, lineColorSpace=u'rgb',
     fillColor=[1,1,1], fillColorSpace=u'rgb',
     opacity=1,interpolate=True)
-
+LowerTopLine = visual.Line(win=win, name='LowerTopLine',units=u'norm', 
+    start=(-[-2, 0.9][0]/2.0, 0), end=(+[-2, 0.9][0]/2.0, 0),
+    ori=0, pos=[0, LowerTopLetLinePos],
+    lineWidth=LowerLineWidth, lineColor=LowerLineColor, lineColorSpace=u'rgb',
+    fillColor=[1,1,1], fillColorSpace=u'rgb',
+    opacity=1,interpolate=True)
+LowerBotLine = visual.Line(win=win, name='LowerBotLine',units=u'norm', 
+    start=(-[-2, 0.9][0]/2.0, 0), end=(+[-2, 0.9][0]/2.0, 0),
+    ori=0, pos=[0, LowerBotLetLinePos],
+    lineWidth=LowerLineWidth, lineColor=LowerLineColor, lineColorSpace=u'rgb',
+    fillColor=[1,1,1], fillColorSpace=u'rgb',
+    opacity=1,interpolate=True)
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
@@ -85,12 +145,8 @@ thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
 if thisTrial != None:
     for paramName in thisTrial.keys():
         exec(paramName + '= thisTrial.' + paramName)
-# 
-LetLen = 6
-LetWidth = 0.8 # what portion of the screen to use
-LetPos = arange(-LetWidth,LetWidth+0.001,(LetWidth*2)/(LetLen-1))
 
-print LetPos
+
 for thisTrial in trials:
     currentLoop = trials
 
@@ -104,7 +160,7 @@ for thisTrial in trials:
     t = 0
     trialClock.reset()  # clock 
     frameN = -1
-    routineTimer.add(2.000000)
+    routineTimer.add(6.000000)
     # update component parameters for each repeat
     ###Stimulus.setText(StimSet)
     LetCount = 0
@@ -113,6 +169,9 @@ for thisTrial in trials:
     trialComponents.append(Stimulus)
     trialComponents.append(UpperTopLine)
     trialComponents.append(UpperBotLine)
+    trialComponents.append(LowerTopLine)
+    trialComponents.append(LowerBotLine)
+    trialComponents.append(Probe)
     for thisComponent in trialComponents:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -126,48 +185,76 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *Stimulus* updates
-        if t >= 0.0 and Stimulus.status == NOT_STARTED:
+        if t >= 1 and Stimulus.status == NOT_STARTED:
             # keep track of start time/frame for later
             Stimulus.tStart = t  # underestimates by a little under one frame
             Stimulus.frameNStart = frameN  # exact frame index
             #Stimulus.setAutoDraw(True)
-            print StimSet
+            #print StimSet
             LetCount = -1
-            for i in range(0,LetLen+2,1):
+            for i in range(0,len(StimSet),1):
                 if (StimSet[i] != '{')&(StimSet[i] !='}'):
                     LetCount = LetCount + 1
-                    Stimulus.setColor('white')
+                    Stimulus.setColor(UpperLetColor,'rgb')
                     Stimulus.setText(StimSet[i])
-                    #print "Attempting Position %d"%(LetCount)
-                    Stimulus.setPos([LetPos[LetCount],0.9])
+                    Stimulus.setPos([LetPos[LetCount],UpperLetTopPos])
                     Stimulus.draw()
-                    
                 elif StimSet[i] == '{':
                     Stimulus.setText(StimSet[i])
-                    Stimulus.setColor('yellow')
+                    Stimulus.setColor(UpperBracketColor,'rgb')
+                    # Check to see if the left bracket is the first character
                     if LetCount == -1:
-                        Stimulus.setPos([LetPos[0]-0.1,0.9])
+                        Stimulus.setPos([LetPos[0]-0.1,UpperLetTopPos])
                     else:
-                        Stimulus.setPos([LetPos[LetCount]+0.1,0.9])
+                        Stimulus.setPos([LetPos[LetCount+1]-0.1,UpperLetTopPos])
                     Stimulus.draw()
-                    
                 elif StimSet[i] == '}':
-                    print LetCount
                     Stimulus.setText(StimSet[i])
-                    Stimulus.setColor('yellow')
-                    Stimulus.setPos([LetPos[LetCount]+0.1,0.9])
+                    Stimulus.setColor(UpperBracketColor,'rgb')
+                    Stimulus.setPos([LetPos[LetCount]+0.1,UpperLetTopPos])
                     Stimulus.draw()
-                    
-        elif Stimulus.status == STARTED and t >= (0.0 + (2-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif Stimulus.status == STARTED and t >= (1 + (1-win.monitorFramePeriod*0.75)): #most of one frame period left
+            # When the stimulus set time is over the letters need to be removed!
+            # HOW????
             Stimulus.setAutoDraw(False)
-        
+        # *PROBE* updates
+        if t >= 3 and Probe.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            Probe.tStart = t  # underestimates by a little under one frame
+            Probe.frameNStart = frameN  # exact frame index
+            #Stimulus.setAutoDraw(True)
+            #print StimSet
+            ProCount = -1
+            for i in range(0,len(ProbeLet),1):
+                if (ProbeLet[i] != '{')&(ProbeLet[i] !='}'):
+                    ProCount = ProCount + 1
+                    Probe.setColor(UpperLetColor,'rgb')
+                    Probe.setText(ProbeLet[i])
+                    Probe.setPos([LetPos[ProCount],LowerLetTopPos])
+                    Probe.draw()
+                elif ProbeLet[i] == '{':
+                    Probe.setText(ProbeLet[i])
+                    Probe.setColor(LowerBracketColor,'rgb')
+                    # Check to see if the left bracket is the first character
+                    if LetCount == -1:
+                        Probe.setPos([LetPos[0]-0.1,LowerLetTopPos])
+                    else:
+                        Probe.setPos([LetPos[ProCount+1]-0.1,LowerLetTopPos])
+                    Probe.draw()
+                elif StimSet[i] == '}':
+                    Probe.setText(ProbeLet[i])
+                    Probe.setColor(LowerBracketColor,'rgb')
+                    Probe.setPos([LetPos[ProCount]+0.1,LowerLetTopPos])
+                    Probe.draw()
+        elif Probe.status == STARTED and t >= (3 + (1-win.monitorFramePeriod*0.75)): #most of one frame period left
+            Probe.setAutoDraw(False)
         # *UpperTopLine* updates
         if t >= 0.0 and UpperTopLine.status == NOT_STARTED:
             # keep track of start time/frame for later
             UpperTopLine.tStart = t  # underestimates by a little under one frame
             UpperTopLine.frameNStart = frameN  # exact frame index
             UpperTopLine.setAutoDraw(True)
-        elif UpperTopLine.status == STARTED and t >= (0.0 + (2-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif UpperTopLine.status == STARTED and t >= (0.0 + (UpperTopLineDur-win.monitorFramePeriod*0.75)): #most of one frame period left
             UpperTopLine.setAutoDraw(False)
         
         # *UpperBotLine* updates
@@ -176,9 +263,27 @@ for thisTrial in trials:
             UpperBotLine.tStart = t  # underestimates by a little under one frame
             UpperBotLine.frameNStart = frameN  # exact frame index
             UpperBotLine.setAutoDraw(True)
-        elif UpperBotLine.status == STARTED and t >= (0.0 + (1.0-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif UpperBotLine.status == STARTED and t >= (0.0 + (UpperBotLineDur-win.monitorFramePeriod*0.75)): #most of one frame period left
             UpperBotLine.setAutoDraw(False)
+
+        # *LowerTopLine* updates
+        if t >= 0.0 and LowerTopLine.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            LowerTopLine.tStart = t  # underestimates by a little under one frame
+            LowerTopLine.frameNStart = frameN  # exact frame index
+            LowerTopLine.setAutoDraw(True)
+        elif LowerTopLine.status == STARTED and t >= (0.0 + (LowerTopLineDur-win.monitorFramePeriod*0.75)): #most of one frame period left
+            LowerTopLine.setAutoDraw(False)
         
+        # *LowerBotLine* updates
+        if t >= 0.0 and LowerBotLine.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            LowerBotLine.tStart = t  # underestimates by a little under one frame
+            LowerBotLine.frameNStart = frameN  # exact frame index
+            LowerBotLine.setAutoDraw(True)
+        elif LowerBotLine.status == STARTED and t >= (0.0 + (LowerBotLineDur-win.monitorFramePeriod*0.75)): #most of one frame period left
+            LowerBotLine.setAutoDraw(False)
+
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
             routineTimer.reset()  # if we abort early the non-slip timer needs reset

@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.80.06), Mon Sep 21 20:49:18 2015
+This experiment was created using PsychoPy2 Experiment Builder (v1.80.06), Tue 22 Sep 2015 01:26:47 PM EDT
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -15,19 +15,23 @@ from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, ra
 from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 
+# Ensure that relative paths start from the same directory as this script
+_thisDir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(_thisDir)
+
 # Store info about the experiment session
 expName = 'PartialTrialDIR'  # from the Builder filename that created this script
 expInfo = {u'session': u'001', u'participant': u'999'}
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
-# Setup filename for saving
-filename = 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
+# Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
+filename = _thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
+    originPath=u'/home/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info
@@ -39,7 +43,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=[800, 600], fullscr=False, screen=0, allowGUI=True, allowStencil=False,
+win = visual.Window(size=[800, 600], fullscr=False, screen=1, allowGUI=True, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='add', useFBO=True,
     units='use preferences')
@@ -53,21 +57,21 @@ else:
 # Initialize components for Routine "trial"
 trialClock = core.Clock()
 Stimulus = visual.TextStim(win=win, ori=0, name='Stimulus',
-    text='default text',    font=u'Arial',
-    units=u'norm', pos=[0, 0.9], height=0.2, wrapWidth=None,
-    color=u'white', colorSpace=u'rgb', opacity=1,
+    text='default text',    font='Arial',
+    units='norm', pos=[0, 0.9], height=0.2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
     depth=0.0)
-UpperTopLine = visual.Line(win=win, name='UpperTopLine',units=u'norm', 
+UpperTopLine = visual.Line(win=win, name='UpperTopLine',units='norm', 
     start=(-[0.95, 0.5][0]/2.0, 0), end=(+[0.95, 0.5][0]/2.0, 0),
     ori=0, pos=[0, 0.95],
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace=u'rgb',
-    fillColor=[1,1,1], fillColorSpace=u'rgb',
+    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
+    fillColor=[1,1,1], fillColorSpace='rgb',
     opacity=1,interpolate=True)
-UpperBotLine = visual.Line(win=win, name='UpperBotLine',units=u'norm', 
+UpperBotLine = visual.Line(win=win, name='UpperBotLine',units='norm', 
     start=(-[0.95, 0.95][0]/2.0, 0), end=(+[0.95, 0.95][0]/2.0, 0),
     ori=0, pos=[0, 0.7],
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace=u'rgb',
-    fillColor=[1,1,1], fillColorSpace=u'rgb',
+    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
+    fillColor=[1,1,1], fillColorSpace='rgb',
     opacity=1,interpolate=True)
 
 # Create some handy timers
@@ -75,9 +79,9 @@ globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1, method=u'sequential', 
-    extraInfo=expInfo, originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
-    trialList=data.importConditions(u'PartialTrial1.xlsx'),
+trials = data.TrialHandler(nReps=1, method='sequential', 
+    extraInfo=expInfo, originPath=u'/home/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/PartialTrialDIR.psyexp',
+    trialList=data.importConditions('PartialTrial1.xlsx'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
