@@ -1,0 +1,142 @@
+## Start line 1484
+text_28
+First ...\nLet's make sure the buttons work.\nPress the RIGHT INDEX Finger button.
+Tout d'abord, assurons-nous que les boutons fonctionnent. \n Appuyez sur le bouton de l'INDEX DROIT.
+
+Press the RIGHT MIDDLE Finger button.
+Appuyez sur le bouton du MAJEUR DROIT.
+
+text_13
+This is the screen you will see for each trial
+Voici l'écran que vous verrez lors de chaque essai
+text_16
+With an UPPER Part
+avec une partie SUPÉRIEURE
+text_18
+And a LOWER part
+et une partie INFÉRIEURE
+text_22
+You will also see a cross hair on the screen
+Vous verrez aussi une croix sur l'écran
+text_23
+Either Green
+soit VERTE
+text_24
+Or RED
+soit ROUGE
+For this experiment you will see letters at the top of the screen.
+Pour cette expérience vous allez voir des lettres en haut de l'écran.
+
+Some of the letters will be enclosed by brackets.
+Certaines lettres seront entre parenthèses.
+
+These are the letters to remember.
+Ce sont les lettres dont vous devez vous souvenir.
+The letters will be removed, focus on the green cross hair.
+Les lettres vont disparaitre, concentrez-vous sur la croix verte.
+
+You will then see letters at the bottom.
+Vous allez ensuite voir des lettres au bas de l'écran.
+
+Only one letter will be in brackets.
+Seulement une lettre sera entre parenthèses.
+You need to decide whether this letter was one that you had to remember.
+Vous devez décider si c'est une des lettre dont vous devez vous souvenir.
+YES = INDEX finger button\nNO  = MIDDLE finger button
+OUI = bouton INDEX  \n NON =bouton MAJEUR
+The trial is then over and the cross hair turns RED.
+L'essai se termine alors et la croix devient ROUGE.
+Let's Repeat
+Répétons
+Remember the letters B and C
+Souvenez-vous des lettres B et C
+Letters are removed
+Les lettres vont disparaitre
+Are you trying to remember the letter b?
+Est-ce que vous essayez de vous souvenir de la lettre b?
+Yes you are. You would press the INDEX finger button as quickly as possible.
+Oui. Vous devez appuyer sur le bouton avec l'INDEX aussi rapidement que possible.
+The trial is over and the cross hair turns RED.
+L'essai est terminé et la croix devient ROUGE.
+Let's repeat at the true pace
+Répétons à vitesse normale.
+Remember the letters B and C
+Souvenez-vous des lettres B et C
+Letters are removed
+Les lettres disparaissent
+Respond as quickly as possible
+Répondez aussi rapidement que possible
+The trial is over and the cross hair turns RED.
+L'essai est terminé et la croix devient ROUGE.
+The number of letters to remember
+Le nombre de lettres à se rappeler
+Varies between 1 and 6
+varie entre 1 et 6
+There will always be six letters presented
+Il y aura toujours 6 lettres présentées
+It is the brackets that indicate which letters to remember.
+Ce sont les parenthèses qui indiquent les lettres à mémoriser.
+Here are some examples
+Voici des exemples
+One letter
+Une lettre
+Two letters
+Deux lettres
+Three letters
+Trois lettres
+Four letters
+Quatre lettres
+Five letters
+Cinq lettres
+Six letters
+six lettres
+To help with the analysis of the brain data.\nSome trials are PARTIAL.
+Pour aider avec les analyses des données du cerveau. \n Certains essais sont PARTIELS.
+All trials will have a set of letters to study.
+Tous les essais ont une série de lettres à étudier.
+Some will not require a response
+Certains ne demandent pas de réponse
+Some will have no delay between the letters to study and the response.
+D'autres n'auront pas de délai entre les lettres à étudier et la réponse.
+What is important is that when the crosshair turns RED. The trial is over.
+Ce qui est important c'est quand la croix devient ROUGE. L'essai est terminé.
+Try to forget any of the studied letters and wait for the next trial
+Essayez d'oublier les lettres étudiées et attendez le nouvel essai
+Here is an example trial with feedback.\nRemember respond as quickly as possible.
+Voici un exemple d'essai avec commentaires. \n Répondez aussi  vite que possible.
+
+Please press the RIGHT INDEX Finger button
+S'il vous plaît appuyez sur le bouton de l'INDEX DROIT
+Correct! That button indicates a YES response.
+Correct! Ce bouton indique la réponse OUI.
+Oops! Wrong button, please try again.
+Oups! Mauvais bouton, s'il vous plaît essayez encore.
+Please press the RIGHT MIDDLE Finger button
+S'il vous plaît appuyez sur le bouton du MAJEUR DROIT
+Good! That button indicates a NO response.
+Bien! Ce bouton indique la réponse NON.
+Oops! Wrong button, please try again.
+Oups! Mauvais bouton, s'il vous plaît essayez à nouveau.
+
+Correct and on time!
+Correct et dans les temps!
+Correct, but too slow!
+Correct, mais trop long!
+Response time should be less than two seconds.
+Le temps pour répondre doit être moins de deux secondes.
+Oops! That was incorrect, but on time!
+oups! C'était incorrect, mais dans les temps!
+Oops! That was incorrect and too slow!
+Oups! C'était incorrect et trop long!
+### Ends line 4701
+
+
+
+
+
+
+
+
+
+
+

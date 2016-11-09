@@ -7,6 +7,11 @@ If you publish work using this script please cite the relevant PsychoPy publicat
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
 """
 
+"""
+What is needed?
+The cues for the differnt partial trials. Are they considered dieferent conditions?
+
+"""
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
 from psychopy import visual, core, data, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
@@ -54,7 +59,7 @@ else:
 
 # Initialize components for Routine "trial"
 trialClock = core.Clock()
-ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
+#ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
 LetterStimulus = visual.TextStim(win=win, ori=0, name='LetterStimulus',
     text='default text',    font='Arial',
     pos=[0, 0], height=0.2, wrapWidth=None,
@@ -90,9 +95,22 @@ thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
 if thisTrial != None:
     for paramName in thisTrial.keys():
-        print paramName
+        print thisTrial[paramName]
+        
         exec(paramName + '= thisTrial.' + paramName)
 # Need to add trial times
+TrialTimes = {}
+TrialTimes['InitialDelay'] = 0.0
+TrialTimes['StimDur'] = 1.0
+TrialTimes['RetDur'] = 1.0
+TrialTimes['ProbeDur'] = 1.0
+TrialTimes['PostDelay'] = 0.0
+TrialETime = {};
+TrialETime['Stim'] = TrialTimes['InitialDelay']
+TrialETime['Ret'] = TrialETime['Stim'] + TrialTimes['StimDur']
+TrialETime['Probe'] = TrialETime['Ret'] + TrialTimes['RetDur']
+TrialETime['Post'] = TrialETime['Probe'] + TrialTimes['ProbeDur']
+TrialETime
 # probe letters are not being presented.
 
 
@@ -113,11 +131,11 @@ for thisTrial in trials:
     Probe.setText(ProbeLetter)
     # keep track of which components have finished
     trialComponents = []
-    trialComponents.append(ISI)
+#    trialComponents.append(ISI)
     trialComponents.append(LetterStimulus)
     trialComponents.append(BlankRetention)
-    trialComponents.append(ProbeLetter)
-    trialComponents.append(BlankITI)
+    trialComponents.append(Probe)
+#    trialComponents.append(BlankITI)
     for thisComponent in trialComponents:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -131,48 +149,48 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *LetterStimulus* updates
-        if t >= 0.0 and LetterStimulus.status == NOT_STARTED:
+        if t >= TrialETime['Stim'] and LetterStimulus.status == NOT_STARTED:
             # keep track of start time/frame for later
             LetterStimulus.tStart = t  # underestimates by a little under one frame
             LetterStimulus.frameNStart = frameN  # exact frame index
             LetterStimulus.setAutoDraw(True)
-        elif LetterStimulus.status == STARTED and t >= (0.0 + (3-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif LetterStimulus.status == STARTED and t >= (TrialETime['Stim'] + (TrialTimes['StimDur']-win.monitorFramePeriod*0.75)): #most of one frame period left
             LetterStimulus.setAutoDraw(False)
         
         # *BlankRetention* updates
-        if t >= 3 and BlankRetention.status == NOT_STARTED:
+        if t >= TrialETime['Ret'] and BlankRetention.status == NOT_STARTED:
             # keep track of start time/frame for later
             BlankRetention.tStart = t  # underestimates by a little under one frame
             BlankRetention.frameNStart = frameN  # exact frame index
             BlankRetention.setAutoDraw(True)
-        elif BlankRetention.status == STARTED and t >= (3 + (5-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif BlankRetention.status == STARTED and t >= (TrialETime['Ret'] + (TrialTimes['RetDur']-win.monitorFramePeriod*0.75)): #most of one frame period left
             BlankRetention.setAutoDraw(False)
         
         # *ProbeLetter* updates
-        if t >= 8 and ProbeLetter.status == NOT_STARTED:
+        if t >= TrialETime['Probe'] and Probe.status == NOT_STARTED:
             # keep track of start time/frame for later
             Probe.tStart = t  # underestimates by a little under one frame
             Probe.frameNStart = frameN  # exact frame index
             Probe.setAutoDraw(True)
-        elif Probe.status == STARTED and t >= (8 + (3-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif Probe.status == STARTED and t >= (TrialETime['Probe'] + (TrialTimes['ProbeDur']-win.monitorFramePeriod*0.75)): #most of one frame period left
             Probe.setAutoDraw(False)
         
         # *BlankITI* updates
-        if t >= 0.0 and BlankITI.status == NOT_STARTED:
+        if t >= TrialETime['Post'] and BlankITI.status == NOT_STARTED:
             # keep track of start time/frame for later
             BlankITI.tStart = t  # underestimates by a little under one frame
             BlankITI.frameNStart = frameN  # exact frame index
             BlankITI.setAutoDraw(True)
-        elif BlankITI.status == STARTED and t >= (0.0 + (ITI-win.monitorFramePeriod*0.75)): #most of one frame period left
+        elif BlankITI.status == STARTED and t >= (TrialETime['Post'] + (TrialTimes['PostDelay']-win.monitorFramePeriod*0.75)): #most of one frame period left
             BlankITI.setAutoDraw(False)
         # *ISI* period
-        if t >= 0.0 and ISI.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            ISI.tStart = t  # underestimates by a little under one frame
-            ISI.frameNStart = frameN  # exact frame index
-            ISI.start(0.5)
-        elif ISI.status == STARTED: #one frame should pass before updating params and completing
-            ISI.complete() #finish the static period
+#        if t >= 110.0 and ISI.status == NOT_STARTED:
+#            # keep track of start time/frame for later
+#            ISI.tStart = t  # underestimates by a little under one frame
+#            ISI.frameNStart = frameN  # exact frame index
+#            ISI.start(0.5)
+#        elif ISI.status == STARTED: #one frame should pass before updating params and completing
+#            ISI.complete() #finish the static period
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
