@@ -1,0 +1,99 @@
+0.3214 	WARNING 	Movie2 stim could not be imported and won't be available
+1.5268 	WARNING 	TextBox stim could not be imported and won't be available.
+1.5269 	WARNING 	TextBox Font Manager Found No Fonts.
+1.9180 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+2.5645 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode=u'add', color=array([-1., -1., -1.]), colorSpace=u'rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x12ddf238>, name='window1', pos=[0, 0], screen=0, size=array([1920, 1080]), stereo=False, units=u'use preferences', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.5645 	EXP 	window1: recordFrameIntervals = False
+2.7303 	EXP 	window1: recordFrameIntervals = True
+2.9139 	EXP 	window1: recordFrameIntervals = False
+2.9171 	EXP 	Created TopUpperLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace=u'rgb', lineRGB=array([ 1.,  1., -1.]), lineWidth=2, name='TopUpperLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  ,  0.45]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+2.9850 	EXP 	Created UpperText = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 0.,  0.,  0.]), colorSpace=u'rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='UpperText', opacity=1.0, ori=0, pos=array([ 0. ,  0.3]), rgb=array([ 0.,  0.,  0.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1.7)
+2.9920 	EXP 	Created UpperBrackets = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'yellow', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='UpperBrackets', opacity=1.0, ori=0, pos=array([ 0. ,  0.3]), rgb=array([ 255.,  255.,    0.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1.7)
+2.9941 	EXP 	Created BotUpperLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace=u'rgb', lineRGB=array([ 1.,  1., -1.]), lineWidth=2, name='BotUpperLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  ,  0.15]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+2.9956 	EXP 	Created TopLowerLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=u'cyan', lineColorSpace='named', lineRGB=array([   0.,  255.,  255.]), lineWidth=2, name='TopLowerLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  , -0.15]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+3.0071 	EXP 	Created LowerText = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 0.,  0.,  0.]), colorSpace=u'rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='LowerText', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([ 0.,  0.,  0.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=2)
+3.0112 	EXP 	Created LowerBrackets = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'cyan', colorSpace='named', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='LowerBrackets', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([   0.,  255.,  255.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1.5)
+3.0127 	EXP 	Created BotLowerLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=u'cyan', lineColorSpace='named', lineRGB=array([   0.,  255.,  255.]), lineWidth=2, name='BotLowerLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  , -0.45]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+3.0168 	EXP 	Created TrialCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'green', colorSpace='named', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.2, italic=False, name='TrialCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([   0.,  128.,    0.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1)
+3.0197 	EXP 	Created RestCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.2, italic=False, name='RestCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1)
+3.0671 	EXP 	Created RestCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.1, italic=False, name='RestCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'Waiting for Scanner\n Or press r to advance', units=u'norm', win=Window(...), wrapWidth=1)
+3.0773 	EXP 	Created RestCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'yellow', colorSpace='named', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.1, italic=False, name='RestCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,    0.]), text=u'Merci\nThank you', units=u'norm', win=Window(...), wrapWidth=1)
+3.0831 	EXP 	Created FeedbackMsg = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Courier', fontFiles=[], height=0.1, italic=False, name='FeedbackMsg', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'default text', units='norm', win=Window(...), wrapWidth=1)
+3.0880 	EXP 	Imported /Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/PartialTrialDIR/ExperimentalTrials/Training30TrialsInOrder.csv as conditions, 30 conditions, 14 params
+3.0884 	EXP 	Created sequence: sequential, trialTypes=30, nReps=1, seed=None
+3.1969 	EXP 	RestCrossHair: autoDraw = True
+4.3745 	DATA 	Keypress: r
+4.3975 	EXP 	RestCrossHair: autoDraw = False
+4.3975 	EXP 	RestCrossHair: autoDraw = True
+9.3674 	EXP 	New trial (rep=0, index=0): {'RetDur': 0, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 2, 'ProbeDurITI': 6.9199999999999999, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.9199999999999999, 'StimSet': u'KTJDRY', 'RetStart': 2, 'ProbeLet': u'tbnmqx', 'TrialITIDur': 8.9199999999999999, 'Correct': u'down'}
+9.4009 	EXP 	window1: recordFrameIntervals = False
+9.4335 	EXP 	RestCrossHair: autoDraw = False
+9.4335 	EXP 	RestCrossHair: autoDraw = False
+9.4335 	EXP 	UpperText: text = u' K T J D R Y '
+9.4335 	EXP 	UpperBrackets: text = '  { }        '
+9.4335 	EXP 	LowerText: text = u' t b n m q x '
+9.4335 	EXP 	LowerBrackets: text = '{ }          '
+9.4335 	EXP 	TopUpperLine: autoDraw = True
+9.4335 	EXP 	UpperText: autoDraw = True
+9.4335 	EXP 	UpperBrackets: autoDraw = True
+9.4335 	EXP 	BotUpperLine: autoDraw = True
+9.4335 	EXP 	TopLowerLine: autoDraw = True
+9.4335 	EXP 	BotLowerLine: autoDraw = True
+9.4335 	EXP 	TrialCrossHair: autoDraw = True
+9.4337 	EXP 	window1: recordFrameIntervals = False
+11.3845 	EXP 	UpperText: autoDraw = False
+11.3845 	EXP 	UpperBrackets: autoDraw = False
+11.4122 	EXP 	LowerText: autoDraw = True
+11.4122 	EXP 	LowerBrackets: autoDraw = True
+12.4855 	DATA 	Keypress: down
+13.3856 	EXP 	LowerText: autoDraw = False
+13.3856 	EXP 	LowerBrackets: autoDraw = False
+13.3856 	EXP 	TrialCrossHair: autoDraw = False
+13.3856 	EXP 	RestCrossHair: autoDraw = True
+18.3218 	EXP 	TopUpperLine: autoDraw = False
+18.3218 	EXP 	BotUpperLine: autoDraw = False
+18.3218 	EXP 	TopLowerLine: autoDraw = False
+18.3218 	EXP 	BotLowerLine: autoDraw = False
+18.3218 	EXP 	RestCrossHair: autoDraw = False
+18.3218 	EXP 	TopUpperLine: autoDraw = False
+18.3218 	EXP 	UpperText: autoDraw = False
+18.3218 	EXP 	UpperBrackets: autoDraw = False
+18.3218 	EXP 	BotUpperLine: autoDraw = False
+18.3218 	EXP 	TopLowerLine: autoDraw = False
+18.3218 	EXP 	LowerText: autoDraw = False
+18.3218 	EXP 	LowerBrackets: autoDraw = False
+18.3218 	EXP 	BotLowerLine: autoDraw = False
+18.3218 	EXP 	TrialCrossHair: autoDraw = False
+18.3218 	EXP 	RestCrossHair: autoDraw = False
+18.3218 	EXP 	FeedbackMsg: text = 'Correct! RT=1.101'
+18.3218 	EXP 	FeedbackMsg: autoDraw = True
+19.8060 	EXP 	FeedbackMsg: autoDraw = False
+19.8060 	EXP 	RestCrossHair: autoDraw = True
+20.7903 	EXP 	New trial (rep=0, index=1): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 2, 'ProbeDurITI': 4.2450000000000001, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.2450000000000001, 'StimSet': u'NDGJXB', 'RetStart': 2, 'ProbeLet': u' ', 'TrialITIDur': 6.2450000000000001, 'Correct': u'none'}
+20.8122 	EXP 	window1: recordFrameIntervals = False
+20.8327 	EXP 	RestCrossHair: autoDraw = False
+20.8327 	EXP 	UpperText: text = u' N D G J X B '
+20.8327 	EXP 	UpperBrackets: text = '  { }        '
+20.8327 	EXP 	LowerText: text = u'   '
+20.8327 	EXP 	LowerBrackets: text = ''
+20.8327 	EXP 	TopUpperLine: autoDraw = True
+20.8327 	EXP 	UpperText: autoDraw = True
+20.8327 	EXP 	UpperBrackets: autoDraw = True
+20.8327 	EXP 	BotUpperLine: autoDraw = True
+20.8327 	EXP 	TopLowerLine: autoDraw = True
+20.8327 	EXP 	BotLowerLine: autoDraw = True
+20.8327 	EXP 	TrialCrossHair: autoDraw = True
+20.8329 	EXP 	window1: recordFrameIntervals = False
+22.8076 	EXP 	UpperText: autoDraw = False
+22.8076 	EXP 	UpperBrackets: autoDraw = False
+22.8076 	EXP 	LowerText: autoDraw = True
+22.8076 	EXP 	LowerBrackets: autoDraw = True
+22.8076 	EXP 	TrialCrossHair: autoDraw = False
+22.8076 	EXP 	RestCrossHair: autoDraw = True
+22.8243 	EXP 	LowerText: autoDraw = False
+22.8243 	EXP 	LowerBrackets: autoDraw = False
+23.5750 	DATA 	Keypress: escape

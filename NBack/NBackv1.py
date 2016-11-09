@@ -6,7 +6,7 @@ ThisFolder = os.path.dirname(ThisScript)
 sys.path.append(ThisFolder)
 
 
-from psychopy import visual, core, data, event, logging, sound, gui
+from psychopy import visual, core, data, event, logging, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
@@ -60,7 +60,7 @@ ExpParameters = {
     'LoadLevel': 1,
     'TimePerTrial': 1.5, # seconds
     'TrialPerBlock': 14,
-    'StimList': 'ABCDEFGHJKLMNPRSTVWXYZ',
+    'StimList': 'ABCDEFGHJKLMNPRSTVWYZ',
     'ResponseKeys':['1','2','3','4','5','6','7','8','9','0'],
     'NumCorrectPerBlock': 4,
     'IntroOffDuration': 36,

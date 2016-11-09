@@ -1,0 +1,3144 @@
+3639.9686 	WARNING 	User requested fullscreen with size [1366  768], but screen is actually [1920, 1080]. Using actual size
+3640.4344 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode=u'add', color=array([-1., -1., -1.]), colorSpace=u'rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x1a25d8c8>, name='window1', pos=[0, 0], screen=0, size=array([1920, 1080]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+3640.4344 	EXP 	window1: recordFrameIntervals = False
+3640.6000 	EXP 	window1: recordFrameIntervals = True
+3640.7836 	EXP 	window1: recordFrameIntervals = False
+3640.7869 	EXP 	Created TopUpperLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace=u'rgb', lineRGB=array([ 1.,  1., -1.]), lineWidth=2, name='TopUpperLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  ,  0.45]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+3640.8034 	EXP 	Created UpperText = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 0.,  0.,  0.]), colorSpace=u'rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='UpperText', opacity=1.0, ori=0, pos=array([ 0. ,  0.3]), rgb=array([ 0.,  0.,  0.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1.5)
+3640.8107 	EXP 	Created UpperBrackets = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'yellow', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='UpperBrackets', opacity=1.0, ori=0, pos=array([ 0. ,  0.3]), rgb=array([ 255.,  255.,    0.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1.5)
+3640.8128 	EXP 	Created BotUpperLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace=u'rgb', lineRGB=array([ 1.,  1., -1.]), lineWidth=2, name='BotUpperLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  ,  0.15]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+3640.8142 	EXP 	Created TopLowerLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=u'cyan', lineColorSpace='named', lineRGB=array([   0.,  255.,  255.]), lineWidth=2, name='TopLowerLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  , -0.15]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+3640.8221 	EXP 	Created LowerText = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 0.,  0.,  0.]), colorSpace=u'rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='LowerText', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([ 0.,  0.,  0.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=2)
+3640.8262 	EXP 	Created LowerBrackets = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'cyan', colorSpace='named', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.25, italic=False, name='LowerBrackets', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([   0.,  255.,  255.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1.5)
+3640.8276 	EXP 	Created BotLowerLine = Line(autoDraw=False, autoLog=True, closeShape=False, contrast=1.0, depth=0, fillColor=None, fillColorSpace=u'rgb', fillRGB=None, interpolate=True, lineColor=u'cyan', lineColorSpace='named', lineRGB=array([   0.,  255.,  255.]), lineWidth=2, name='BotLowerLine', opacity=1.0, ori=array(0.0), pos=array([ 0.  , -0.45]), size=array([ 1.,  1.]), units=u'norm', vertices=array([[-1.,  0.],
+       [ 1.,  0.]]), win=Window(...))
+3640.8317 	EXP 	Created TrialCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'green', colorSpace='named', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.2, italic=False, name='TrialCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([   0.,  128.,    0.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1)
+3640.8349 	EXP 	Created RestCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.2, italic=False, name='RestCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1)
+3640.8529 	EXP 	Created RestCrossHair = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font=u'Courier', fontFiles=[], height=0.1, italic=False, name='RestCrossHair', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'Waiting for Scanner, press r to advance', units=u'norm', win=Window(...), wrapWidth=1)
+3640.8694 	EXP 	Imported ../../ExperimentalTrials/Optimized72Trials_6LoadsVer2.csv as conditions, 72 conditions, 14 params
+3640.8703 	EXP 	Created sequence: sequential, trialTypes=72, nReps=1, seed=None
+3640.8999 	EXP 	RestCrossHair: autoDraw = True
+3648.9034 	DATA 	Keypress: equal
+3648.9193 	EXP 	RestCrossHair: autoDraw = False
+3648.9193 	EXP 	RestCrossHair: autoDraw = True
+3650.9032 	DATA 	Keypress: equal
+3652.9038 	DATA 	Keypress: equal
+3654.9046 	DATA 	Keypress: equal
+3656.9053 	DATA 	Keypress: equal
+3658.9059 	EXP 	New trial (rep=0, index=0): {'RetDur': 5, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 345, 'ProbeDurITI': 6.0070000000000006, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0069999999999997, 'StimSet': 'LXDRFJ', 'RetStart': 2, 'ProbeLet': 'gynqbh', 'TrialITIDur': 13.007, 'Correct': 7}
+3658.9452 	EXP 	window1: recordFrameIntervals = False
+3658.9458 	DATA 	Keypress: equal
+3658.9720 	EXP 	RestCrossHair: autoDraw = False
+3658.9720 	EXP 	UpperText: text = ' L X D R F J '
+3658.9720 	EXP 	UpperBrackets: text = '    {     }  '
+3658.9720 	EXP 	LowerText: text = ' g y n q b h '
+3658.9720 	EXP 	LowerBrackets: text = '      { }    '
+3658.9720 	EXP 	TopUpperLine: autoDraw = True
+3658.9720 	EXP 	UpperText: autoDraw = True
+3658.9720 	EXP 	UpperBrackets: autoDraw = True
+3658.9720 	EXP 	BotUpperLine: autoDraw = True
+3658.9720 	EXP 	TopLowerLine: autoDraw = True
+3658.9720 	EXP 	BotLowerLine: autoDraw = True
+3658.9720 	EXP 	TrialCrossHair: autoDraw = True
+3658.9721 	EXP 	window1: recordFrameIntervals = False
+3660.9067 	DATA 	Keypress: equal
+3660.9227 	EXP 	UpperText: autoDraw = False
+3660.9227 	EXP 	UpperBrackets: autoDraw = False
+3662.9076 	DATA 	Keypress: equal
+3664.9087 	DATA 	Keypress: equal
+3665.9245 	EXP 	LowerText: autoDraw = True
+3665.9245 	EXP 	LowerBrackets: autoDraw = True
+3666.9088 	DATA 	Keypress: equal
+3667.2089 	DATA 	Keypress: 8
+3667.9252 	EXP 	LowerText: autoDraw = False
+3667.9252 	EXP 	LowerBrackets: autoDraw = False
+3667.9252 	EXP 	TrialCrossHair: autoDraw = False
+3667.9252 	EXP 	RestCrossHair: autoDraw = True
+3668.9098 	DATA 	Keypress: equal
+3670.9102 	DATA 	Keypress: equal
+3671.9115 	EXP 	New trial (rep=0, index=1): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 345, 'ProbeDurITI': 4.0019999999999998, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.0019999999999998, 'StimSet': 'YXDMLR', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.0020000000000007, 'Correct': 6}
+3671.9293 	EXP 	window1: recordFrameIntervals = False
+3671.9432 	EXP 	TopUpperLine: autoDraw = False
+3671.9432 	EXP 	BotUpperLine: autoDraw = False
+3671.9432 	EXP 	TopLowerLine: autoDraw = False
+3671.9432 	EXP 	BotLowerLine: autoDraw = False
+3671.9432 	EXP 	RestCrossHair: autoDraw = False
+3671.9432 	EXP 	TopUpperLine: autoDraw = False
+3671.9432 	EXP 	UpperText: autoDraw = False
+3671.9432 	EXP 	UpperBrackets: autoDraw = False
+3671.9432 	EXP 	BotUpperLine: autoDraw = False
+3671.9432 	EXP 	TopLowerLine: autoDraw = False
+3671.9432 	EXP 	LowerText: autoDraw = False
+3671.9432 	EXP 	LowerBrackets: autoDraw = False
+3671.9432 	EXP 	BotLowerLine: autoDraw = False
+3671.9432 	EXP 	TrialCrossHair: autoDraw = False
+3671.9432 	EXP 	RestCrossHair: autoDraw = False
+3671.9432 	EXP 	UpperText: text = ' Y X D M L R '
+3671.9432 	EXP 	UpperBrackets: text = '    {     }  '
+3671.9432 	EXP 	LowerText: text = '   '
+3671.9432 	EXP 	LowerBrackets: text = ''
+3671.9432 	EXP 	TopUpperLine: autoDraw = True
+3671.9432 	EXP 	UpperText: autoDraw = True
+3671.9432 	EXP 	UpperBrackets: autoDraw = True
+3671.9432 	EXP 	BotUpperLine: autoDraw = True
+3671.9432 	EXP 	TopLowerLine: autoDraw = True
+3671.9432 	EXP 	BotLowerLine: autoDraw = True
+3671.9432 	EXP 	TrialCrossHair: autoDraw = True
+3671.9435 	EXP 	window1: recordFrameIntervals = False
+3672.9064 	DATA 	Keypress: equal
+3673.9273 	EXP 	UpperText: autoDraw = False
+3673.9273 	EXP 	UpperBrackets: autoDraw = False
+3673.9273 	EXP 	TrialCrossHair: autoDraw = False
+3673.9440 	EXP 	LowerText: autoDraw = True
+3673.9440 	EXP 	LowerBrackets: autoDraw = True
+3673.9440 	EXP 	RestCrossHair: autoDraw = True
+3673.9607 	EXP 	LowerText: autoDraw = False
+3673.9607 	EXP 	LowerBrackets: autoDraw = False
+3674.9117 	DATA 	Keypress: equal
+3676.9124 	DATA 	Keypress: equal
+3677.9136 	EXP 	New trial (rep=0, index=2): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 56, 'ProbeDurITI': 4.0889999999999995, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.0889999999999995, 'StimSet': 'GKQNHJ', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.0889999999999995, 'Correct': 6}
+3677.9386 	EXP 	window1: recordFrameIntervals = False
+3677.9622 	EXP 	TopUpperLine: autoDraw = False
+3677.9622 	EXP 	BotUpperLine: autoDraw = False
+3677.9622 	EXP 	TopLowerLine: autoDraw = False
+3677.9622 	EXP 	BotLowerLine: autoDraw = False
+3677.9622 	EXP 	RestCrossHair: autoDraw = False
+3677.9622 	EXP 	TopUpperLine: autoDraw = False
+3677.9622 	EXP 	UpperText: autoDraw = False
+3677.9622 	EXP 	UpperBrackets: autoDraw = False
+3677.9622 	EXP 	BotUpperLine: autoDraw = False
+3677.9622 	EXP 	TopLowerLine: autoDraw = False
+3677.9622 	EXP 	LowerText: autoDraw = False
+3677.9622 	EXP 	LowerBrackets: autoDraw = False
+3677.9622 	EXP 	BotLowerLine: autoDraw = False
+3677.9622 	EXP 	TrialCrossHair: autoDraw = False
+3677.9622 	EXP 	RestCrossHair: autoDraw = False
+3677.9622 	EXP 	UpperText: text = ' G K Q N H J '
+3677.9622 	EXP 	UpperBrackets: text = '        {   }'
+3677.9622 	EXP 	LowerText: text = '   '
+3677.9622 	EXP 	LowerBrackets: text = ''
+3677.9622 	EXP 	TopUpperLine: autoDraw = True
+3677.9622 	EXP 	UpperText: autoDraw = True
+3677.9622 	EXP 	UpperBrackets: autoDraw = True
+3677.9622 	EXP 	BotUpperLine: autoDraw = True
+3677.9622 	EXP 	TopLowerLine: autoDraw = True
+3677.9622 	EXP 	BotLowerLine: autoDraw = True
+3677.9622 	EXP 	TrialCrossHair: autoDraw = True
+3677.9626 	EXP 	window1: recordFrameIntervals = False
+3678.9083 	DATA 	Keypress: equal
+3679.9294 	EXP 	UpperText: autoDraw = False
+3679.9294 	EXP 	UpperBrackets: autoDraw = False
+3679.9294 	EXP 	TrialCrossHair: autoDraw = False
+3679.9462 	EXP 	LowerText: autoDraw = True
+3679.9462 	EXP 	LowerBrackets: autoDraw = True
+3679.9462 	EXP 	RestCrossHair: autoDraw = True
+3679.9629 	EXP 	LowerText: autoDraw = False
+3679.9629 	EXP 	LowerBrackets: autoDraw = False
+3680.9137 	DATA 	Keypress: equal
+3682.9147 	DATA 	Keypress: equal
+3683.9989 	EXP 	New trial (rep=0, index=3): {'RetDur': 5, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 234, 'ProbeDurITI': 6.9670000000000005, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.9669999999999996, 'StimSet': 'JDMHWQ', 'RetStart': 2, 'ProbeLet': 'xrtdgl', 'TrialITIDur': 13.967000000000001, 'Correct': 6}
+3684.0320 	EXP 	window1: recordFrameIntervals = False
+3684.0476 	EXP 	TopUpperLine: autoDraw = False
+3684.0476 	EXP 	BotUpperLine: autoDraw = False
+3684.0476 	EXP 	TopLowerLine: autoDraw = False
+3684.0476 	EXP 	BotLowerLine: autoDraw = False
+3684.0476 	EXP 	RestCrossHair: autoDraw = False
+3684.0476 	EXP 	TopUpperLine: autoDraw = False
+3684.0476 	EXP 	UpperText: autoDraw = False
+3684.0476 	EXP 	UpperBrackets: autoDraw = False
+3684.0476 	EXP 	BotUpperLine: autoDraw = False
+3684.0476 	EXP 	TopLowerLine: autoDraw = False
+3684.0476 	EXP 	LowerText: autoDraw = False
+3684.0476 	EXP 	LowerBrackets: autoDraw = False
+3684.0476 	EXP 	BotLowerLine: autoDraw = False
+3684.0476 	EXP 	TrialCrossHair: autoDraw = False
+3684.0476 	EXP 	RestCrossHair: autoDraw = False
+3684.0476 	EXP 	UpperText: text = ' J D M H W Q '
+3684.0476 	EXP 	UpperBrackets: text = '  {     }    '
+3684.0476 	EXP 	LowerText: text = ' x r t d g l '
+3684.0476 	EXP 	LowerBrackets: text = '      { }    '
+3684.0476 	EXP 	TopUpperLine: autoDraw = True
+3684.0476 	EXP 	UpperText: autoDraw = True
+3684.0476 	EXP 	UpperBrackets: autoDraw = True
+3684.0476 	EXP 	BotUpperLine: autoDraw = True
+3684.0476 	EXP 	TopLowerLine: autoDraw = True
+3684.0476 	EXP 	BotLowerLine: autoDraw = True
+3684.0476 	EXP 	TrialCrossHair: autoDraw = True
+3684.0478 	EXP 	window1: recordFrameIntervals = False
+3684.9107 	DATA 	Keypress: equal
+3686.0150 	EXP 	UpperText: autoDraw = False
+3686.0150 	EXP 	UpperBrackets: autoDraw = False
+3686.9161 	DATA 	Keypress: equal
+3688.9167 	DATA 	Keypress: equal
+3690.9176 	DATA 	Keypress: equal
+3691.0168 	EXP 	LowerText: autoDraw = True
+3691.0168 	EXP 	LowerBrackets: autoDraw = True
+3691.7847 	DATA 	Keypress: 7
+3692.9180 	DATA 	Keypress: equal
+3693.0176 	EXP 	LowerText: autoDraw = False
+3693.0176 	EXP 	LowerBrackets: autoDraw = False
+3693.0176 	EXP 	TrialCrossHair: autoDraw = False
+3693.0176 	EXP 	RestCrossHair: autoDraw = True
+3694.9191 	DATA 	Keypress: equal
+3696.9196 	DATA 	Keypress: equal
+3697.9709 	EXP 	New trial (rep=0, index=4): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 345, 'ProbeDurITI': 4.0750000000000002, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.0750000000000002, 'StimSet': 'TJFXRG', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.074999999999999, 'Correct': 6}
+3697.9936 	EXP 	window1: recordFrameIntervals = False
+3698.0193 	EXP 	TopUpperLine: autoDraw = False
+3698.0193 	EXP 	BotUpperLine: autoDraw = False
+3698.0193 	EXP 	TopLowerLine: autoDraw = False
+3698.0193 	EXP 	BotLowerLine: autoDraw = False
+3698.0193 	EXP 	RestCrossHair: autoDraw = False
+3698.0193 	EXP 	TopUpperLine: autoDraw = False
+3698.0193 	EXP 	UpperText: autoDraw = False
+3698.0193 	EXP 	UpperBrackets: autoDraw = False
+3698.0193 	EXP 	BotUpperLine: autoDraw = False
+3698.0193 	EXP 	TopLowerLine: autoDraw = False
+3698.0193 	EXP 	LowerText: autoDraw = False
+3698.0193 	EXP 	LowerBrackets: autoDraw = False
+3698.0193 	EXP 	BotLowerLine: autoDraw = False
+3698.0193 	EXP 	TrialCrossHair: autoDraw = False
+3698.0193 	EXP 	RestCrossHair: autoDraw = False
+3698.0193 	EXP 	UpperText: text = ' T J F X R G '
+3698.0193 	EXP 	UpperBrackets: text = '    {     }  '
+3698.0193 	EXP 	LowerText: text = '   '
+3698.0193 	EXP 	LowerBrackets: text = ''
+3698.0193 	EXP 	TopUpperLine: autoDraw = True
+3698.0193 	EXP 	UpperText: autoDraw = True
+3698.0193 	EXP 	UpperBrackets: autoDraw = True
+3698.0193 	EXP 	BotUpperLine: autoDraw = True
+3698.0193 	EXP 	TopLowerLine: autoDraw = True
+3698.0193 	EXP 	BotLowerLine: autoDraw = True
+3698.0193 	EXP 	TrialCrossHair: autoDraw = True
+3698.0195 	EXP 	window1: recordFrameIntervals = False
+3698.9156 	DATA 	Keypress: equal
+3699.9866 	EXP 	UpperText: autoDraw = False
+3699.9866 	EXP 	UpperBrackets: autoDraw = False
+3700.9212 	DATA 	Keypress: equal
+3702.9220 	DATA 	Keypress: equal
+3704.9225 	DATA 	Keypress: equal
+3704.9885 	EXP 	LowerText: autoDraw = True
+3704.9885 	EXP 	LowerBrackets: autoDraw = True
+3704.9885 	EXP 	TrialCrossHair: autoDraw = False
+3704.9885 	EXP 	RestCrossHair: autoDraw = True
+3705.0052 	EXP 	LowerText: autoDraw = False
+3705.0052 	EXP 	LowerBrackets: autoDraw = False
+3706.9234 	DATA 	Keypress: equal
+3708.9239 	DATA 	Keypress: equal
+3709.0410 	EXP 	New trial (rep=0, index=5): {'RetDur': 5, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.0800000000000001, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0800000000000001, 'StimSet': 'WKXGRJ', 'RetStart': 2, 'ProbeLet': 'nrbfth', 'TrialITIDur': 13.08, 'Correct': 6}
+3709.0712 	EXP 	window1: recordFrameIntervals = False
+3709.0900 	EXP 	TopUpperLine: autoDraw = False
+3709.0900 	EXP 	BotUpperLine: autoDraw = False
+3709.0900 	EXP 	TopLowerLine: autoDraw = False
+3709.0900 	EXP 	BotLowerLine: autoDraw = False
+3709.0900 	EXP 	RestCrossHair: autoDraw = False
+3709.0900 	EXP 	TopUpperLine: autoDraw = False
+3709.0900 	EXP 	UpperText: autoDraw = False
+3709.0900 	EXP 	UpperBrackets: autoDraw = False
+3709.0900 	EXP 	BotUpperLine: autoDraw = False
+3709.0900 	EXP 	TopLowerLine: autoDraw = False
+3709.0900 	EXP 	LowerText: autoDraw = False
+3709.0900 	EXP 	LowerBrackets: autoDraw = False
+3709.0900 	EXP 	BotLowerLine: autoDraw = False
+3709.0900 	EXP 	TrialCrossHair: autoDraw = False
+3709.0900 	EXP 	RestCrossHair: autoDraw = False
+3709.0900 	EXP 	UpperText: text = ' W K X G R J '
+3709.0900 	EXP 	UpperBrackets: text = '{           }'
+3709.0900 	EXP 	LowerText: text = ' n r b f t h '
+3709.0900 	EXP 	LowerBrackets: text = '  { }        '
+3709.0900 	EXP 	TopUpperLine: autoDraw = True
+3709.0900 	EXP 	UpperText: autoDraw = True
+3709.0900 	EXP 	UpperBrackets: autoDraw = True
+3709.0900 	EXP 	BotUpperLine: autoDraw = True
+3709.0900 	EXP 	TopLowerLine: autoDraw = True
+3709.0900 	EXP 	BotLowerLine: autoDraw = True
+3709.0900 	EXP 	TrialCrossHair: autoDraw = True
+3709.0902 	EXP 	window1: recordFrameIntervals = False
+3710.9246 	DATA 	Keypress: equal
+3711.0573 	EXP 	UpperText: autoDraw = False
+3711.0573 	EXP 	UpperBrackets: autoDraw = False
+3712.9255 	DATA 	Keypress: equal
+3714.9261 	DATA 	Keypress: equal
+3716.0591 	EXP 	LowerText: autoDraw = True
+3716.0591 	EXP 	LowerBrackets: autoDraw = True
+3716.9268 	DATA 	Keypress: equal
+3718.0598 	EXP 	LowerText: autoDraw = False
+3718.0598 	EXP 	LowerBrackets: autoDraw = False
+3718.0598 	EXP 	TrialCrossHair: autoDraw = False
+3718.0598 	EXP 	RestCrossHair: autoDraw = True
+3718.1770 	DATA 	Keypress: 7
+3718.9277 	DATA 	Keypress: equal
+3720.9285 	DATA 	Keypress: equal
+3722.1125 	EXP 	New trial (rep=0, index=6): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 23456, 'ProbeDurITI': 6.0570000000000004, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0569999999999995, 'StimSet': 'RYXTHJ', 'RetStart': 2, 'ProbeLet': 'mwnbyd', 'TrialITIDur': 13.057, 'Correct': 6}
+3722.1450 	EXP 	window1: recordFrameIntervals = False
+3722.1615 	EXP 	TopUpperLine: autoDraw = False
+3722.1615 	EXP 	BotUpperLine: autoDraw = False
+3722.1615 	EXP 	TopLowerLine: autoDraw = False
+3722.1615 	EXP 	BotLowerLine: autoDraw = False
+3722.1615 	EXP 	RestCrossHair: autoDraw = False
+3722.1615 	EXP 	TopUpperLine: autoDraw = False
+3722.1615 	EXP 	UpperText: autoDraw = False
+3722.1615 	EXP 	UpperBrackets: autoDraw = False
+3722.1615 	EXP 	BotUpperLine: autoDraw = False
+3722.1615 	EXP 	TopLowerLine: autoDraw = False
+3722.1615 	EXP 	LowerText: autoDraw = False
+3722.1615 	EXP 	LowerBrackets: autoDraw = False
+3722.1615 	EXP 	BotLowerLine: autoDraw = False
+3722.1615 	EXP 	TrialCrossHair: autoDraw = False
+3722.1615 	EXP 	RestCrossHair: autoDraw = False
+3722.1615 	EXP 	UpperText: text = ' R Y X T H J '
+3722.1615 	EXP 	UpperBrackets: text = '  {         }'
+3722.1615 	EXP 	LowerText: text = ' m w n b y d '
+3722.1615 	EXP 	LowerBrackets: text = '        { }  '
+3722.1615 	EXP 	TopUpperLine: autoDraw = True
+3722.1615 	EXP 	UpperText: autoDraw = True
+3722.1615 	EXP 	UpperBrackets: autoDraw = True
+3722.1615 	EXP 	BotUpperLine: autoDraw = True
+3722.1615 	EXP 	TopLowerLine: autoDraw = True
+3722.1615 	EXP 	BotLowerLine: autoDraw = True
+3722.1615 	EXP 	TrialCrossHair: autoDraw = True
+3722.1618 	EXP 	window1: recordFrameIntervals = False
+3722.9469 	DATA 	Keypress: equal
+3724.1291 	EXP 	UpperText: autoDraw = False
+3724.1291 	EXP 	UpperBrackets: autoDraw = False
+3724.9306 	DATA 	Keypress: equal
+3726.9311 	DATA 	Keypress: equal
+3728.9319 	DATA 	Keypress: equal
+3729.1312 	EXP 	LowerText: autoDraw = True
+3729.1312 	EXP 	LowerBrackets: autoDraw = True
+3729.9343 	DATA 	Keypress: 7
+3730.9325 	DATA 	Keypress: equal
+3731.1318 	EXP 	LowerText: autoDraw = False
+3731.1318 	EXP 	LowerBrackets: autoDraw = False
+3731.1318 	EXP 	TrialCrossHair: autoDraw = False
+3731.1318 	EXP 	RestCrossHair: autoDraw = True
+3732.9333 	DATA 	Keypress: equal
+3734.9342 	DATA 	Keypress: equal
+3735.1678 	EXP 	New trial (rep=0, index=7): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 12345, 'ProbeDurITI': 4.0220000000000002, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.0220000000000002, 'StimSet': 'DHTFLB', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.022, 'Correct': 7}
+3735.1863 	EXP 	window1: recordFrameIntervals = False
+3735.2000 	EXP 	TopUpperLine: autoDraw = False
+3735.2000 	EXP 	BotUpperLine: autoDraw = False
+3735.2000 	EXP 	TopLowerLine: autoDraw = False
+3735.2000 	EXP 	BotLowerLine: autoDraw = False
+3735.2000 	EXP 	RestCrossHair: autoDraw = False
+3735.2000 	EXP 	TopUpperLine: autoDraw = False
+3735.2000 	EXP 	UpperText: autoDraw = False
+3735.2000 	EXP 	UpperBrackets: autoDraw = False
+3735.2000 	EXP 	BotUpperLine: autoDraw = False
+3735.2000 	EXP 	TopLowerLine: autoDraw = False
+3735.2000 	EXP 	LowerText: autoDraw = False
+3735.2000 	EXP 	LowerBrackets: autoDraw = False
+3735.2000 	EXP 	BotLowerLine: autoDraw = False
+3735.2000 	EXP 	TrialCrossHair: autoDraw = False
+3735.2000 	EXP 	RestCrossHair: autoDraw = False
+3735.2000 	EXP 	UpperText: text = ' D H T F L B '
+3735.2000 	EXP 	UpperBrackets: text = '{         }  '
+3735.2000 	EXP 	LowerText: text = '   '
+3735.2000 	EXP 	LowerBrackets: text = ''
+3735.2000 	EXP 	TopUpperLine: autoDraw = True
+3735.2000 	EXP 	UpperText: autoDraw = True
+3735.2000 	EXP 	UpperBrackets: autoDraw = True
+3735.2000 	EXP 	BotUpperLine: autoDraw = True
+3735.2000 	EXP 	TopLowerLine: autoDraw = True
+3735.2000 	EXP 	BotLowerLine: autoDraw = True
+3735.2000 	EXP 	TrialCrossHair: autoDraw = True
+3735.2002 	EXP 	window1: recordFrameIntervals = False
+3736.9347 	DATA 	Keypress: equal
+3737.1840 	EXP 	UpperText: autoDraw = False
+3737.1840 	EXP 	UpperBrackets: autoDraw = False
+3738.9354 	DATA 	Keypress: equal
+3740.9363 	DATA 	Keypress: equal
+3742.1860 	EXP 	LowerText: autoDraw = True
+3742.1860 	EXP 	LowerBrackets: autoDraw = True
+3742.1860 	EXP 	TrialCrossHair: autoDraw = False
+3742.1860 	EXP 	RestCrossHair: autoDraw = True
+3742.2027 	EXP 	LowerText: autoDraw = False
+3742.2027 	EXP 	LowerBrackets: autoDraw = False
+3742.9370 	DATA 	Keypress: equal
+3744.9379 	DATA 	Keypress: equal
+3746.1888 	EXP 	New trial (rep=0, index=8): {'RetDur': 5, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 23, 'ProbeDurITI': 6.4860000000000007, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.4860000000000007, 'StimSet': 'NFJTWY', 'RetStart': 2, 'ProbeLet': 'xmrbhg', 'TrialITIDur': 13.485999999999999, 'Correct': 7}
+3746.2208 	EXP 	window1: recordFrameIntervals = False
+3746.2376 	EXP 	TopUpperLine: autoDraw = False
+3746.2376 	EXP 	BotUpperLine: autoDraw = False
+3746.2376 	EXP 	TopLowerLine: autoDraw = False
+3746.2376 	EXP 	BotLowerLine: autoDraw = False
+3746.2376 	EXP 	RestCrossHair: autoDraw = False
+3746.2376 	EXP 	TopUpperLine: autoDraw = False
+3746.2376 	EXP 	UpperText: autoDraw = False
+3746.2376 	EXP 	UpperBrackets: autoDraw = False
+3746.2376 	EXP 	BotUpperLine: autoDraw = False
+3746.2376 	EXP 	TopLowerLine: autoDraw = False
+3746.2376 	EXP 	LowerText: autoDraw = False
+3746.2376 	EXP 	LowerBrackets: autoDraw = False
+3746.2376 	EXP 	BotLowerLine: autoDraw = False
+3746.2376 	EXP 	TrialCrossHair: autoDraw = False
+3746.2376 	EXP 	RestCrossHair: autoDraw = False
+3746.2376 	EXP 	UpperText: text = ' N F J T W Y '
+3746.2376 	EXP 	UpperBrackets: text = '  {   }      '
+3746.2376 	EXP 	LowerText: text = ' x m r b h g '
+3746.2376 	EXP 	LowerBrackets: text = '  { }        '
+3746.2376 	EXP 	TopUpperLine: autoDraw = True
+3746.2376 	EXP 	UpperText: autoDraw = True
+3746.2376 	EXP 	UpperBrackets: autoDraw = True
+3746.2376 	EXP 	BotUpperLine: autoDraw = True
+3746.2376 	EXP 	TopLowerLine: autoDraw = True
+3746.2376 	EXP 	BotLowerLine: autoDraw = True
+3746.2376 	EXP 	TrialCrossHair: autoDraw = True
+3746.2378 	EXP 	window1: recordFrameIntervals = False
+3747.0235 	DATA 	Keypress: equal
+3748.2050 	EXP 	UpperText: autoDraw = False
+3748.2050 	EXP 	UpperBrackets: autoDraw = False
+3748.9394 	DATA 	Keypress: equal
+3750.9403 	DATA 	Keypress: equal
+3752.9405 	DATA 	Keypress: equal
+3753.2063 	EXP 	LowerText: autoDraw = True
+3753.2063 	EXP 	LowerBrackets: autoDraw = True
+3754.0261 	DATA 	Keypress: 8
+3754.9406 	DATA 	Keypress: equal
+3755.2064 	EXP 	LowerText: autoDraw = False
+3755.2064 	EXP 	LowerBrackets: autoDraw = False
+3755.2064 	EXP 	TrialCrossHair: autoDraw = False
+3755.2064 	EXP 	RestCrossHair: autoDraw = True
+3756.9412 	DATA 	Keypress: equal
+3758.9418 	DATA 	Keypress: equal
+3759.6758 	EXP 	New trial (rep=0, index=9): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 4, 'ProbeDurITI': 4.6960000000000006, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.6960000000000006, 'StimSet': 'YNXJRW', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.696, 'Correct': 7}
+3759.6943 	EXP 	window1: recordFrameIntervals = False
+3759.7082 	EXP 	TopUpperLine: autoDraw = False
+3759.7082 	EXP 	BotUpperLine: autoDraw = False
+3759.7082 	EXP 	TopLowerLine: autoDraw = False
+3759.7082 	EXP 	BotLowerLine: autoDraw = False
+3759.7082 	EXP 	RestCrossHair: autoDraw = False
+3759.7082 	EXP 	TopUpperLine: autoDraw = False
+3759.7082 	EXP 	UpperText: autoDraw = False
+3759.7082 	EXP 	UpperBrackets: autoDraw = False
+3759.7082 	EXP 	BotUpperLine: autoDraw = False
+3759.7082 	EXP 	TopLowerLine: autoDraw = False
+3759.7082 	EXP 	LowerText: autoDraw = False
+3759.7082 	EXP 	LowerBrackets: autoDraw = False
+3759.7082 	EXP 	BotLowerLine: autoDraw = False
+3759.7082 	EXP 	TrialCrossHair: autoDraw = False
+3759.7082 	EXP 	RestCrossHair: autoDraw = False
+3759.7082 	EXP 	UpperText: text = ' Y N X J R W '
+3759.7082 	EXP 	UpperBrackets: text = '      { }    '
+3759.7082 	EXP 	LowerText: text = '   '
+3759.7082 	EXP 	LowerBrackets: text = ''
+3759.7082 	EXP 	TopUpperLine: autoDraw = True
+3759.7082 	EXP 	UpperText: autoDraw = True
+3759.7082 	EXP 	UpperBrackets: autoDraw = True
+3759.7082 	EXP 	BotUpperLine: autoDraw = True
+3759.7082 	EXP 	TopLowerLine: autoDraw = True
+3759.7082 	EXP 	BotLowerLine: autoDraw = True
+3759.7082 	EXP 	TrialCrossHair: autoDraw = True
+3759.7084 	EXP 	window1: recordFrameIntervals = False
+3760.9427 	DATA 	Keypress: equal
+3761.6923 	EXP 	UpperText: autoDraw = False
+3761.6923 	EXP 	UpperBrackets: autoDraw = False
+3762.9434 	DATA 	Keypress: equal
+3764.9440 	DATA 	Keypress: equal
+3766.6940 	EXP 	LowerText: autoDraw = True
+3766.6940 	EXP 	LowerBrackets: autoDraw = True
+3766.6940 	EXP 	TrialCrossHair: autoDraw = False
+3766.6940 	EXP 	RestCrossHair: autoDraw = True
+3766.7107 	EXP 	LowerText: autoDraw = False
+3766.7107 	EXP 	LowerBrackets: autoDraw = False
+3766.9446 	DATA 	Keypress: equal
+3768.9453 	DATA 	Keypress: equal
+3770.9463 	DATA 	Keypress: equal
+3771.3633 	EXP 	New trial (rep=0, index=10): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 234, 'ProbeDurITI': 4.0039999999999996, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.0039999999999996, 'StimSet': 'NQYXLJ', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.0039999999999996, 'Correct': 7}
+3771.3810 	EXP 	window1: recordFrameIntervals = False
+3771.3954 	EXP 	TopUpperLine: autoDraw = False
+3771.3954 	EXP 	BotUpperLine: autoDraw = False
+3771.3954 	EXP 	TopLowerLine: autoDraw = False
+3771.3954 	EXP 	BotLowerLine: autoDraw = False
+3771.3954 	EXP 	RestCrossHair: autoDraw = False
+3771.3954 	EXP 	TopUpperLine: autoDraw = False
+3771.3954 	EXP 	UpperText: autoDraw = False
+3771.3954 	EXP 	UpperBrackets: autoDraw = False
+3771.3954 	EXP 	BotUpperLine: autoDraw = False
+3771.3954 	EXP 	TopLowerLine: autoDraw = False
+3771.3954 	EXP 	LowerText: autoDraw = False
+3771.3954 	EXP 	LowerBrackets: autoDraw = False
+3771.3954 	EXP 	BotLowerLine: autoDraw = False
+3771.3954 	EXP 	TrialCrossHair: autoDraw = False
+3771.3954 	EXP 	RestCrossHair: autoDraw = False
+3771.3954 	EXP 	UpperText: text = ' N Q Y X L J '
+3771.3954 	EXP 	UpperBrackets: text = '  {     }    '
+3771.3954 	EXP 	LowerText: text = '   '
+3771.3954 	EXP 	LowerBrackets: text = ''
+3771.3954 	EXP 	TopUpperLine: autoDraw = True
+3771.3954 	EXP 	UpperText: autoDraw = True
+3771.3954 	EXP 	UpperBrackets: autoDraw = True
+3771.3954 	EXP 	BotUpperLine: autoDraw = True
+3771.3954 	EXP 	TopLowerLine: autoDraw = True
+3771.3954 	EXP 	BotLowerLine: autoDraw = True
+3771.3954 	EXP 	TrialCrossHair: autoDraw = True
+3771.3957 	EXP 	window1: recordFrameIntervals = False
+3772.9469 	DATA 	Keypress: equal
+3773.3795 	EXP 	UpperText: autoDraw = False
+3773.3795 	EXP 	UpperBrackets: autoDraw = False
+3773.3795 	EXP 	TrialCrossHair: autoDraw = False
+3773.3961 	EXP 	LowerText: autoDraw = True
+3773.3961 	EXP 	LowerBrackets: autoDraw = True
+3773.3961 	EXP 	RestCrossHair: autoDraw = True
+3773.4129 	EXP 	LowerText: autoDraw = False
+3773.4129 	EXP 	LowerBrackets: autoDraw = False
+3774.9478 	DATA 	Keypress: equal
+3776.9487 	DATA 	Keypress: equal
+3777.3654 	EXP 	New trial (rep=0, index=11): {'RetDur': 0, 'BotBrack': 6, 'StimDur': 2, 'UpBrack': 123, 'ProbeDurITI': 6.1029999999999998, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.1029999999999998, 'StimSet': 'MHFLXR', 'RetStart': 2, 'ProbeLet': 'jkdtnf', 'TrialITIDur': 8.1029999999999998, 'Correct': 6}
+3777.3976 	EXP 	window1: recordFrameIntervals = False
+3777.4143 	EXP 	TopUpperLine: autoDraw = False
+3777.4143 	EXP 	BotUpperLine: autoDraw = False
+3777.4143 	EXP 	TopLowerLine: autoDraw = False
+3777.4143 	EXP 	BotLowerLine: autoDraw = False
+3777.4143 	EXP 	RestCrossHair: autoDraw = False
+3777.4143 	EXP 	TopUpperLine: autoDraw = False
+3777.4143 	EXP 	UpperText: autoDraw = False
+3777.4143 	EXP 	UpperBrackets: autoDraw = False
+3777.4143 	EXP 	BotUpperLine: autoDraw = False
+3777.4143 	EXP 	TopLowerLine: autoDraw = False
+3777.4143 	EXP 	LowerText: autoDraw = False
+3777.4143 	EXP 	LowerBrackets: autoDraw = False
+3777.4143 	EXP 	BotLowerLine: autoDraw = False
+3777.4143 	EXP 	TrialCrossHair: autoDraw = False
+3777.4143 	EXP 	RestCrossHair: autoDraw = False
+3777.4143 	EXP 	UpperText: text = ' M H F L X R '
+3777.4143 	EXP 	UpperBrackets: text = '{     }      '
+3777.4143 	EXP 	LowerText: text = ' j k d t n f '
+3777.4143 	EXP 	LowerBrackets: text = '          { }'
+3777.4143 	EXP 	TopUpperLine: autoDraw = True
+3777.4143 	EXP 	UpperText: autoDraw = True
+3777.4143 	EXP 	UpperBrackets: autoDraw = True
+3777.4143 	EXP 	BotUpperLine: autoDraw = True
+3777.4143 	EXP 	TopLowerLine: autoDraw = True
+3777.4143 	EXP 	BotLowerLine: autoDraw = True
+3777.4143 	EXP 	TrialCrossHair: autoDraw = True
+3777.4145 	EXP 	window1: recordFrameIntervals = False
+3778.9492 	DATA 	Keypress: equal
+3779.3817 	EXP 	UpperText: autoDraw = False
+3779.3817 	EXP 	UpperBrackets: autoDraw = False
+3779.3984 	EXP 	LowerText: autoDraw = True
+3779.3984 	EXP 	LowerBrackets: autoDraw = True
+3780.8665 	DATA 	Keypress: 7
+3780.9500 	DATA 	Keypress: equal
+3781.3824 	EXP 	LowerText: autoDraw = False
+3781.3824 	EXP 	LowerBrackets: autoDraw = False
+3781.3824 	EXP 	TrialCrossHair: autoDraw = False
+3781.3991 	EXP 	RestCrossHair: autoDraw = True
+3782.9505 	DATA 	Keypress: equal
+3784.9512 	DATA 	Keypress: equal
+3785.4688 	EXP 	New trial (rep=0, index=12): {'RetDur': 0, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.6500000000000004, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.6500000000000004, 'StimSet': 'HGDJQF', 'RetStart': 2, 'ProbeLet': 'bqlxwr', 'TrialITIDur': 8.6500000000000004, 'Correct': 6}
+3785.5010 	EXP 	window1: recordFrameIntervals = False
+3785.5172 	EXP 	TopUpperLine: autoDraw = False
+3785.5172 	EXP 	BotUpperLine: autoDraw = False
+3785.5172 	EXP 	TopLowerLine: autoDraw = False
+3785.5172 	EXP 	BotLowerLine: autoDraw = False
+3785.5172 	EXP 	RestCrossHair: autoDraw = False
+3785.5172 	EXP 	TopUpperLine: autoDraw = False
+3785.5172 	EXP 	UpperText: autoDraw = False
+3785.5172 	EXP 	UpperBrackets: autoDraw = False
+3785.5172 	EXP 	BotUpperLine: autoDraw = False
+3785.5172 	EXP 	TopLowerLine: autoDraw = False
+3785.5172 	EXP 	LowerText: autoDraw = False
+3785.5172 	EXP 	LowerBrackets: autoDraw = False
+3785.5172 	EXP 	BotLowerLine: autoDraw = False
+3785.5172 	EXP 	TrialCrossHair: autoDraw = False
+3785.5172 	EXP 	RestCrossHair: autoDraw = False
+3785.5172 	EXP 	UpperText: text = ' H G D J Q F '
+3785.5172 	EXP 	UpperBrackets: text = '{           }'
+3785.5172 	EXP 	LowerText: text = ' b q l x w r '
+3785.5172 	EXP 	LowerBrackets: text = '  { }        '
+3785.5172 	EXP 	TopUpperLine: autoDraw = True
+3785.5172 	EXP 	UpperText: autoDraw = True
+3785.5172 	EXP 	UpperBrackets: autoDraw = True
+3785.5172 	EXP 	BotUpperLine: autoDraw = True
+3785.5172 	EXP 	TopLowerLine: autoDraw = True
+3785.5172 	EXP 	BotLowerLine: autoDraw = True
+3785.5172 	EXP 	TrialCrossHair: autoDraw = True
+3785.5174 	EXP 	window1: recordFrameIntervals = False
+3786.9521 	DATA 	Keypress: equal
+3787.4845 	EXP 	UpperText: autoDraw = False
+3787.4845 	EXP 	UpperBrackets: autoDraw = False
+3787.5012 	EXP 	LowerText: autoDraw = True
+3787.5012 	EXP 	LowerBrackets: autoDraw = True
+3788.9526 	DATA 	Keypress: equal
+3789.3027 	DATA 	Keypress: 8
+3789.4853 	EXP 	LowerText: autoDraw = False
+3789.4853 	EXP 	LowerBrackets: autoDraw = False
+3789.4853 	EXP 	TrialCrossHair: autoDraw = False
+3789.5020 	EXP 	RestCrossHair: autoDraw = True
+3790.9535 	DATA 	Keypress: equal
+3792.9541 	DATA 	Keypress: equal
+3794.1219 	EXP 	New trial (rep=0, index=13): {'RetDur': 5, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 12, 'ProbeDurITI': 6.4989999999999997, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.4989999999999997, 'StimSet': 'BKGRHD', 'RetStart': 2, 'ProbeLet': 'njqxfy', 'TrialITIDur': 13.499000000000001, 'Correct': 7}
+3794.1554 	EXP 	window1: recordFrameIntervals = False
+3794.1705 	EXP 	TopUpperLine: autoDraw = False
+3794.1705 	EXP 	BotUpperLine: autoDraw = False
+3794.1705 	EXP 	TopLowerLine: autoDraw = False
+3794.1705 	EXP 	BotLowerLine: autoDraw = False
+3794.1705 	EXP 	RestCrossHair: autoDraw = False
+3794.1705 	EXP 	TopUpperLine: autoDraw = False
+3794.1705 	EXP 	UpperText: autoDraw = False
+3794.1705 	EXP 	UpperBrackets: autoDraw = False
+3794.1705 	EXP 	BotUpperLine: autoDraw = False
+3794.1705 	EXP 	TopLowerLine: autoDraw = False
+3794.1705 	EXP 	LowerText: autoDraw = False
+3794.1705 	EXP 	LowerBrackets: autoDraw = False
+3794.1705 	EXP 	BotLowerLine: autoDraw = False
+3794.1705 	EXP 	TrialCrossHair: autoDraw = False
+3794.1705 	EXP 	RestCrossHair: autoDraw = False
+3794.1705 	EXP 	UpperText: text = ' B K G R H D '
+3794.1705 	EXP 	UpperBrackets: text = '{   }        '
+3794.1705 	EXP 	LowerText: text = ' n j q x f y '
+3794.1705 	EXP 	LowerBrackets: text = '      { }    '
+3794.1705 	EXP 	TopUpperLine: autoDraw = True
+3794.1705 	EXP 	UpperText: autoDraw = True
+3794.1705 	EXP 	UpperBrackets: autoDraw = True
+3794.1705 	EXP 	BotUpperLine: autoDraw = True
+3794.1705 	EXP 	TopLowerLine: autoDraw = True
+3794.1705 	EXP 	BotLowerLine: autoDraw = True
+3794.1705 	EXP 	TrialCrossHair: autoDraw = True
+3794.1707 	EXP 	window1: recordFrameIntervals = False
+3794.9581 	DATA 	Keypress: equal
+3796.1378 	EXP 	UpperText: autoDraw = False
+3796.1378 	EXP 	UpperBrackets: autoDraw = False
+3796.9555 	DATA 	Keypress: equal
+3798.9562 	DATA 	Keypress: equal
+3800.9568 	DATA 	Keypress: equal
+3801.1396 	EXP 	LowerText: autoDraw = True
+3801.1396 	EXP 	LowerBrackets: autoDraw = True
+3802.3739 	DATA 	Keypress: 8
+3802.9576 	DATA 	Keypress: equal
+3803.1403 	EXP 	LowerText: autoDraw = False
+3803.1403 	EXP 	LowerBrackets: autoDraw = False
+3803.1403 	EXP 	TrialCrossHair: autoDraw = False
+3803.1403 	EXP 	RestCrossHair: autoDraw = True
+3804.9584 	DATA 	Keypress: equal
+3806.9591 	DATA 	Keypress: equal
+3807.6266 	EXP 	New trial (rep=0, index=14): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 6.3140000000000001, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.3140000000000001, 'StimSet': 'XKGNRJ', 'RetStart': 2, 'ProbeLet': 'lytmqh', 'TrialITIDur': 13.314, 'Correct': 7}
+3807.6580 	EXP 	window1: recordFrameIntervals = False
+3807.6754 	EXP 	TopUpperLine: autoDraw = False
+3807.6754 	EXP 	BotUpperLine: autoDraw = False
+3807.6754 	EXP 	TopLowerLine: autoDraw = False
+3807.6754 	EXP 	BotLowerLine: autoDraw = False
+3807.6754 	EXP 	RestCrossHair: autoDraw = False
+3807.6754 	EXP 	TopUpperLine: autoDraw = False
+3807.6754 	EXP 	UpperText: autoDraw = False
+3807.6754 	EXP 	UpperBrackets: autoDraw = False
+3807.6754 	EXP 	BotUpperLine: autoDraw = False
+3807.6754 	EXP 	TopLowerLine: autoDraw = False
+3807.6754 	EXP 	LowerText: autoDraw = False
+3807.6754 	EXP 	LowerBrackets: autoDraw = False
+3807.6754 	EXP 	BotLowerLine: autoDraw = False
+3807.6754 	EXP 	TrialCrossHair: autoDraw = False
+3807.6754 	EXP 	RestCrossHair: autoDraw = False
+3807.6754 	EXP 	UpperText: text = ' X K G N R J '
+3807.6754 	EXP 	UpperBrackets: text = '  {       }  '
+3807.6754 	EXP 	LowerText: text = ' l y t m q h '
+3807.6754 	EXP 	LowerBrackets: text = '        { }  '
+3807.6754 	EXP 	TopUpperLine: autoDraw = True
+3807.6754 	EXP 	UpperText: autoDraw = True
+3807.6754 	EXP 	UpperBrackets: autoDraw = True
+3807.6754 	EXP 	BotUpperLine: autoDraw = True
+3807.6754 	EXP 	TopLowerLine: autoDraw = True
+3807.6754 	EXP 	BotLowerLine: autoDraw = True
+3807.6754 	EXP 	TrialCrossHair: autoDraw = True
+3807.6758 	EXP 	window1: recordFrameIntervals = False
+3808.9598 	DATA 	Keypress: equal
+3809.6427 	EXP 	UpperText: autoDraw = False
+3809.6427 	EXP 	UpperBrackets: autoDraw = False
+3810.9605 	DATA 	Keypress: equal
+3812.9612 	DATA 	Keypress: equal
+3814.6445 	EXP 	LowerText: autoDraw = True
+3814.6445 	EXP 	LowerBrackets: autoDraw = True
+3814.9622 	DATA 	Keypress: equal
+3815.8959 	DATA 	Keypress: 8
+3816.6452 	EXP 	LowerText: autoDraw = False
+3816.6452 	EXP 	LowerBrackets: autoDraw = False
+3816.6452 	EXP 	TrialCrossHair: autoDraw = False
+3816.6452 	EXP 	RestCrossHair: autoDraw = True
+3816.9628 	DATA 	Keypress: equal
+3818.9636 	DATA 	Keypress: equal
+3820.9315 	EXP 	New trial (rep=0, index=15): {'RetDur': 0, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 1, 'ProbeDurITI': 6.1660000000000004, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.1660000000000004, 'StimSet': 'LNRXJH', 'RetStart': 2, 'ProbeLet': 'kgdyfm', 'TrialITIDur': 8.1660000000000004, 'Correct': 7}
+3820.9661 	EXP 	window1: recordFrameIntervals = False
+3820.9670 	DATA 	Keypress: equal
+3820.9802 	EXP 	TopUpperLine: autoDraw = False
+3820.9802 	EXP 	BotUpperLine: autoDraw = False
+3820.9802 	EXP 	TopLowerLine: autoDraw = False
+3820.9802 	EXP 	BotLowerLine: autoDraw = False
+3820.9802 	EXP 	RestCrossHair: autoDraw = False
+3820.9802 	EXP 	TopUpperLine: autoDraw = False
+3820.9802 	EXP 	UpperText: autoDraw = False
+3820.9802 	EXP 	UpperBrackets: autoDraw = False
+3820.9802 	EXP 	BotUpperLine: autoDraw = False
+3820.9802 	EXP 	TopLowerLine: autoDraw = False
+3820.9802 	EXP 	LowerText: autoDraw = False
+3820.9802 	EXP 	LowerBrackets: autoDraw = False
+3820.9802 	EXP 	BotLowerLine: autoDraw = False
+3820.9802 	EXP 	TrialCrossHair: autoDraw = False
+3820.9802 	EXP 	RestCrossHair: autoDraw = False
+3820.9802 	EXP 	UpperText: text = ' L N R X J H '
+3820.9802 	EXP 	UpperBrackets: text = '{ }          '
+3820.9802 	EXP 	LowerText: text = ' k g d y f m '
+3820.9802 	EXP 	LowerBrackets: text = '  { }        '
+3820.9802 	EXP 	TopUpperLine: autoDraw = True
+3820.9802 	EXP 	UpperText: autoDraw = True
+3820.9802 	EXP 	UpperBrackets: autoDraw = True
+3820.9802 	EXP 	BotUpperLine: autoDraw = True
+3820.9802 	EXP 	TopLowerLine: autoDraw = True
+3820.9802 	EXP 	BotLowerLine: autoDraw = True
+3820.9802 	EXP 	TrialCrossHair: autoDraw = True
+3820.9804 	EXP 	window1: recordFrameIntervals = False
+3822.9475 	EXP 	UpperText: autoDraw = False
+3822.9475 	EXP 	UpperBrackets: autoDraw = False
+3822.9642 	EXP 	LowerText: autoDraw = True
+3822.9642 	EXP 	LowerBrackets: autoDraw = True
+3822.9649 	DATA 	Keypress: equal
+3823.8653 	DATA 	Keypress: 8
+3824.9484 	EXP 	LowerText: autoDraw = False
+3824.9484 	EXP 	LowerBrackets: autoDraw = False
+3824.9484 	EXP 	TrialCrossHair: autoDraw = False
+3824.9651 	EXP 	RestCrossHair: autoDraw = True
+3824.9660 	DATA 	Keypress: equal
+3826.9665 	DATA 	Keypress: equal
+3828.9678 	DATA 	Keypress: equal
+3829.1020 	EXP 	New trial (rep=0, index=16): {'RetDur': 0, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 23456, 'ProbeDurITI': 7.1179999999999994, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 5.1180000000000003, 'StimSet': 'MDJHWK', 'RetStart': 2, 'ProbeLet': 'btfgkr', 'TrialITIDur': 9.1180000000000003, 'Correct': 6}
+3829.1765 	EXP 	window1: recordFrameIntervals = False
+3829.2004 	EXP 	TopUpperLine: autoDraw = False
+3829.2004 	EXP 	BotUpperLine: autoDraw = False
+3829.2004 	EXP 	TopLowerLine: autoDraw = False
+3829.2004 	EXP 	BotLowerLine: autoDraw = False
+3829.2004 	EXP 	RestCrossHair: autoDraw = False
+3829.2004 	EXP 	TopUpperLine: autoDraw = False
+3829.2004 	EXP 	UpperText: autoDraw = False
+3829.2004 	EXP 	UpperBrackets: autoDraw = False
+3829.2004 	EXP 	BotUpperLine: autoDraw = False
+3829.2004 	EXP 	TopLowerLine: autoDraw = False
+3829.2004 	EXP 	LowerText: autoDraw = False
+3829.2004 	EXP 	LowerBrackets: autoDraw = False
+3829.2004 	EXP 	BotLowerLine: autoDraw = False
+3829.2004 	EXP 	TrialCrossHair: autoDraw = False
+3829.2004 	EXP 	RestCrossHair: autoDraw = False
+3829.2004 	EXP 	UpperText: text = ' M D J H W K '
+3829.2004 	EXP 	UpperBrackets: text = '  {         }'
+3829.2004 	EXP 	LowerText: text = ' b t f g k r '
+3829.2004 	EXP 	LowerBrackets: text = '        { }  '
+3829.2004 	EXP 	TopUpperLine: autoDraw = True
+3829.2004 	EXP 	UpperText: autoDraw = True
+3829.2004 	EXP 	UpperBrackets: autoDraw = True
+3829.2004 	EXP 	BotUpperLine: autoDraw = True
+3829.2004 	EXP 	TopLowerLine: autoDraw = True
+3829.2004 	EXP 	BotLowerLine: autoDraw = True
+3829.2004 	EXP 	TrialCrossHair: autoDraw = True
+3829.2008 	EXP 	window1: recordFrameIntervals = False
+3830.9686 	DATA 	Keypress: equal
+3831.1179 	EXP 	UpperText: autoDraw = False
+3831.1179 	EXP 	UpperBrackets: autoDraw = False
+3831.1345 	EXP 	LowerText: autoDraw = True
+3831.1345 	EXP 	LowerBrackets: autoDraw = True
+3832.7691 	DATA 	Keypress: 7
+3832.9692 	DATA 	Keypress: equal
+3833.1185 	EXP 	LowerText: autoDraw = False
+3833.1185 	EXP 	LowerBrackets: autoDraw = False
+3833.1185 	EXP 	TrialCrossHair: autoDraw = False
+3833.1352 	EXP 	RestCrossHair: autoDraw = True
+3834.9698 	DATA 	Keypress: equal
+3836.9704 	DATA 	Keypress: equal
+3838.2213 	EXP 	New trial (rep=0, index=17): {'RetDur': 5, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 4, 'ProbeDurITI': 6.0510000000000002, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0510000000000002, 'StimSet': 'MWLDYH', 'RetStart': 2, 'ProbeLet': 'nkjfgr', 'TrialITIDur': 13.050999999999998, 'Correct': 7}
+3838.2545 	EXP 	window1: recordFrameIntervals = False
+3838.2702 	EXP 	TopUpperLine: autoDraw = False
+3838.2702 	EXP 	BotUpperLine: autoDraw = False
+3838.2702 	EXP 	TopLowerLine: autoDraw = False
+3838.2702 	EXP 	BotLowerLine: autoDraw = False
+3838.2702 	EXP 	RestCrossHair: autoDraw = False
+3838.2702 	EXP 	TopUpperLine: autoDraw = False
+3838.2702 	EXP 	UpperText: autoDraw = False
+3838.2702 	EXP 	UpperBrackets: autoDraw = False
+3838.2702 	EXP 	BotUpperLine: autoDraw = False
+3838.2702 	EXP 	TopLowerLine: autoDraw = False
+3838.2702 	EXP 	LowerText: autoDraw = False
+3838.2702 	EXP 	LowerBrackets: autoDraw = False
+3838.2702 	EXP 	BotLowerLine: autoDraw = False
+3838.2702 	EXP 	TrialCrossHair: autoDraw = False
+3838.2702 	EXP 	RestCrossHair: autoDraw = False
+3838.2702 	EXP 	UpperText: text = ' M W L D Y H '
+3838.2702 	EXP 	UpperBrackets: text = '      { }    '
+3838.2702 	EXP 	LowerText: text = ' n k j f g r '
+3838.2702 	EXP 	LowerBrackets: text = '  { }        '
+3838.2702 	EXP 	TopUpperLine: autoDraw = True
+3838.2702 	EXP 	UpperText: autoDraw = True
+3838.2702 	EXP 	UpperBrackets: autoDraw = True
+3838.2702 	EXP 	BotUpperLine: autoDraw = True
+3838.2702 	EXP 	TopLowerLine: autoDraw = True
+3838.2702 	EXP 	BotLowerLine: autoDraw = True
+3838.2702 	EXP 	TrialCrossHair: autoDraw = True
+3838.2704 	EXP 	window1: recordFrameIntervals = False
+3839.0572 	DATA 	Keypress: equal
+3840.2376 	EXP 	UpperText: autoDraw = False
+3840.2376 	EXP 	UpperBrackets: autoDraw = False
+3840.9723 	DATA 	Keypress: equal
+3842.9728 	DATA 	Keypress: equal
+3844.9735 	DATA 	Keypress: equal
+3845.2397 	EXP 	LowerText: autoDraw = True
+3845.2397 	EXP 	LowerBrackets: autoDraw = True
+3846.7094 	DATA 	Keypress: 8
+3846.9747 	DATA 	Keypress: equal
+3847.2404 	EXP 	LowerText: autoDraw = False
+3847.2404 	EXP 	LowerBrackets: autoDraw = False
+3847.2404 	EXP 	TrialCrossHair: autoDraw = False
+3847.2404 	EXP 	RestCrossHair: autoDraw = True
+3848.9751 	DATA 	Keypress: equal
+3850.9761 	DATA 	Keypress: equal
+3851.2767 	EXP 	New trial (rep=0, index=18): {'RetDur': 0, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 45, 'ProbeDurITI': 6.0579999999999998, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.0579999999999998, 'StimSet': 'TXJGDQ', 'RetStart': 2, 'ProbeLet': 'ryfbmw', 'TrialITIDur': 8.0579999999999998, 'Correct': 7}
+3851.3095 	EXP 	window1: recordFrameIntervals = False
+3851.3253 	EXP 	TopUpperLine: autoDraw = False
+3851.3253 	EXP 	BotUpperLine: autoDraw = False
+3851.3253 	EXP 	TopLowerLine: autoDraw = False
+3851.3253 	EXP 	BotLowerLine: autoDraw = False
+3851.3253 	EXP 	RestCrossHair: autoDraw = False
+3851.3253 	EXP 	TopUpperLine: autoDraw = False
+3851.3253 	EXP 	UpperText: autoDraw = False
+3851.3253 	EXP 	UpperBrackets: autoDraw = False
+3851.3253 	EXP 	BotUpperLine: autoDraw = False
+3851.3253 	EXP 	TopLowerLine: autoDraw = False
+3851.3253 	EXP 	LowerText: autoDraw = False
+3851.3253 	EXP 	LowerBrackets: autoDraw = False
+3851.3253 	EXP 	BotLowerLine: autoDraw = False
+3851.3253 	EXP 	TrialCrossHair: autoDraw = False
+3851.3253 	EXP 	RestCrossHair: autoDraw = False
+3851.3253 	EXP 	UpperText: text = ' T X J G D Q '
+3851.3253 	EXP 	UpperBrackets: text = '      {   }  '
+3851.3253 	EXP 	LowerText: text = ' r y f b m w '
+3851.3253 	EXP 	LowerBrackets: text = '    { }      '
+3851.3253 	EXP 	TopUpperLine: autoDraw = True
+3851.3253 	EXP 	UpperText: autoDraw = True
+3851.3253 	EXP 	UpperBrackets: autoDraw = True
+3851.3253 	EXP 	BotUpperLine: autoDraw = True
+3851.3253 	EXP 	TopLowerLine: autoDraw = True
+3851.3253 	EXP 	BotLowerLine: autoDraw = True
+3851.3253 	EXP 	TrialCrossHair: autoDraw = True
+3851.3255 	EXP 	window1: recordFrameIntervals = False
+3852.9770 	DATA 	Keypress: equal
+3853.2928 	EXP 	UpperText: autoDraw = False
+3853.2928 	EXP 	UpperBrackets: autoDraw = False
+3853.3094 	EXP 	LowerText: autoDraw = True
+3853.3094 	EXP 	LowerBrackets: autoDraw = True
+3854.3773 	DATA 	Keypress: 8
+3854.9773 	DATA 	Keypress: equal
+3855.2934 	EXP 	LowerText: autoDraw = False
+3855.2934 	EXP 	LowerBrackets: autoDraw = False
+3855.2934 	EXP 	TrialCrossHair: autoDraw = False
+3855.3101 	EXP 	RestCrossHair: autoDraw = True
+3856.9777 	DATA 	Keypress: equal
+3858.9779 	DATA 	Keypress: equal
+3859.3284 	EXP 	New trial (rep=0, index=19): {'RetDur': 5, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 5, 'ProbeDurITI': 6.1620000000000008, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.1619999999999999, 'StimSet': 'FQHLYT', 'RetStart': 2, 'ProbeLet': 'xrjdkn', 'TrialITIDur': 13.162000000000001, 'Correct': 7}
+3859.3611 	EXP 	window1: recordFrameIntervals = False
+3859.3771 	EXP 	TopUpperLine: autoDraw = False
+3859.3771 	EXP 	BotUpperLine: autoDraw = False
+3859.3771 	EXP 	TopLowerLine: autoDraw = False
+3859.3771 	EXP 	BotLowerLine: autoDraw = False
+3859.3771 	EXP 	RestCrossHair: autoDraw = False
+3859.3771 	EXP 	TopUpperLine: autoDraw = False
+3859.3771 	EXP 	UpperText: autoDraw = False
+3859.3771 	EXP 	UpperBrackets: autoDraw = False
+3859.3771 	EXP 	BotUpperLine: autoDraw = False
+3859.3771 	EXP 	TopLowerLine: autoDraw = False
+3859.3771 	EXP 	LowerText: autoDraw = False
+3859.3771 	EXP 	LowerBrackets: autoDraw = False
+3859.3771 	EXP 	BotLowerLine: autoDraw = False
+3859.3771 	EXP 	TrialCrossHair: autoDraw = False
+3859.3771 	EXP 	RestCrossHair: autoDraw = False
+3859.3771 	EXP 	UpperText: text = ' F Q H L Y T '
+3859.3771 	EXP 	UpperBrackets: text = '        { }  '
+3859.3771 	EXP 	LowerText: text = ' x r j d k n '
+3859.3771 	EXP 	LowerBrackets: text = '      { }    '
+3859.3771 	EXP 	TopUpperLine: autoDraw = True
+3859.3771 	EXP 	UpperText: autoDraw = True
+3859.3771 	EXP 	UpperBrackets: autoDraw = True
+3859.3771 	EXP 	BotUpperLine: autoDraw = True
+3859.3771 	EXP 	TopLowerLine: autoDraw = True
+3859.3771 	EXP 	BotLowerLine: autoDraw = True
+3859.3771 	EXP 	TrialCrossHair: autoDraw = True
+3859.3773 	EXP 	window1: recordFrameIntervals = False
+3860.9785 	DATA 	Keypress: equal
+3861.3445 	EXP 	UpperText: autoDraw = False
+3861.3445 	EXP 	UpperBrackets: autoDraw = False
+3862.9794 	DATA 	Keypress: equal
+3864.9803 	DATA 	Keypress: equal
+3866.3463 	EXP 	LowerText: autoDraw = True
+3866.3463 	EXP 	LowerBrackets: autoDraw = True
+3866.9806 	DATA 	Keypress: equal
+3867.3163 	DATA 	Keypress: 8
+3868.3469 	EXP 	LowerText: autoDraw = False
+3868.3469 	EXP 	LowerBrackets: autoDraw = False
+3868.3469 	EXP 	TrialCrossHair: autoDraw = False
+3868.3469 	EXP 	RestCrossHair: autoDraw = True
+3868.9812 	DATA 	Keypress: equal
+3870.9821 	DATA 	Keypress: equal
+3872.4828 	EXP 	New trial (rep=0, index=20): {'RetDur': 0, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.0789999999999997, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.0789999999999997, 'StimSet': 'YRBWLK', 'RetStart': 2, 'ProbeLet': 'mfnhdq', 'TrialITIDur': 8.0790000000000006, 'Correct': 7}
+3872.5139 	EXP 	window1: recordFrameIntervals = False
+3872.5317 	EXP 	TopUpperLine: autoDraw = False
+3872.5317 	EXP 	BotUpperLine: autoDraw = False
+3872.5317 	EXP 	TopLowerLine: autoDraw = False
+3872.5317 	EXP 	BotLowerLine: autoDraw = False
+3872.5317 	EXP 	RestCrossHair: autoDraw = False
+3872.5317 	EXP 	TopUpperLine: autoDraw = False
+3872.5317 	EXP 	UpperText: autoDraw = False
+3872.5317 	EXP 	UpperBrackets: autoDraw = False
+3872.5317 	EXP 	BotUpperLine: autoDraw = False
+3872.5317 	EXP 	TopLowerLine: autoDraw = False
+3872.5317 	EXP 	LowerText: autoDraw = False
+3872.5317 	EXP 	LowerBrackets: autoDraw = False
+3872.5317 	EXP 	BotLowerLine: autoDraw = False
+3872.5317 	EXP 	TrialCrossHair: autoDraw = False
+3872.5317 	EXP 	RestCrossHair: autoDraw = False
+3872.5317 	EXP 	UpperText: text = ' Y R B W L K '
+3872.5317 	EXP 	UpperBrackets: text = '{           }'
+3872.5317 	EXP 	LowerText: text = ' m f n h d q '
+3872.5317 	EXP 	LowerBrackets: text = '    { }      '
+3872.5317 	EXP 	TopUpperLine: autoDraw = True
+3872.5317 	EXP 	UpperText: autoDraw = True
+3872.5317 	EXP 	UpperBrackets: autoDraw = True
+3872.5317 	EXP 	BotUpperLine: autoDraw = True
+3872.5317 	EXP 	TopLowerLine: autoDraw = True
+3872.5317 	EXP 	BotLowerLine: autoDraw = True
+3872.5317 	EXP 	TrialCrossHair: autoDraw = True
+3872.5321 	EXP 	window1: recordFrameIntervals = False
+3873.3167 	DATA 	Keypress: equal
+3874.4991 	EXP 	UpperText: autoDraw = False
+3874.4991 	EXP 	UpperBrackets: autoDraw = False
+3874.5158 	EXP 	LowerText: autoDraw = True
+3874.5158 	EXP 	LowerBrackets: autoDraw = True
+3874.9836 	DATA 	Keypress: equal
+3875.9004 	DATA 	Keypress: 8
+3876.4998 	EXP 	LowerText: autoDraw = False
+3876.4998 	EXP 	LowerBrackets: autoDraw = False
+3876.4998 	EXP 	TrialCrossHair: autoDraw = False
+3876.5166 	EXP 	RestCrossHair: autoDraw = True
+3876.9840 	DATA 	Keypress: equal
+3878.9847 	DATA 	Keypress: equal
+3880.5523 	EXP 	New trial (rep=0, index=21): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 4.4939999999999998, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.4939999999999998, 'StimSet': 'NWLGFK', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.494000000000002, 'Correct': 7}
+3880.5698 	EXP 	window1: recordFrameIntervals = False
+3880.5847 	EXP 	TopUpperLine: autoDraw = False
+3880.5847 	EXP 	BotUpperLine: autoDraw = False
+3880.5847 	EXP 	TopLowerLine: autoDraw = False
+3880.5847 	EXP 	BotLowerLine: autoDraw = False
+3880.5847 	EXP 	RestCrossHair: autoDraw = False
+3880.5847 	EXP 	TopUpperLine: autoDraw = False
+3880.5847 	EXP 	UpperText: autoDraw = False
+3880.5847 	EXP 	UpperBrackets: autoDraw = False
+3880.5847 	EXP 	BotUpperLine: autoDraw = False
+3880.5847 	EXP 	TopLowerLine: autoDraw = False
+3880.5847 	EXP 	LowerText: autoDraw = False
+3880.5847 	EXP 	LowerBrackets: autoDraw = False
+3880.5847 	EXP 	BotLowerLine: autoDraw = False
+3880.5847 	EXP 	TrialCrossHair: autoDraw = False
+3880.5847 	EXP 	RestCrossHair: autoDraw = False
+3880.5847 	EXP 	UpperText: text = ' N W L G F K '
+3880.5847 	EXP 	UpperBrackets: text = '  {       }  '
+3880.5847 	EXP 	LowerText: text = '   '
+3880.5847 	EXP 	LowerBrackets: text = ''
+3880.5847 	EXP 	TopUpperLine: autoDraw = True
+3880.5847 	EXP 	UpperText: autoDraw = True
+3880.5847 	EXP 	UpperBrackets: autoDraw = True
+3880.5847 	EXP 	BotUpperLine: autoDraw = True
+3880.5847 	EXP 	TopLowerLine: autoDraw = True
+3880.5847 	EXP 	BotLowerLine: autoDraw = True
+3880.5847 	EXP 	TrialCrossHair: autoDraw = True
+3880.5849 	EXP 	window1: recordFrameIntervals = False
+3881.3725 	DATA 	Keypress: equal
+3882.5687 	EXP 	UpperText: autoDraw = False
+3882.5687 	EXP 	UpperBrackets: autoDraw = False
+3882.9867 	DATA 	Keypress: equal
+3884.9868 	DATA 	Keypress: equal
+3886.9877 	DATA 	Keypress: equal
+3887.5705 	EXP 	LowerText: autoDraw = True
+3887.5705 	EXP 	LowerBrackets: autoDraw = True
+3887.5705 	EXP 	TrialCrossHair: autoDraw = False
+3887.5705 	EXP 	RestCrossHair: autoDraw = True
+3887.5872 	EXP 	LowerText: autoDraw = False
+3887.5872 	EXP 	LowerBrackets: autoDraw = False
+3888.9886 	DATA 	Keypress: equal
+3890.9893 	DATA 	Keypress: equal
+3892.0403 	EXP 	New trial (rep=0, index=22): {'RetDur': 0, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 12345, 'ProbeDurITI': 6.0640000000000001, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.0640000000000001, 'StimSet': 'GYKWTB', 'RetStart': 2, 'ProbeLet': 'ldxqnf', 'TrialITIDur': 8.0640000000000001, 'Correct': 7}
+3892.0748 	EXP 	window1: recordFrameIntervals = False
+3892.0890 	EXP 	TopUpperLine: autoDraw = False
+3892.0890 	EXP 	BotUpperLine: autoDraw = False
+3892.0890 	EXP 	TopLowerLine: autoDraw = False
+3892.0890 	EXP 	BotLowerLine: autoDraw = False
+3892.0890 	EXP 	RestCrossHair: autoDraw = False
+3892.0890 	EXP 	TopUpperLine: autoDraw = False
+3892.0890 	EXP 	UpperText: autoDraw = False
+3892.0890 	EXP 	UpperBrackets: autoDraw = False
+3892.0890 	EXP 	BotUpperLine: autoDraw = False
+3892.0890 	EXP 	TopLowerLine: autoDraw = False
+3892.0890 	EXP 	LowerText: autoDraw = False
+3892.0890 	EXP 	LowerBrackets: autoDraw = False
+3892.0890 	EXP 	BotLowerLine: autoDraw = False
+3892.0890 	EXP 	TrialCrossHair: autoDraw = False
+3892.0890 	EXP 	RestCrossHair: autoDraw = False
+3892.0890 	EXP 	UpperText: text = ' G Y K W T B '
+3892.0890 	EXP 	UpperBrackets: text = '{         }  '
+3892.0890 	EXP 	LowerText: text = ' l d x q n f '
+3892.0890 	EXP 	LowerBrackets: text = '      { }    '
+3892.0890 	EXP 	TopUpperLine: autoDraw = True
+3892.0890 	EXP 	UpperText: autoDraw = True
+3892.0890 	EXP 	UpperBrackets: autoDraw = True
+3892.0890 	EXP 	BotUpperLine: autoDraw = True
+3892.0890 	EXP 	TopLowerLine: autoDraw = True
+3892.0890 	EXP 	BotLowerLine: autoDraw = True
+3892.0890 	EXP 	TrialCrossHair: autoDraw = True
+3892.0892 	EXP 	window1: recordFrameIntervals = False
+3892.9898 	DATA 	Keypress: equal
+3894.0563 	EXP 	UpperText: autoDraw = False
+3894.0563 	EXP 	UpperBrackets: autoDraw = False
+3894.0730 	EXP 	LowerText: autoDraw = True
+3894.0730 	EXP 	LowerBrackets: autoDraw = True
+3894.9904 	DATA 	Keypress: equal
+3895.9094 	DATA 	Keypress: 8
+3896.0571 	EXP 	LowerText: autoDraw = False
+3896.0571 	EXP 	LowerBrackets: autoDraw = False
+3896.0571 	EXP 	TrialCrossHair: autoDraw = False
+3896.0737 	EXP 	RestCrossHair: autoDraw = True
+3896.9917 	DATA 	Keypress: equal
+3898.9920 	DATA 	Keypress: equal
+3900.1099 	EXP 	New trial (rep=0, index=23): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 12345, 'ProbeDurITI': 6.2029999999999994, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.2030000000000003, 'StimSet': 'HWRQXK', 'RetStart': 2, 'ProbeLet': 'fydbng', 'TrialITIDur': 13.202999999999999, 'Correct': 7}
+3900.1424 	EXP 	window1: recordFrameIntervals = False
+3900.1585 	EXP 	TopUpperLine: autoDraw = False
+3900.1585 	EXP 	BotUpperLine: autoDraw = False
+3900.1585 	EXP 	TopLowerLine: autoDraw = False
+3900.1585 	EXP 	BotLowerLine: autoDraw = False
+3900.1585 	EXP 	RestCrossHair: autoDraw = False
+3900.1585 	EXP 	TopUpperLine: autoDraw = False
+3900.1585 	EXP 	UpperText: autoDraw = False
+3900.1585 	EXP 	UpperBrackets: autoDraw = False
+3900.1585 	EXP 	BotUpperLine: autoDraw = False
+3900.1585 	EXP 	TopLowerLine: autoDraw = False
+3900.1585 	EXP 	LowerText: autoDraw = False
+3900.1585 	EXP 	LowerBrackets: autoDraw = False
+3900.1585 	EXP 	BotLowerLine: autoDraw = False
+3900.1585 	EXP 	TrialCrossHair: autoDraw = False
+3900.1585 	EXP 	RestCrossHair: autoDraw = False
+3900.1585 	EXP 	UpperText: text = ' H W R Q X K '
+3900.1585 	EXP 	UpperBrackets: text = '{         }  '
+3900.1585 	EXP 	LowerText: text = ' f y d b n g '
+3900.1585 	EXP 	LowerBrackets: text = '{ }          '
+3900.1585 	EXP 	TopUpperLine: autoDraw = True
+3900.1585 	EXP 	UpperText: autoDraw = True
+3900.1585 	EXP 	UpperBrackets: autoDraw = True
+3900.1585 	EXP 	BotUpperLine: autoDraw = True
+3900.1585 	EXP 	TopLowerLine: autoDraw = True
+3900.1585 	EXP 	BotLowerLine: autoDraw = True
+3900.1585 	EXP 	TrialCrossHair: autoDraw = True
+3900.1588 	EXP 	window1: recordFrameIntervals = False
+3900.9927 	DATA 	Keypress: equal
+3902.1258 	EXP 	UpperText: autoDraw = False
+3902.1258 	EXP 	UpperBrackets: autoDraw = False
+3902.9936 	DATA 	Keypress: equal
+3904.9943 	DATA 	Keypress: equal
+3906.9950 	DATA 	Keypress: equal
+3907.1276 	EXP 	LowerText: autoDraw = True
+3907.1276 	EXP 	LowerBrackets: autoDraw = True
+3908.3621 	DATA 	Keypress: 8
+3908.9955 	DATA 	Keypress: equal
+3909.1284 	EXP 	LowerText: autoDraw = False
+3909.1284 	EXP 	LowerBrackets: autoDraw = False
+3909.1284 	EXP 	TrialCrossHair: autoDraw = False
+3909.1284 	EXP 	RestCrossHair: autoDraw = True
+3910.9966 	DATA 	Keypress: equal
+3912.9980 	DATA 	Keypress: equal
+3913.3146 	EXP 	New trial (rep=0, index=24): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 4.2789999999999999, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.2789999999999999, 'StimSet': 'RTDFBG', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.2789999999999999, 'Correct': 6}
+3913.3338 	EXP 	window1: recordFrameIntervals = False
+3913.3632 	EXP 	TopUpperLine: autoDraw = False
+3913.3632 	EXP 	BotUpperLine: autoDraw = False
+3913.3632 	EXP 	TopLowerLine: autoDraw = False
+3913.3632 	EXP 	BotLowerLine: autoDraw = False
+3913.3632 	EXP 	RestCrossHair: autoDraw = False
+3913.3632 	EXP 	TopUpperLine: autoDraw = False
+3913.3632 	EXP 	UpperText: autoDraw = False
+3913.3632 	EXP 	UpperBrackets: autoDraw = False
+3913.3632 	EXP 	BotUpperLine: autoDraw = False
+3913.3632 	EXP 	TopLowerLine: autoDraw = False
+3913.3632 	EXP 	LowerText: autoDraw = False
+3913.3632 	EXP 	LowerBrackets: autoDraw = False
+3913.3632 	EXP 	BotLowerLine: autoDraw = False
+3913.3632 	EXP 	TrialCrossHair: autoDraw = False
+3913.3632 	EXP 	RestCrossHair: autoDraw = False
+3913.3632 	EXP 	UpperText: text = ' R T D F B G '
+3913.3632 	EXP 	UpperBrackets: text = '  {       }  '
+3913.3632 	EXP 	LowerText: text = '   '
+3913.3632 	EXP 	LowerBrackets: text = ''
+3913.3632 	EXP 	TopUpperLine: autoDraw = True
+3913.3632 	EXP 	UpperText: autoDraw = True
+3913.3632 	EXP 	UpperBrackets: autoDraw = True
+3913.3632 	EXP 	BotUpperLine: autoDraw = True
+3913.3632 	EXP 	TopLowerLine: autoDraw = True
+3913.3632 	EXP 	BotLowerLine: autoDraw = True
+3913.3632 	EXP 	TrialCrossHair: autoDraw = True
+3913.3634 	EXP 	window1: recordFrameIntervals = False
+3914.9991 	DATA 	Keypress: equal
+3915.3305 	EXP 	UpperText: autoDraw = False
+3915.3305 	EXP 	UpperBrackets: autoDraw = False
+3915.3305 	EXP 	TrialCrossHair: autoDraw = False
+3915.3472 	EXP 	LowerText: autoDraw = True
+3915.3472 	EXP 	LowerBrackets: autoDraw = True
+3915.3472 	EXP 	RestCrossHair: autoDraw = True
+3915.3638 	EXP 	LowerText: autoDraw = False
+3915.3638 	EXP 	LowerBrackets: autoDraw = False
+3917.0005 	DATA 	Keypress: equal
+3919.0004 	DATA 	Keypress: equal
+3919.5828 	EXP 	New trial (rep=0, index=25): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 12345, 'ProbeDurITI': 4.032, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.032, 'StimSet': 'QJXNDK', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.032, 'Correct': 6}
+3919.5993 	EXP 	window1: recordFrameIntervals = False
+3919.6153 	EXP 	TopUpperLine: autoDraw = False
+3919.6153 	EXP 	BotUpperLine: autoDraw = False
+3919.6153 	EXP 	TopLowerLine: autoDraw = False
+3919.6153 	EXP 	BotLowerLine: autoDraw = False
+3919.6153 	EXP 	RestCrossHair: autoDraw = False
+3919.6153 	EXP 	TopUpperLine: autoDraw = False
+3919.6153 	EXP 	UpperText: autoDraw = False
+3919.6153 	EXP 	UpperBrackets: autoDraw = False
+3919.6153 	EXP 	BotUpperLine: autoDraw = False
+3919.6153 	EXP 	TopLowerLine: autoDraw = False
+3919.6153 	EXP 	LowerText: autoDraw = False
+3919.6153 	EXP 	LowerBrackets: autoDraw = False
+3919.6153 	EXP 	BotLowerLine: autoDraw = False
+3919.6153 	EXP 	TrialCrossHair: autoDraw = False
+3919.6153 	EXP 	RestCrossHair: autoDraw = False
+3919.6153 	EXP 	UpperText: text = ' Q J X N D K '
+3919.6153 	EXP 	UpperBrackets: text = '{         }  '
+3919.6153 	EXP 	LowerText: text = '   '
+3919.6153 	EXP 	LowerBrackets: text = ''
+3919.6153 	EXP 	TopUpperLine: autoDraw = True
+3919.6153 	EXP 	UpperText: autoDraw = True
+3919.6153 	EXP 	UpperBrackets: autoDraw = True
+3919.6153 	EXP 	BotUpperLine: autoDraw = True
+3919.6153 	EXP 	TopLowerLine: autoDraw = True
+3919.6153 	EXP 	BotLowerLine: autoDraw = True
+3919.6153 	EXP 	TrialCrossHair: autoDraw = True
+3919.6156 	EXP 	window1: recordFrameIntervals = False
+3921.0017 	DATA 	Keypress: equal
+3921.5993 	EXP 	UpperText: autoDraw = False
+3921.5993 	EXP 	UpperBrackets: autoDraw = False
+3921.5993 	EXP 	TrialCrossHair: autoDraw = False
+3921.6161 	EXP 	LowerText: autoDraw = True
+3921.6161 	EXP 	LowerBrackets: autoDraw = True
+3921.6161 	EXP 	RestCrossHair: autoDraw = True
+3921.6327 	EXP 	LowerText: autoDraw = False
+3921.6327 	EXP 	LowerBrackets: autoDraw = False
+3923.0020 	DATA 	Keypress: equal
+3925.0028 	DATA 	Keypress: equal
+3925.6189 	EXP 	New trial (rep=0, index=26): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 4, 'ProbeDurITI': 4.2450000000000001, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.2450000000000001, 'StimSet': 'RDXLBF', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.2450000000000001, 'Correct': 6}
+3925.6405 	EXP 	window1: recordFrameIntervals = False
+3925.6676 	EXP 	TopUpperLine: autoDraw = False
+3925.6676 	EXP 	BotUpperLine: autoDraw = False
+3925.6676 	EXP 	TopLowerLine: autoDraw = False
+3925.6676 	EXP 	BotLowerLine: autoDraw = False
+3925.6676 	EXP 	RestCrossHair: autoDraw = False
+3925.6676 	EXP 	TopUpperLine: autoDraw = False
+3925.6676 	EXP 	UpperText: autoDraw = False
+3925.6676 	EXP 	UpperBrackets: autoDraw = False
+3925.6676 	EXP 	BotUpperLine: autoDraw = False
+3925.6676 	EXP 	TopLowerLine: autoDraw = False
+3925.6676 	EXP 	LowerText: autoDraw = False
+3925.6676 	EXP 	LowerBrackets: autoDraw = False
+3925.6676 	EXP 	BotLowerLine: autoDraw = False
+3925.6676 	EXP 	TrialCrossHair: autoDraw = False
+3925.6676 	EXP 	RestCrossHair: autoDraw = False
+3925.6676 	EXP 	UpperText: text = ' R D X L B F '
+3925.6676 	EXP 	UpperBrackets: text = '      { }    '
+3925.6676 	EXP 	LowerText: text = '   '
+3925.6676 	EXP 	LowerBrackets: text = ''
+3925.6676 	EXP 	TopUpperLine: autoDraw = True
+3925.6676 	EXP 	UpperText: autoDraw = True
+3925.6676 	EXP 	UpperBrackets: autoDraw = True
+3925.6676 	EXP 	BotUpperLine: autoDraw = True
+3925.6676 	EXP 	TopLowerLine: autoDraw = True
+3925.6676 	EXP 	BotLowerLine: autoDraw = True
+3925.6676 	EXP 	TrialCrossHair: autoDraw = True
+3925.6679 	EXP 	window1: recordFrameIntervals = False
+3927.0041 	DATA 	Keypress: equal
+3927.6350 	EXP 	UpperText: autoDraw = False
+3927.6350 	EXP 	UpperBrackets: autoDraw = False
+3927.6350 	EXP 	TrialCrossHair: autoDraw = False
+3927.6518 	EXP 	LowerText: autoDraw = True
+3927.6518 	EXP 	LowerBrackets: autoDraw = True
+3927.6518 	EXP 	RestCrossHair: autoDraw = True
+3927.6685 	EXP 	LowerText: autoDraw = False
+3927.6685 	EXP 	LowerBrackets: autoDraw = False
+3929.0040 	DATA 	Keypress: equal
+3931.0055 	DATA 	Keypress: equal
+3931.8551 	EXP 	New trial (rep=0, index=27): {'RetDur': 5, 'BotBrack': 6, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.0039999999999996, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0039999999999996, 'StimSet': 'YDFHTM', 'RetStart': 2, 'ProbeLet': 'wrqxbg', 'TrialITIDur': 13.004000000000001, 'Correct': 7}
+3931.8855 	EXP 	window1: recordFrameIntervals = False
+3931.9039 	EXP 	TopUpperLine: autoDraw = False
+3931.9039 	EXP 	BotUpperLine: autoDraw = False
+3931.9039 	EXP 	TopLowerLine: autoDraw = False
+3931.9039 	EXP 	BotLowerLine: autoDraw = False
+3931.9039 	EXP 	RestCrossHair: autoDraw = False
+3931.9039 	EXP 	TopUpperLine: autoDraw = False
+3931.9039 	EXP 	UpperText: autoDraw = False
+3931.9039 	EXP 	UpperBrackets: autoDraw = False
+3931.9039 	EXP 	BotUpperLine: autoDraw = False
+3931.9039 	EXP 	TopLowerLine: autoDraw = False
+3931.9039 	EXP 	LowerText: autoDraw = False
+3931.9039 	EXP 	LowerBrackets: autoDraw = False
+3931.9039 	EXP 	BotLowerLine: autoDraw = False
+3931.9039 	EXP 	TrialCrossHair: autoDraw = False
+3931.9039 	EXP 	RestCrossHair: autoDraw = False
+3931.9039 	EXP 	UpperText: text = ' Y D F H T M '
+3931.9039 	EXP 	UpperBrackets: text = '{           }'
+3931.9039 	EXP 	LowerText: text = ' w r q x b g '
+3931.9039 	EXP 	LowerBrackets: text = '          { }'
+3931.9039 	EXP 	TopUpperLine: autoDraw = True
+3931.9039 	EXP 	UpperText: autoDraw = True
+3931.9039 	EXP 	UpperBrackets: autoDraw = True
+3931.9039 	EXP 	BotUpperLine: autoDraw = True
+3931.9039 	EXP 	TopLowerLine: autoDraw = True
+3931.9039 	EXP 	BotLowerLine: autoDraw = True
+3931.9039 	EXP 	TrialCrossHair: autoDraw = True
+3931.9041 	EXP 	window1: recordFrameIntervals = False
+3933.0067 	DATA 	Keypress: equal
+3933.8716 	EXP 	UpperText: autoDraw = False
+3933.8716 	EXP 	UpperBrackets: autoDraw = False
+3935.0070 	DATA 	Keypress: equal
+3937.0079 	DATA 	Keypress: equal
+3938.8731 	EXP 	LowerText: autoDraw = True
+3938.8731 	EXP 	LowerBrackets: autoDraw = True
+3939.0095 	DATA 	Keypress: equal
+3940.3578 	DATA 	Keypress: 8
+3940.8739 	EXP 	LowerText: autoDraw = False
+3940.8739 	EXP 	LowerBrackets: autoDraw = False
+3940.8739 	EXP 	TrialCrossHair: autoDraw = False
+3940.8739 	EXP 	RestCrossHair: autoDraw = True
+3941.0089 	DATA 	Keypress: equal
+3943.0099 	DATA 	Keypress: equal
+3944.8600 	EXP 	New trial (rep=0, index=28): {'RetDur': 0, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 6.0899999999999999, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.0899999999999999, 'StimSet': 'DMYNBQ', 'RetStart': 2, 'ProbeLet': 'jfrhtl', 'TrialITIDur': 8.0899999999999999, 'Correct': 7}
+3944.8931 	EXP 	window1: recordFrameIntervals = False
+3944.9087 	EXP 	TopUpperLine: autoDraw = False
+3944.9087 	EXP 	BotUpperLine: autoDraw = False
+3944.9087 	EXP 	TopLowerLine: autoDraw = False
+3944.9087 	EXP 	BotLowerLine: autoDraw = False
+3944.9087 	EXP 	RestCrossHair: autoDraw = False
+3944.9087 	EXP 	TopUpperLine: autoDraw = False
+3944.9087 	EXP 	UpperText: autoDraw = False
+3944.9087 	EXP 	UpperBrackets: autoDraw = False
+3944.9087 	EXP 	BotUpperLine: autoDraw = False
+3944.9087 	EXP 	TopLowerLine: autoDraw = False
+3944.9087 	EXP 	LowerText: autoDraw = False
+3944.9087 	EXP 	LowerBrackets: autoDraw = False
+3944.9087 	EXP 	BotLowerLine: autoDraw = False
+3944.9087 	EXP 	TrialCrossHair: autoDraw = False
+3944.9087 	EXP 	RestCrossHair: autoDraw = False
+3944.9087 	EXP 	UpperText: text = ' D M Y N B Q '
+3944.9087 	EXP 	UpperBrackets: text = '  {       }  '
+3944.9087 	EXP 	LowerText: text = ' j f r h t l '
+3944.9087 	EXP 	LowerBrackets: text = '      { }    '
+3944.9087 	EXP 	TopUpperLine: autoDraw = True
+3944.9087 	EXP 	UpperText: autoDraw = True
+3944.9087 	EXP 	UpperBrackets: autoDraw = True
+3944.9087 	EXP 	BotUpperLine: autoDraw = True
+3944.9087 	EXP 	TopLowerLine: autoDraw = True
+3944.9087 	EXP 	BotLowerLine: autoDraw = True
+3944.9087 	EXP 	TrialCrossHair: autoDraw = True
+3944.9089 	EXP 	window1: recordFrameIntervals = False
+3945.6955 	DATA 	Keypress: equal
+3946.8761 	EXP 	UpperText: autoDraw = False
+3946.8761 	EXP 	UpperBrackets: autoDraw = False
+3946.8929 	EXP 	LowerText: autoDraw = True
+3946.8929 	EXP 	LowerBrackets: autoDraw = True
+3947.0126 	DATA 	Keypress: equal
+3948.1109 	DATA 	Keypress: 8
+3948.8770 	EXP 	LowerText: autoDraw = False
+3948.8770 	EXP 	LowerBrackets: autoDraw = False
+3948.8770 	EXP 	TrialCrossHair: autoDraw = False
+3948.8937 	EXP 	RestCrossHair: autoDraw = True
+3949.0119 	DATA 	Keypress: equal
+3951.0132 	DATA 	Keypress: equal
+3952.9466 	EXP 	New trial (rep=0, index=29): {'RetDur': 5, 'BotBrack': 6, 'StimDur': 2, 'UpBrack': 12, 'ProbeDurITI': 6.0170000000000003, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0169999999999995, 'StimSet': 'FTHKMG', 'RetStart': 2, 'ProbeLet': 'jqwxrb', 'TrialITIDur': 13.017000000000001, 'Correct': 7}
+3952.9789 	EXP 	window1: recordFrameIntervals = False
+3952.9954 	EXP 	TopUpperLine: autoDraw = False
+3952.9954 	EXP 	BotUpperLine: autoDraw = False
+3952.9954 	EXP 	TopLowerLine: autoDraw = False
+3952.9954 	EXP 	BotLowerLine: autoDraw = False
+3952.9954 	EXP 	RestCrossHair: autoDraw = False
+3952.9954 	EXP 	TopUpperLine: autoDraw = False
+3952.9954 	EXP 	UpperText: autoDraw = False
+3952.9954 	EXP 	UpperBrackets: autoDraw = False
+3952.9954 	EXP 	BotUpperLine: autoDraw = False
+3952.9954 	EXP 	TopLowerLine: autoDraw = False
+3952.9954 	EXP 	LowerText: autoDraw = False
+3952.9954 	EXP 	LowerBrackets: autoDraw = False
+3952.9954 	EXP 	BotLowerLine: autoDraw = False
+3952.9954 	EXP 	TrialCrossHair: autoDraw = False
+3952.9954 	EXP 	RestCrossHair: autoDraw = False
+3952.9954 	EXP 	UpperText: text = ' F T H K M G '
+3952.9954 	EXP 	UpperBrackets: text = '{   }        '
+3952.9954 	EXP 	LowerText: text = ' j q w x r b '
+3952.9954 	EXP 	LowerBrackets: text = '          { }'
+3952.9954 	EXP 	TopUpperLine: autoDraw = True
+3952.9954 	EXP 	UpperText: autoDraw = True
+3952.9954 	EXP 	UpperBrackets: autoDraw = True
+3952.9954 	EXP 	BotUpperLine: autoDraw = True
+3952.9954 	EXP 	TopLowerLine: autoDraw = True
+3952.9954 	EXP 	BotLowerLine: autoDraw = True
+3952.9954 	EXP 	TrialCrossHair: autoDraw = True
+3952.9958 	EXP 	window1: recordFrameIntervals = False
+3953.7816 	DATA 	Keypress: equal
+3954.9627 	EXP 	UpperText: autoDraw = False
+3954.9627 	EXP 	UpperBrackets: autoDraw = False
+3955.0148 	DATA 	Keypress: equal
+3957.0158 	DATA 	Keypress: equal
+3959.0158 	DATA 	Keypress: equal
+3959.9643 	EXP 	LowerText: autoDraw = True
+3959.9643 	EXP 	LowerBrackets: autoDraw = True
+3960.9317 	DATA 	Keypress: 8
+3961.0180 	DATA 	Keypress: equal
+3961.9643 	EXP 	LowerText: autoDraw = False
+3961.9643 	EXP 	LowerBrackets: autoDraw = False
+3961.9643 	EXP 	TrialCrossHair: autoDraw = False
+3961.9643 	EXP 	RestCrossHair: autoDraw = True
+3963.0164 	DATA 	Keypress: equal
+3965.0326 	DATA 	Keypress: equal
+3965.9666 	EXP 	New trial (rep=0, index=30): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 4, 'ProbeDurITI': 6.3529999999999998, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.3529999999999998, 'StimSet': 'NJRKLB', 'RetStart': 2, 'ProbeLet': 'hdgqkm', 'TrialITIDur': 13.353, 'Correct': 6}
+3965.9980 	EXP 	window1: recordFrameIntervals = False
+3966.0155 	EXP 	TopUpperLine: autoDraw = False
+3966.0155 	EXP 	BotUpperLine: autoDraw = False
+3966.0155 	EXP 	TopLowerLine: autoDraw = False
+3966.0155 	EXP 	BotLowerLine: autoDraw = False
+3966.0155 	EXP 	RestCrossHair: autoDraw = False
+3966.0155 	EXP 	TopUpperLine: autoDraw = False
+3966.0155 	EXP 	UpperText: autoDraw = False
+3966.0155 	EXP 	UpperBrackets: autoDraw = False
+3966.0155 	EXP 	BotUpperLine: autoDraw = False
+3966.0155 	EXP 	TopLowerLine: autoDraw = False
+3966.0155 	EXP 	LowerText: autoDraw = False
+3966.0155 	EXP 	LowerBrackets: autoDraw = False
+3966.0155 	EXP 	BotLowerLine: autoDraw = False
+3966.0155 	EXP 	TrialCrossHair: autoDraw = False
+3966.0155 	EXP 	RestCrossHair: autoDraw = False
+3966.0155 	EXP 	UpperText: text = ' N J R K L B '
+3966.0155 	EXP 	UpperBrackets: text = '      { }    '
+3966.0155 	EXP 	LowerText: text = ' h d g q k m '
+3966.0155 	EXP 	LowerBrackets: text = '        { }  '
+3966.0155 	EXP 	TopUpperLine: autoDraw = True
+3966.0155 	EXP 	UpperText: autoDraw = True
+3966.0155 	EXP 	UpperBrackets: autoDraw = True
+3966.0155 	EXP 	BotUpperLine: autoDraw = True
+3966.0155 	EXP 	TopLowerLine: autoDraw = True
+3966.0155 	EXP 	BotLowerLine: autoDraw = True
+3966.0155 	EXP 	TrialCrossHair: autoDraw = True
+3966.0158 	EXP 	window1: recordFrameIntervals = False
+3967.0189 	DATA 	Keypress: equal
+3967.9829 	EXP 	UpperText: autoDraw = False
+3967.9829 	EXP 	UpperBrackets: autoDraw = False
+3969.0342 	DATA 	Keypress: equal
+3971.0194 	DATA 	Keypress: equal
+3972.9847 	EXP 	LowerText: autoDraw = True
+3972.9847 	EXP 	LowerBrackets: autoDraw = True
+3973.0207 	DATA 	Keypress: equal
+3973.8856 	DATA 	Keypress: 8
+3974.2193 	DATA 	Keypress: 7
+3974.9855 	EXP 	LowerText: autoDraw = False
+3974.9855 	EXP 	LowerBrackets: autoDraw = False
+3974.9855 	EXP 	TrialCrossHair: autoDraw = False
+3974.9855 	EXP 	RestCrossHair: autoDraw = True
+3975.0361 	DATA 	Keypress: equal
+3977.0215 	DATA 	Keypress: equal
+3979.0375 	DATA 	Keypress: equal
+3979.3218 	EXP 	New trial (rep=0, index=31): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 45, 'ProbeDurITI': 6.0039999999999996, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0039999999999996, 'StimSet': 'FKMLQB', 'RetStart': 2, 'ProbeLet': 'jdwnqr', 'TrialITIDur': 13.004000000000001, 'Correct': 6}
+3979.3570 	EXP 	window1: recordFrameIntervals = False
+3979.3702 	EXP 	TopUpperLine: autoDraw = False
+3979.3702 	EXP 	BotUpperLine: autoDraw = False
+3979.3702 	EXP 	TopLowerLine: autoDraw = False
+3979.3702 	EXP 	BotLowerLine: autoDraw = False
+3979.3702 	EXP 	RestCrossHair: autoDraw = False
+3979.3702 	EXP 	TopUpperLine: autoDraw = False
+3979.3702 	EXP 	UpperText: autoDraw = False
+3979.3702 	EXP 	UpperBrackets: autoDraw = False
+3979.3702 	EXP 	BotUpperLine: autoDraw = False
+3979.3702 	EXP 	TopLowerLine: autoDraw = False
+3979.3702 	EXP 	LowerText: autoDraw = False
+3979.3702 	EXP 	LowerBrackets: autoDraw = False
+3979.3702 	EXP 	BotLowerLine: autoDraw = False
+3979.3702 	EXP 	TrialCrossHair: autoDraw = False
+3979.3702 	EXP 	RestCrossHair: autoDraw = False
+3979.3702 	EXP 	UpperText: text = ' F K M L Q B '
+3979.3702 	EXP 	UpperBrackets: text = '      {   }  '
+3979.3702 	EXP 	LowerText: text = ' j d w n q r '
+3979.3702 	EXP 	LowerBrackets: text = '        { }  '
+3979.3702 	EXP 	TopUpperLine: autoDraw = True
+3979.3702 	EXP 	UpperText: autoDraw = True
+3979.3702 	EXP 	UpperBrackets: autoDraw = True
+3979.3702 	EXP 	BotUpperLine: autoDraw = True
+3979.3702 	EXP 	TopLowerLine: autoDraw = True
+3979.3702 	EXP 	BotLowerLine: autoDraw = True
+3979.3702 	EXP 	TrialCrossHair: autoDraw = True
+3979.3704 	EXP 	window1: recordFrameIntervals = False
+3981.0242 	DATA 	Keypress: equal
+3981.3377 	EXP 	UpperText: autoDraw = False
+3981.3377 	EXP 	UpperBrackets: autoDraw = False
+3983.0390 	DATA 	Keypress: equal
+3985.0397 	DATA 	Keypress: equal
+3986.3394 	EXP 	LowerText: autoDraw = True
+3986.3394 	EXP 	LowerBrackets: autoDraw = True
+3987.0405 	DATA 	Keypress: equal
+3987.3238 	DATA 	Keypress: 8
+3988.3401 	EXP 	LowerText: autoDraw = False
+3988.3401 	EXP 	LowerBrackets: autoDraw = False
+3988.3401 	EXP 	TrialCrossHair: autoDraw = False
+3988.3401 	EXP 	RestCrossHair: autoDraw = True
+3989.0413 	DATA 	Keypress: equal
+3991.0419 	DATA 	Keypress: equal
+3992.3263 	EXP 	New trial (rep=0, index=32): {'RetDur': 5, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.1660000000000004, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.1660000000000004, 'StimSet': 'NTWHYG', 'RetStart': 2, 'ProbeLet': 'qdrbjk', 'TrialITIDur': 13.165999999999999, 'Correct': 7}
+3992.3623 	EXP 	window1: recordFrameIntervals = False
+3992.3750 	EXP 	TopUpperLine: autoDraw = False
+3992.3750 	EXP 	BotUpperLine: autoDraw = False
+3992.3750 	EXP 	TopLowerLine: autoDraw = False
+3992.3750 	EXP 	BotLowerLine: autoDraw = False
+3992.3750 	EXP 	RestCrossHair: autoDraw = False
+3992.3750 	EXP 	TopUpperLine: autoDraw = False
+3992.3750 	EXP 	UpperText: autoDraw = False
+3992.3750 	EXP 	UpperBrackets: autoDraw = False
+3992.3750 	EXP 	BotUpperLine: autoDraw = False
+3992.3750 	EXP 	TopLowerLine: autoDraw = False
+3992.3750 	EXP 	LowerText: autoDraw = False
+3992.3750 	EXP 	LowerBrackets: autoDraw = False
+3992.3750 	EXP 	BotLowerLine: autoDraw = False
+3992.3750 	EXP 	TrialCrossHair: autoDraw = False
+3992.3750 	EXP 	RestCrossHair: autoDraw = False
+3992.3750 	EXP 	UpperText: text = ' N T W H Y G '
+3992.3750 	EXP 	UpperBrackets: text = '{           }'
+3992.3750 	EXP 	LowerText: text = ' q d r b j k '
+3992.3750 	EXP 	LowerBrackets: text = '    { }      '
+3992.3750 	EXP 	TopUpperLine: autoDraw = True
+3992.3750 	EXP 	UpperText: autoDraw = True
+3992.3750 	EXP 	UpperBrackets: autoDraw = True
+3992.3750 	EXP 	BotUpperLine: autoDraw = True
+3992.3750 	EXP 	TopLowerLine: autoDraw = True
+3992.3750 	EXP 	BotLowerLine: autoDraw = True
+3992.3750 	EXP 	TrialCrossHair: autoDraw = True
+3992.3752 	EXP 	window1: recordFrameIntervals = False
+3993.1643 	DATA 	Keypress: equal
+3994.3422 	EXP 	UpperText: autoDraw = False
+3994.3422 	EXP 	UpperBrackets: autoDraw = False
+3995.0433 	DATA 	Keypress: equal
+3997.0438 	DATA 	Keypress: equal
+3999.0447 	DATA 	Keypress: equal
+3999.3441 	EXP 	LowerText: autoDraw = True
+3999.3441 	EXP 	LowerBrackets: autoDraw = True
+4000.9789 	DATA 	Keypress: 8
+4001.0454 	DATA 	Keypress: equal
+4001.3447 	EXP 	LowerText: autoDraw = False
+4001.3447 	EXP 	LowerBrackets: autoDraw = False
+4001.3447 	EXP 	TrialCrossHair: autoDraw = False
+4001.3447 	EXP 	RestCrossHair: autoDraw = True
+4003.0464 	DATA 	Keypress: equal
+4005.0472 	DATA 	Keypress: equal
+4005.4973 	EXP 	New trial (rep=0, index=33): {'RetDur': 0, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 6.2939999999999996, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.2939999999999996, 'StimSet': 'BQDTJX', 'RetStart': 2, 'ProbeLet': 'mrkhdw', 'TrialITIDur': 8.2940000000000005, 'Correct': 6}
+4005.5288 	EXP 	window1: recordFrameIntervals = False
+4005.5462 	EXP 	TopUpperLine: autoDraw = False
+4005.5462 	EXP 	BotUpperLine: autoDraw = False
+4005.5462 	EXP 	TopLowerLine: autoDraw = False
+4005.5462 	EXP 	BotLowerLine: autoDraw = False
+4005.5462 	EXP 	RestCrossHair: autoDraw = False
+4005.5462 	EXP 	TopUpperLine: autoDraw = False
+4005.5462 	EXP 	UpperText: autoDraw = False
+4005.5462 	EXP 	UpperBrackets: autoDraw = False
+4005.5462 	EXP 	BotUpperLine: autoDraw = False
+4005.5462 	EXP 	TopLowerLine: autoDraw = False
+4005.5462 	EXP 	LowerText: autoDraw = False
+4005.5462 	EXP 	LowerBrackets: autoDraw = False
+4005.5462 	EXP 	BotLowerLine: autoDraw = False
+4005.5462 	EXP 	TrialCrossHair: autoDraw = False
+4005.5462 	EXP 	RestCrossHair: autoDraw = False
+4005.5462 	EXP 	UpperText: text = ' B Q D T J X '
+4005.5462 	EXP 	UpperBrackets: text = '  {       }  '
+4005.5462 	EXP 	LowerText: text = ' m r k h d w '
+4005.5462 	EXP 	LowerBrackets: text = '        { }  '
+4005.5462 	EXP 	TopUpperLine: autoDraw = True
+4005.5462 	EXP 	UpperText: autoDraw = True
+4005.5462 	EXP 	UpperBrackets: autoDraw = True
+4005.5462 	EXP 	BotUpperLine: autoDraw = True
+4005.5462 	EXP 	TopLowerLine: autoDraw = True
+4005.5462 	EXP 	BotLowerLine: autoDraw = True
+4005.5462 	EXP 	TrialCrossHair: autoDraw = True
+4005.5464 	EXP 	window1: recordFrameIntervals = False
+4007.0477 	DATA 	Keypress: equal
+4007.5136 	EXP 	UpperText: autoDraw = False
+4007.5136 	EXP 	UpperBrackets: autoDraw = False
+4007.5303 	EXP 	LowerText: autoDraw = True
+4007.5303 	EXP 	LowerBrackets: autoDraw = True
+4009.0485 	DATA 	Keypress: equal
+4009.0984 	DATA 	Keypress: 7
+4009.5143 	EXP 	LowerText: autoDraw = False
+4009.5143 	EXP 	LowerBrackets: autoDraw = False
+4009.5143 	EXP 	TrialCrossHair: autoDraw = False
+4009.5310 	EXP 	RestCrossHair: autoDraw = True
+4011.0493 	DATA 	Keypress: equal
+4013.0497 	DATA 	Keypress: equal
+4013.7843 	EXP 	New trial (rep=0, index=34): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 123, 'ProbeDurITI': 4.3610000000000007, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.3610000000000007, 'StimSet': 'HNLYGQ', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.360999999999999, 'Correct': 7}
+4013.8076 	EXP 	window1: recordFrameIntervals = False
+4013.8328 	EXP 	TopUpperLine: autoDraw = False
+4013.8328 	EXP 	BotUpperLine: autoDraw = False
+4013.8328 	EXP 	TopLowerLine: autoDraw = False
+4013.8328 	EXP 	BotLowerLine: autoDraw = False
+4013.8328 	EXP 	RestCrossHair: autoDraw = False
+4013.8328 	EXP 	TopUpperLine: autoDraw = False
+4013.8328 	EXP 	UpperText: autoDraw = False
+4013.8328 	EXP 	UpperBrackets: autoDraw = False
+4013.8328 	EXP 	BotUpperLine: autoDraw = False
+4013.8328 	EXP 	TopLowerLine: autoDraw = False
+4013.8328 	EXP 	LowerText: autoDraw = False
+4013.8328 	EXP 	LowerBrackets: autoDraw = False
+4013.8328 	EXP 	BotLowerLine: autoDraw = False
+4013.8328 	EXP 	TrialCrossHair: autoDraw = False
+4013.8328 	EXP 	RestCrossHair: autoDraw = False
+4013.8328 	EXP 	UpperText: text = ' H N L Y G Q '
+4013.8328 	EXP 	UpperBrackets: text = '{     }      '
+4013.8328 	EXP 	LowerText: text = '   '
+4013.8328 	EXP 	LowerBrackets: text = ''
+4013.8328 	EXP 	TopUpperLine: autoDraw = True
+4013.8328 	EXP 	UpperText: autoDraw = True
+4013.8328 	EXP 	UpperBrackets: autoDraw = True
+4013.8328 	EXP 	BotUpperLine: autoDraw = True
+4013.8328 	EXP 	TopLowerLine: autoDraw = True
+4013.8328 	EXP 	BotLowerLine: autoDraw = True
+4013.8328 	EXP 	TrialCrossHair: autoDraw = True
+4013.8332 	EXP 	window1: recordFrameIntervals = False
+4015.0506 	DATA 	Keypress: equal
+4015.8002 	EXP 	UpperText: autoDraw = False
+4015.8002 	EXP 	UpperBrackets: autoDraw = False
+4017.0514 	DATA 	Keypress: equal
+4019.0520 	DATA 	Keypress: equal
+4020.8020 	EXP 	LowerText: autoDraw = True
+4020.8020 	EXP 	LowerBrackets: autoDraw = True
+4020.8020 	EXP 	TrialCrossHair: autoDraw = False
+4020.8020 	EXP 	RestCrossHair: autoDraw = True
+4020.8187 	EXP 	LowerText: autoDraw = False
+4020.8187 	EXP 	LowerBrackets: autoDraw = False
+4021.0527 	DATA 	Keypress: equal
+4023.0536 	DATA 	Keypress: equal
+4025.0541 	DATA 	Keypress: equal
+4025.1381 	EXP 	New trial (rep=0, index=35): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 34, 'ProbeDurITI': 4.2469999999999999, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.2469999999999999, 'StimSet': 'GTQJKD', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.247, 'Correct': 6}
+4025.1582 	EXP 	window1: recordFrameIntervals = False
+4025.1867 	EXP 	TopUpperLine: autoDraw = False
+4025.1867 	EXP 	BotUpperLine: autoDraw = False
+4025.1867 	EXP 	TopLowerLine: autoDraw = False
+4025.1867 	EXP 	BotLowerLine: autoDraw = False
+4025.1867 	EXP 	RestCrossHair: autoDraw = False
+4025.1867 	EXP 	TopUpperLine: autoDraw = False
+4025.1867 	EXP 	UpperText: autoDraw = False
+4025.1867 	EXP 	UpperBrackets: autoDraw = False
+4025.1867 	EXP 	BotUpperLine: autoDraw = False
+4025.1867 	EXP 	TopLowerLine: autoDraw = False
+4025.1867 	EXP 	LowerText: autoDraw = False
+4025.1867 	EXP 	LowerBrackets: autoDraw = False
+4025.1867 	EXP 	BotLowerLine: autoDraw = False
+4025.1867 	EXP 	TrialCrossHair: autoDraw = False
+4025.1867 	EXP 	RestCrossHair: autoDraw = False
+4025.1867 	EXP 	UpperText: text = ' G T Q J K D '
+4025.1867 	EXP 	UpperBrackets: text = '    {   }    '
+4025.1867 	EXP 	LowerText: text = '   '
+4025.1867 	EXP 	LowerBrackets: text = ''
+4025.1867 	EXP 	TopUpperLine: autoDraw = True
+4025.1867 	EXP 	UpperText: autoDraw = True
+4025.1867 	EXP 	UpperBrackets: autoDraw = True
+4025.1867 	EXP 	BotUpperLine: autoDraw = True
+4025.1867 	EXP 	TopLowerLine: autoDraw = True
+4025.1867 	EXP 	BotLowerLine: autoDraw = True
+4025.1867 	EXP 	TrialCrossHair: autoDraw = True
+4025.1869 	EXP 	window1: recordFrameIntervals = False
+4027.0548 	DATA 	Keypress: equal
+4027.1541 	EXP 	UpperText: autoDraw = False
+4027.1541 	EXP 	UpperBrackets: autoDraw = False
+4029.0555 	DATA 	Keypress: equal
+4031.0563 	DATA 	Keypress: equal
+4032.1562 	EXP 	LowerText: autoDraw = True
+4032.1562 	EXP 	LowerBrackets: autoDraw = True
+4032.1562 	EXP 	TrialCrossHair: autoDraw = False
+4032.1562 	EXP 	RestCrossHair: autoDraw = True
+4032.1729 	EXP 	LowerText: autoDraw = False
+4032.1729 	EXP 	LowerBrackets: autoDraw = False
+4033.0571 	DATA 	Keypress: equal
+4035.0584 	DATA 	Keypress: equal
+4036.3757 	EXP 	New trial (rep=0, index=36): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 4.4279999999999999, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.4279999999999999, 'StimSet': 'DHLTQN', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.427999999999999, 'Correct': 7}
+4036.3929 	EXP 	window1: recordFrameIntervals = False
+4036.4081 	EXP 	TopUpperLine: autoDraw = False
+4036.4081 	EXP 	BotUpperLine: autoDraw = False
+4036.4081 	EXP 	TopLowerLine: autoDraw = False
+4036.4081 	EXP 	BotLowerLine: autoDraw = False
+4036.4081 	EXP 	RestCrossHair: autoDraw = False
+4036.4081 	EXP 	TopUpperLine: autoDraw = False
+4036.4081 	EXP 	UpperText: autoDraw = False
+4036.4081 	EXP 	UpperBrackets: autoDraw = False
+4036.4081 	EXP 	BotUpperLine: autoDraw = False
+4036.4081 	EXP 	TopLowerLine: autoDraw = False
+4036.4081 	EXP 	LowerText: autoDraw = False
+4036.4081 	EXP 	LowerBrackets: autoDraw = False
+4036.4081 	EXP 	BotLowerLine: autoDraw = False
+4036.4081 	EXP 	TrialCrossHair: autoDraw = False
+4036.4081 	EXP 	RestCrossHair: autoDraw = False
+4036.4081 	EXP 	UpperText: text = ' D H L T Q N '
+4036.4081 	EXP 	UpperBrackets: text = '{           }'
+4036.4081 	EXP 	LowerText: text = '   '
+4036.4081 	EXP 	LowerBrackets: text = ''
+4036.4081 	EXP 	TopUpperLine: autoDraw = True
+4036.4081 	EXP 	UpperText: autoDraw = True
+4036.4081 	EXP 	UpperBrackets: autoDraw = True
+4036.4081 	EXP 	BotUpperLine: autoDraw = True
+4036.4081 	EXP 	TopLowerLine: autoDraw = True
+4036.4081 	EXP 	BotLowerLine: autoDraw = True
+4036.4081 	EXP 	TrialCrossHair: autoDraw = True
+4036.4083 	EXP 	window1: recordFrameIntervals = False
+4037.1957 	DATA 	Keypress: equal
+4038.3922 	EXP 	UpperText: autoDraw = False
+4038.3922 	EXP 	UpperBrackets: autoDraw = False
+4039.0600 	DATA 	Keypress: equal
+4041.0608 	DATA 	Keypress: equal
+4043.0613 	DATA 	Keypress: equal
+4043.3939 	EXP 	LowerText: autoDraw = True
+4043.3939 	EXP 	LowerBrackets: autoDraw = True
+4043.3939 	EXP 	TrialCrossHair: autoDraw = False
+4043.3939 	EXP 	RestCrossHair: autoDraw = True
+4043.4106 	EXP 	LowerText: autoDraw = False
+4043.4106 	EXP 	LowerBrackets: autoDraw = False
+4045.0624 	DATA 	Keypress: equal
+4047.0627 	DATA 	Keypress: equal
+4047.7972 	EXP 	New trial (rep=0, index=37): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 3456, 'ProbeDurITI': 6.7479999999999993, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.7480000000000002, 'StimSet': 'MDHTBK', 'RetStart': 2, 'ProbeLet': 'lnrjbq', 'TrialITIDur': 13.747999999999999, 'Correct': 6}
+4047.8355 	EXP 	window1: recordFrameIntervals = False
+4047.8624 	EXP 	TopUpperLine: autoDraw = False
+4047.8624 	EXP 	BotUpperLine: autoDraw = False
+4047.8624 	EXP 	TopLowerLine: autoDraw = False
+4047.8624 	EXP 	BotLowerLine: autoDraw = False
+4047.8624 	EXP 	RestCrossHair: autoDraw = False
+4047.8624 	EXP 	TopUpperLine: autoDraw = False
+4047.8624 	EXP 	UpperText: autoDraw = False
+4047.8624 	EXP 	UpperBrackets: autoDraw = False
+4047.8624 	EXP 	BotUpperLine: autoDraw = False
+4047.8624 	EXP 	TopLowerLine: autoDraw = False
+4047.8624 	EXP 	LowerText: autoDraw = False
+4047.8624 	EXP 	LowerBrackets: autoDraw = False
+4047.8624 	EXP 	BotLowerLine: autoDraw = False
+4047.8624 	EXP 	TrialCrossHair: autoDraw = False
+4047.8624 	EXP 	RestCrossHair: autoDraw = False
+4047.8624 	EXP 	UpperText: text = ' M D H T B K '
+4047.8624 	EXP 	UpperBrackets: text = '    {       }'
+4047.8624 	EXP 	LowerText: text = ' l n r j b q '
+4047.8624 	EXP 	LowerBrackets: text = '        { }  '
+4047.8624 	EXP 	TopUpperLine: autoDraw = True
+4047.8624 	EXP 	UpperText: autoDraw = True
+4047.8624 	EXP 	UpperBrackets: autoDraw = True
+4047.8624 	EXP 	BotUpperLine: autoDraw = True
+4047.8624 	EXP 	TopLowerLine: autoDraw = True
+4047.8624 	EXP 	BotLowerLine: autoDraw = True
+4047.8624 	EXP 	TrialCrossHair: autoDraw = True
+4047.8626 	EXP 	window1: recordFrameIntervals = False
+4049.0635 	DATA 	Keypress: equal
+4049.8132 	EXP 	UpperText: autoDraw = False
+4049.8132 	EXP 	UpperBrackets: autoDraw = False
+4051.0644 	DATA 	Keypress: equal
+4053.0651 	DATA 	Keypress: equal
+4054.8153 	EXP 	LowerText: autoDraw = True
+4054.8153 	EXP 	LowerBrackets: autoDraw = True
+4055.0659 	DATA 	Keypress: equal
+4056.1664 	DATA 	Keypress: 7
+4056.8160 	EXP 	LowerText: autoDraw = False
+4056.8160 	EXP 	LowerBrackets: autoDraw = False
+4056.8160 	EXP 	TrialCrossHair: autoDraw = False
+4056.8160 	EXP 	RestCrossHair: autoDraw = True
+4057.0667 	DATA 	Keypress: equal
+4059.0673 	DATA 	Keypress: equal
+4061.0682 	DATA 	Keypress: equal
+4061.5358 	EXP 	New trial (rep=0, index=38): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 4.8630000000000004, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.8630000000000004, 'StimSet': 'KJQWFN', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.8629999999999995, 'Correct': 7}
+4061.5566 	EXP 	window1: recordFrameIntervals = False
+4061.5842 	EXP 	TopUpperLine: autoDraw = False
+4061.5842 	EXP 	BotUpperLine: autoDraw = False
+4061.5842 	EXP 	TopLowerLine: autoDraw = False
+4061.5842 	EXP 	BotLowerLine: autoDraw = False
+4061.5842 	EXP 	RestCrossHair: autoDraw = False
+4061.5842 	EXP 	TopUpperLine: autoDraw = False
+4061.5842 	EXP 	UpperText: autoDraw = False
+4061.5842 	EXP 	UpperBrackets: autoDraw = False
+4061.5842 	EXP 	BotUpperLine: autoDraw = False
+4061.5842 	EXP 	TopLowerLine: autoDraw = False
+4061.5842 	EXP 	LowerText: autoDraw = False
+4061.5842 	EXP 	LowerBrackets: autoDraw = False
+4061.5842 	EXP 	BotLowerLine: autoDraw = False
+4061.5842 	EXP 	TrialCrossHair: autoDraw = False
+4061.5842 	EXP 	RestCrossHair: autoDraw = False
+4061.5842 	EXP 	UpperText: text = ' K J Q W F N '
+4061.5842 	EXP 	UpperBrackets: text = '  {       }  '
+4061.5842 	EXP 	LowerText: text = '   '
+4061.5842 	EXP 	LowerBrackets: text = ''
+4061.5842 	EXP 	TopUpperLine: autoDraw = True
+4061.5842 	EXP 	UpperText: autoDraw = True
+4061.5842 	EXP 	UpperBrackets: autoDraw = True
+4061.5842 	EXP 	BotUpperLine: autoDraw = True
+4061.5842 	EXP 	TopLowerLine: autoDraw = True
+4061.5842 	EXP 	BotLowerLine: autoDraw = True
+4061.5842 	EXP 	TrialCrossHair: autoDraw = True
+4061.5844 	EXP 	window1: recordFrameIntervals = False
+4063.0688 	DATA 	Keypress: equal
+4063.5514 	EXP 	UpperText: autoDraw = False
+4063.5514 	EXP 	UpperBrackets: autoDraw = False
+4063.5514 	EXP 	TrialCrossHair: autoDraw = False
+4063.5680 	EXP 	LowerText: autoDraw = True
+4063.5680 	EXP 	LowerBrackets: autoDraw = True
+4063.5680 	EXP 	RestCrossHair: autoDraw = True
+4063.5846 	EXP 	LowerText: autoDraw = False
+4063.5846 	EXP 	LowerBrackets: autoDraw = False
+4065.0688 	DATA 	Keypress: equal
+4067.0694 	DATA 	Keypress: equal
+4068.4036 	EXP 	New trial (rep=0, index=39): {'RetDur': 0, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 345, 'ProbeDurITI': 6.7000000000000002, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.7000000000000002, 'StimSet': 'GDHQYL', 'RetStart': 2, 'ProbeLet': 'xfkbmr', 'TrialITIDur': 8.6999999999999993, 'Correct': 7}
+4068.4369 	EXP 	window1: recordFrameIntervals = False
+4068.4523 	EXP 	TopUpperLine: autoDraw = False
+4068.4523 	EXP 	BotUpperLine: autoDraw = False
+4068.4523 	EXP 	TopLowerLine: autoDraw = False
+4068.4523 	EXP 	BotLowerLine: autoDraw = False
+4068.4523 	EXP 	RestCrossHair: autoDraw = False
+4068.4523 	EXP 	TopUpperLine: autoDraw = False
+4068.4523 	EXP 	UpperText: autoDraw = False
+4068.4523 	EXP 	UpperBrackets: autoDraw = False
+4068.4523 	EXP 	BotUpperLine: autoDraw = False
+4068.4523 	EXP 	TopLowerLine: autoDraw = False
+4068.4523 	EXP 	LowerText: autoDraw = False
+4068.4523 	EXP 	LowerBrackets: autoDraw = False
+4068.4523 	EXP 	BotLowerLine: autoDraw = False
+4068.4523 	EXP 	TrialCrossHair: autoDraw = False
+4068.4523 	EXP 	RestCrossHair: autoDraw = False
+4068.4523 	EXP 	UpperText: text = ' G D H Q Y L '
+4068.4523 	EXP 	UpperBrackets: text = '    {     }  '
+4068.4523 	EXP 	LowerText: text = ' x f k b m r '
+4068.4523 	EXP 	LowerBrackets: text = '    { }      '
+4068.4523 	EXP 	TopUpperLine: autoDraw = True
+4068.4523 	EXP 	UpperText: autoDraw = True
+4068.4523 	EXP 	UpperBrackets: autoDraw = True
+4068.4523 	EXP 	BotUpperLine: autoDraw = True
+4068.4523 	EXP 	TopLowerLine: autoDraw = True
+4068.4523 	EXP 	BotLowerLine: autoDraw = True
+4068.4523 	EXP 	TrialCrossHair: autoDraw = True
+4068.4525 	EXP 	window1: recordFrameIntervals = False
+4069.2396 	DATA 	Keypress: equal
+4070.4196 	EXP 	UpperText: autoDraw = False
+4070.4196 	EXP 	UpperBrackets: autoDraw = False
+4070.4362 	EXP 	LowerText: autoDraw = True
+4070.4362 	EXP 	LowerBrackets: autoDraw = True
+4071.0707 	DATA 	Keypress: equal
+4072.2074 	DATA 	Keypress: 8
+4072.4203 	EXP 	LowerText: autoDraw = False
+4072.4203 	EXP 	LowerBrackets: autoDraw = False
+4072.4203 	EXP 	TrialCrossHair: autoDraw = False
+4072.4369 	EXP 	RestCrossHair: autoDraw = True
+4073.0716 	DATA 	Keypress: equal
+4075.0722 	DATA 	Keypress: equal
+4077.0729 	DATA 	Keypress: equal
+4077.1066 	EXP 	New trial (rep=0, index=40): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 23456, 'ProbeDurITI': 4.1160000000000005, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.1160000000000005, 'StimSet': 'DKWJGL', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.116, 'Correct': 6}
+4077.1231 	EXP 	window1: recordFrameIntervals = False
+4077.1387 	EXP 	TopUpperLine: autoDraw = False
+4077.1387 	EXP 	BotUpperLine: autoDraw = False
+4077.1387 	EXP 	TopLowerLine: autoDraw = False
+4077.1387 	EXP 	BotLowerLine: autoDraw = False
+4077.1387 	EXP 	RestCrossHair: autoDraw = False
+4077.1387 	EXP 	TopUpperLine: autoDraw = False
+4077.1387 	EXP 	UpperText: autoDraw = False
+4077.1387 	EXP 	UpperBrackets: autoDraw = False
+4077.1387 	EXP 	BotUpperLine: autoDraw = False
+4077.1387 	EXP 	TopLowerLine: autoDraw = False
+4077.1387 	EXP 	LowerText: autoDraw = False
+4077.1387 	EXP 	LowerBrackets: autoDraw = False
+4077.1387 	EXP 	BotLowerLine: autoDraw = False
+4077.1387 	EXP 	TrialCrossHair: autoDraw = False
+4077.1387 	EXP 	RestCrossHair: autoDraw = False
+4077.1387 	EXP 	UpperText: text = ' D K W J G L '
+4077.1387 	EXP 	UpperBrackets: text = '  {         }'
+4077.1387 	EXP 	LowerText: text = '   '
+4077.1387 	EXP 	LowerBrackets: text = ''
+4077.1387 	EXP 	TopUpperLine: autoDraw = True
+4077.1387 	EXP 	UpperText: autoDraw = True
+4077.1387 	EXP 	UpperBrackets: autoDraw = True
+4077.1387 	EXP 	BotUpperLine: autoDraw = True
+4077.1387 	EXP 	TopLowerLine: autoDraw = True
+4077.1387 	EXP 	BotLowerLine: autoDraw = True
+4077.1387 	EXP 	TrialCrossHair: autoDraw = True
+4077.1390 	EXP 	window1: recordFrameIntervals = False
+4079.0735 	DATA 	Keypress: equal
+4079.1228 	EXP 	UpperText: autoDraw = False
+4079.1228 	EXP 	UpperBrackets: autoDraw = False
+4081.0744 	DATA 	Keypress: equal
+4083.0751 	DATA 	Keypress: equal
+4084.1246 	EXP 	LowerText: autoDraw = True
+4084.1246 	EXP 	LowerBrackets: autoDraw = True
+4084.1246 	EXP 	TrialCrossHair: autoDraw = False
+4084.1246 	EXP 	RestCrossHair: autoDraw = True
+4084.1413 	EXP 	LowerText: autoDraw = False
+4084.1413 	EXP 	LowerBrackets: autoDraw = False
+4085.0759 	DATA 	Keypress: equal
+4087.0764 	DATA 	Keypress: equal
+4088.2275 	EXP 	New trial (rep=0, index=41): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 4.7430000000000003, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.7430000000000003, 'StimSet': 'RWYKXJ', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.743, 'Correct': 6}
+4088.2458 	EXP 	window1: recordFrameIntervals = False
+4088.2594 	EXP 	TopUpperLine: autoDraw = False
+4088.2594 	EXP 	BotUpperLine: autoDraw = False
+4088.2594 	EXP 	TopLowerLine: autoDraw = False
+4088.2594 	EXP 	BotLowerLine: autoDraw = False
+4088.2594 	EXP 	RestCrossHair: autoDraw = False
+4088.2594 	EXP 	TopUpperLine: autoDraw = False
+4088.2594 	EXP 	UpperText: autoDraw = False
+4088.2594 	EXP 	UpperBrackets: autoDraw = False
+4088.2594 	EXP 	BotUpperLine: autoDraw = False
+4088.2594 	EXP 	TopLowerLine: autoDraw = False
+4088.2594 	EXP 	LowerText: autoDraw = False
+4088.2594 	EXP 	LowerBrackets: autoDraw = False
+4088.2594 	EXP 	BotLowerLine: autoDraw = False
+4088.2594 	EXP 	TrialCrossHair: autoDraw = False
+4088.2594 	EXP 	RestCrossHair: autoDraw = False
+4088.2594 	EXP 	UpperText: text = ' R W Y K X J '
+4088.2594 	EXP 	UpperBrackets: text = '{           }'
+4088.2594 	EXP 	LowerText: text = '   '
+4088.2594 	EXP 	LowerBrackets: text = ''
+4088.2594 	EXP 	TopUpperLine: autoDraw = True
+4088.2594 	EXP 	UpperText: autoDraw = True
+4088.2594 	EXP 	UpperBrackets: autoDraw = True
+4088.2594 	EXP 	BotUpperLine: autoDraw = True
+4088.2594 	EXP 	TopLowerLine: autoDraw = True
+4088.2594 	EXP 	BotLowerLine: autoDraw = True
+4088.2594 	EXP 	TrialCrossHair: autoDraw = True
+4088.2596 	EXP 	window1: recordFrameIntervals = False
+4089.0643 	DATA 	Keypress: equal
+4090.2434 	EXP 	UpperText: autoDraw = False
+4090.2434 	EXP 	UpperBrackets: autoDraw = False
+4091.0778 	DATA 	Keypress: equal
+4093.0788 	DATA 	Keypress: equal
+4095.0792 	DATA 	Keypress: equal
+4095.2452 	EXP 	LowerText: autoDraw = True
+4095.2452 	EXP 	LowerBrackets: autoDraw = True
+4095.2452 	EXP 	TrialCrossHair: autoDraw = False
+4095.2452 	EXP 	RestCrossHair: autoDraw = True
+4095.2620 	EXP 	LowerText: autoDraw = False
+4095.2620 	EXP 	LowerBrackets: autoDraw = False
+4097.0802 	DATA 	Keypress: equal
+4099.0811 	DATA 	Keypress: equal
+4099.9651 	EXP 	New trial (rep=0, index=42): {'RetDur': 5, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 4, 'ProbeDurITI': 6.0110000000000001, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0110000000000001, 'StimSet': 'QBXNRY', 'RetStart': 2, 'ProbeLet': 'lnkmdt', 'TrialITIDur': 13.010999999999999, 'Correct': 6}
+4099.9992 	EXP 	window1: recordFrameIntervals = False
+4100.0137 	EXP 	TopUpperLine: autoDraw = False
+4100.0137 	EXP 	BotUpperLine: autoDraw = False
+4100.0137 	EXP 	TopLowerLine: autoDraw = False
+4100.0137 	EXP 	BotLowerLine: autoDraw = False
+4100.0137 	EXP 	RestCrossHair: autoDraw = False
+4100.0137 	EXP 	TopUpperLine: autoDraw = False
+4100.0137 	EXP 	UpperText: autoDraw = False
+4100.0137 	EXP 	UpperBrackets: autoDraw = False
+4100.0137 	EXP 	BotUpperLine: autoDraw = False
+4100.0137 	EXP 	TopLowerLine: autoDraw = False
+4100.0137 	EXP 	LowerText: autoDraw = False
+4100.0137 	EXP 	LowerBrackets: autoDraw = False
+4100.0137 	EXP 	BotLowerLine: autoDraw = False
+4100.0137 	EXP 	TrialCrossHair: autoDraw = False
+4100.0137 	EXP 	RestCrossHair: autoDraw = False
+4100.0137 	EXP 	UpperText: text = ' Q B X N R Y '
+4100.0137 	EXP 	UpperBrackets: text = '      { }    '
+4100.0137 	EXP 	LowerText: text = ' l n k m d t '
+4100.0137 	EXP 	LowerBrackets: text = '  { }        '
+4100.0137 	EXP 	TopUpperLine: autoDraw = True
+4100.0137 	EXP 	UpperText: autoDraw = True
+4100.0137 	EXP 	UpperBrackets: autoDraw = True
+4100.0137 	EXP 	BotUpperLine: autoDraw = True
+4100.0137 	EXP 	TopLowerLine: autoDraw = True
+4100.0137 	EXP 	BotLowerLine: autoDraw = True
+4100.0137 	EXP 	TrialCrossHair: autoDraw = True
+4100.0142 	EXP 	window1: recordFrameIntervals = False
+4101.0816 	DATA 	Keypress: equal
+4101.9812 	EXP 	UpperText: autoDraw = False
+4101.9812 	EXP 	UpperBrackets: autoDraw = False
+4103.0823 	DATA 	Keypress: equal
+4105.0830 	DATA 	Keypress: equal
+4106.9829 	EXP 	LowerText: autoDraw = True
+4106.9829 	EXP 	LowerBrackets: autoDraw = True
+4107.0836 	DATA 	Keypress: equal
+4108.2173 	DATA 	Keypress: 7
+4108.9837 	EXP 	LowerText: autoDraw = False
+4108.9837 	EXP 	LowerBrackets: autoDraw = False
+4108.9837 	EXP 	TrialCrossHair: autoDraw = False
+4108.9837 	EXP 	RestCrossHair: autoDraw = True
+4109.0844 	DATA 	Keypress: equal
+4111.0850 	DATA 	Keypress: equal
+4112.9697 	EXP 	New trial (rep=0, index=43): {'RetDur': 0, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 56, 'ProbeDurITI': 6.2050000000000001, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.2050000000000001, 'StimSet': 'BHNXFR', 'RetStart': 2, 'ProbeLet': 'qlkrtg', 'TrialITIDur': 8.2050000000000001, 'Correct': 6}
+4113.0021 	EXP 	window1: recordFrameIntervals = False
+4113.0184 	EXP 	TopUpperLine: autoDraw = False
+4113.0184 	EXP 	BotUpperLine: autoDraw = False
+4113.0184 	EXP 	TopLowerLine: autoDraw = False
+4113.0184 	EXP 	BotLowerLine: autoDraw = False
+4113.0184 	EXP 	RestCrossHair: autoDraw = False
+4113.0184 	EXP 	TopUpperLine: autoDraw = False
+4113.0184 	EXP 	UpperText: autoDraw = False
+4113.0184 	EXP 	UpperBrackets: autoDraw = False
+4113.0184 	EXP 	BotUpperLine: autoDraw = False
+4113.0184 	EXP 	TopLowerLine: autoDraw = False
+4113.0184 	EXP 	LowerText: autoDraw = False
+4113.0184 	EXP 	LowerBrackets: autoDraw = False
+4113.0184 	EXP 	BotLowerLine: autoDraw = False
+4113.0184 	EXP 	TrialCrossHair: autoDraw = False
+4113.0184 	EXP 	RestCrossHair: autoDraw = False
+4113.0184 	EXP 	UpperText: text = ' B H N X F R '
+4113.0184 	EXP 	UpperBrackets: text = '        {   }'
+4113.0184 	EXP 	LowerText: text = ' q l k r t g '
+4113.0184 	EXP 	LowerBrackets: text = '      { }    '
+4113.0184 	EXP 	TopUpperLine: autoDraw = True
+4113.0184 	EXP 	UpperText: autoDraw = True
+4113.0184 	EXP 	UpperBrackets: autoDraw = True
+4113.0184 	EXP 	BotUpperLine: autoDraw = True
+4113.0184 	EXP 	TopLowerLine: autoDraw = True
+4113.0184 	EXP 	BotLowerLine: autoDraw = True
+4113.0184 	EXP 	TrialCrossHair: autoDraw = True
+4113.0187 	EXP 	window1: recordFrameIntervals = False
+4113.8048 	DATA 	Keypress: equal
+4114.9858 	EXP 	UpperText: autoDraw = False
+4114.9858 	EXP 	UpperBrackets: autoDraw = False
+4115.0025 	EXP 	LowerText: autoDraw = True
+4115.0025 	EXP 	LowerBrackets: autoDraw = True
+4115.0866 	DATA 	Keypress: equal
+4116.1874 	DATA 	Keypress: 7
+4116.9866 	EXP 	LowerText: autoDraw = False
+4116.9866 	EXP 	LowerBrackets: autoDraw = False
+4116.9866 	EXP 	TrialCrossHair: autoDraw = False
+4117.0032 	EXP 	RestCrossHair: autoDraw = True
+4117.0872 	DATA 	Keypress: equal
+4119.0879 	DATA 	Keypress: equal
+4121.0886 	DATA 	Keypress: equal
+4121.1723 	EXP 	New trial (rep=0, index=44): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 12, 'ProbeDurITI': 4.0250000000000004, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.0250000000000004, 'StimSet': 'HLRYMN', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.0250000000000004, 'Correct': 7}
+4121.1903 	EXP 	window1: recordFrameIntervals = False
+4121.2046 	EXP 	TopUpperLine: autoDraw = False
+4121.2046 	EXP 	BotUpperLine: autoDraw = False
+4121.2046 	EXP 	TopLowerLine: autoDraw = False
+4121.2046 	EXP 	BotLowerLine: autoDraw = False
+4121.2046 	EXP 	RestCrossHair: autoDraw = False
+4121.2046 	EXP 	TopUpperLine: autoDraw = False
+4121.2046 	EXP 	UpperText: autoDraw = False
+4121.2046 	EXP 	UpperBrackets: autoDraw = False
+4121.2046 	EXP 	BotUpperLine: autoDraw = False
+4121.2046 	EXP 	TopLowerLine: autoDraw = False
+4121.2046 	EXP 	LowerText: autoDraw = False
+4121.2046 	EXP 	LowerBrackets: autoDraw = False
+4121.2046 	EXP 	BotLowerLine: autoDraw = False
+4121.2046 	EXP 	TrialCrossHair: autoDraw = False
+4121.2046 	EXP 	RestCrossHair: autoDraw = False
+4121.2046 	EXP 	UpperText: text = ' H L R Y M N '
+4121.2046 	EXP 	UpperBrackets: text = '{   }        '
+4121.2046 	EXP 	LowerText: text = '   '
+4121.2046 	EXP 	LowerBrackets: text = ''
+4121.2046 	EXP 	TopUpperLine: autoDraw = True
+4121.2046 	EXP 	UpperText: autoDraw = True
+4121.2046 	EXP 	UpperBrackets: autoDraw = True
+4121.2046 	EXP 	BotUpperLine: autoDraw = True
+4121.2046 	EXP 	TopLowerLine: autoDraw = True
+4121.2046 	EXP 	BotLowerLine: autoDraw = True
+4121.2046 	EXP 	TrialCrossHair: autoDraw = True
+4121.2049 	EXP 	window1: recordFrameIntervals = False
+4123.0896 	DATA 	Keypress: equal
+4123.1887 	EXP 	UpperText: autoDraw = False
+4123.1887 	EXP 	UpperBrackets: autoDraw = False
+4123.1887 	EXP 	TrialCrossHair: autoDraw = False
+4123.2054 	EXP 	LowerText: autoDraw = True
+4123.2054 	EXP 	LowerBrackets: autoDraw = True
+4123.2054 	EXP 	RestCrossHair: autoDraw = True
+4123.2220 	EXP 	LowerText: autoDraw = False
+4123.2220 	EXP 	LowerBrackets: autoDraw = False
+4125.0902 	DATA 	Keypress: equal
+4127.0907 	DATA 	Keypress: equal
+4127.1912 	EXP 	New trial (rep=0, index=45): {'RetDur': 5, 'BotBrack': 6, 'StimDur': 2, 'UpBrack': 1234, 'ProbeDurITI': 6.0999999999999996, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0999999999999996, 'StimSet': 'MKWYLR', 'RetStart': 2, 'ProbeLet': 'ghnjqx', 'TrialITIDur': 13.1, 'Correct': 7}
+4127.2220 	EXP 	window1: recordFrameIntervals = False
+4127.2401 	EXP 	TopUpperLine: autoDraw = False
+4127.2401 	EXP 	BotUpperLine: autoDraw = False
+4127.2401 	EXP 	TopLowerLine: autoDraw = False
+4127.2401 	EXP 	BotLowerLine: autoDraw = False
+4127.2401 	EXP 	RestCrossHair: autoDraw = False
+4127.2401 	EXP 	TopUpperLine: autoDraw = False
+4127.2401 	EXP 	UpperText: autoDraw = False
+4127.2401 	EXP 	UpperBrackets: autoDraw = False
+4127.2401 	EXP 	BotUpperLine: autoDraw = False
+4127.2401 	EXP 	TopLowerLine: autoDraw = False
+4127.2401 	EXP 	LowerText: autoDraw = False
+4127.2401 	EXP 	LowerBrackets: autoDraw = False
+4127.2401 	EXP 	BotLowerLine: autoDraw = False
+4127.2401 	EXP 	TrialCrossHair: autoDraw = False
+4127.2401 	EXP 	RestCrossHair: autoDraw = False
+4127.2401 	EXP 	UpperText: text = ' M K W Y L R '
+4127.2401 	EXP 	UpperBrackets: text = '{       }    '
+4127.2401 	EXP 	LowerText: text = ' g h n j q x '
+4127.2401 	EXP 	LowerBrackets: text = '          { }'
+4127.2401 	EXP 	TopUpperLine: autoDraw = True
+4127.2401 	EXP 	UpperText: autoDraw = True
+4127.2401 	EXP 	UpperBrackets: autoDraw = True
+4127.2401 	EXP 	BotUpperLine: autoDraw = True
+4127.2401 	EXP 	TopLowerLine: autoDraw = True
+4127.2401 	EXP 	BotLowerLine: autoDraw = True
+4127.2401 	EXP 	TrialCrossHair: autoDraw = True
+4127.2404 	EXP 	window1: recordFrameIntervals = False
+4129.0917 	DATA 	Keypress: equal
+4129.2075 	EXP 	UpperText: autoDraw = False
+4129.2075 	EXP 	UpperBrackets: autoDraw = False
+4131.0921 	DATA 	Keypress: equal
+4133.0930 	DATA 	Keypress: equal
+4134.2093 	EXP 	LowerText: autoDraw = True
+4134.2093 	EXP 	LowerBrackets: autoDraw = True
+4135.0939 	DATA 	Keypress: equal
+4136.2102 	EXP 	LowerText: autoDraw = False
+4136.2102 	EXP 	LowerBrackets: autoDraw = False
+4136.2102 	EXP 	TrialCrossHair: autoDraw = False
+4136.2102 	EXP 	RestCrossHair: autoDraw = True
+4136.2109 	DATA 	Keypress: 8
+4137.0948 	DATA 	Keypress: equal
+4139.0958 	DATA 	Keypress: equal
+4140.2971 	EXP 	New trial (rep=0, index=46): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 1, 'ProbeDurITI': 4.7290000000000001, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.7290000000000001, 'StimSet': 'RBXYTL', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.729000000000001, 'Correct': 6}
+4140.3168 	EXP 	window1: recordFrameIntervals = False
+4140.3456 	EXP 	TopUpperLine: autoDraw = False
+4140.3456 	EXP 	BotUpperLine: autoDraw = False
+4140.3456 	EXP 	TopLowerLine: autoDraw = False
+4140.3456 	EXP 	BotLowerLine: autoDraw = False
+4140.3456 	EXP 	RestCrossHair: autoDraw = False
+4140.3456 	EXP 	TopUpperLine: autoDraw = False
+4140.3456 	EXP 	UpperText: autoDraw = False
+4140.3456 	EXP 	UpperBrackets: autoDraw = False
+4140.3456 	EXP 	BotUpperLine: autoDraw = False
+4140.3456 	EXP 	TopLowerLine: autoDraw = False
+4140.3456 	EXP 	LowerText: autoDraw = False
+4140.3456 	EXP 	LowerBrackets: autoDraw = False
+4140.3456 	EXP 	BotLowerLine: autoDraw = False
+4140.3456 	EXP 	TrialCrossHair: autoDraw = False
+4140.3456 	EXP 	RestCrossHair: autoDraw = False
+4140.3456 	EXP 	UpperText: text = ' R B X Y T L '
+4140.3456 	EXP 	UpperBrackets: text = '{ }          '
+4140.3456 	EXP 	LowerText: text = '   '
+4140.3456 	EXP 	LowerBrackets: text = ''
+4140.3456 	EXP 	TopUpperLine: autoDraw = True
+4140.3456 	EXP 	UpperText: autoDraw = True
+4140.3456 	EXP 	UpperBrackets: autoDraw = True
+4140.3456 	EXP 	BotUpperLine: autoDraw = True
+4140.3456 	EXP 	TopLowerLine: autoDraw = True
+4140.3456 	EXP 	BotLowerLine: autoDraw = True
+4140.3456 	EXP 	TrialCrossHair: autoDraw = True
+4140.3458 	EXP 	window1: recordFrameIntervals = False
+4141.1189 	DATA 	Keypress: equal
+4142.3130 	EXP 	UpperText: autoDraw = False
+4142.3130 	EXP 	UpperBrackets: autoDraw = False
+4143.0974 	DATA 	Keypress: equal
+4145.0979 	DATA 	Keypress: equal
+4147.0988 	DATA 	Keypress: equal
+4147.3146 	EXP 	LowerText: autoDraw = True
+4147.3146 	EXP 	LowerBrackets: autoDraw = True
+4147.3146 	EXP 	TrialCrossHair: autoDraw = False
+4147.3146 	EXP 	RestCrossHair: autoDraw = True
+4147.3313 	EXP 	LowerText: autoDraw = False
+4147.3313 	EXP 	LowerBrackets: autoDraw = False
+4149.0995 	DATA 	Keypress: equal
+4151.1001 	DATA 	Keypress: equal
+4152.0174 	EXP 	New trial (rep=0, index=47): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 4.077, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.077, 'StimSet': 'QBMKWD', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.0770000000000008, 'Correct': 6}
+4152.0354 	EXP 	window1: recordFrameIntervals = False
+4152.0498 	EXP 	TopUpperLine: autoDraw = False
+4152.0498 	EXP 	BotUpperLine: autoDraw = False
+4152.0498 	EXP 	TopLowerLine: autoDraw = False
+4152.0498 	EXP 	BotLowerLine: autoDraw = False
+4152.0498 	EXP 	RestCrossHair: autoDraw = False
+4152.0498 	EXP 	TopUpperLine: autoDraw = False
+4152.0498 	EXP 	UpperText: autoDraw = False
+4152.0498 	EXP 	UpperBrackets: autoDraw = False
+4152.0498 	EXP 	BotUpperLine: autoDraw = False
+4152.0498 	EXP 	TopLowerLine: autoDraw = False
+4152.0498 	EXP 	LowerText: autoDraw = False
+4152.0498 	EXP 	LowerBrackets: autoDraw = False
+4152.0498 	EXP 	BotLowerLine: autoDraw = False
+4152.0498 	EXP 	TrialCrossHair: autoDraw = False
+4152.0498 	EXP 	RestCrossHair: autoDraw = False
+4152.0498 	EXP 	UpperText: text = ' Q B M K W D '
+4152.0498 	EXP 	UpperBrackets: text = '{           }'
+4152.0498 	EXP 	LowerText: text = '   '
+4152.0498 	EXP 	LowerBrackets: text = ''
+4152.0498 	EXP 	TopUpperLine: autoDraw = True
+4152.0498 	EXP 	UpperText: autoDraw = True
+4152.0498 	EXP 	UpperBrackets: autoDraw = True
+4152.0498 	EXP 	BotUpperLine: autoDraw = True
+4152.0498 	EXP 	TopLowerLine: autoDraw = True
+4152.0498 	EXP 	BotLowerLine: autoDraw = True
+4152.0498 	EXP 	TrialCrossHair: autoDraw = True
+4152.0501 	EXP 	window1: recordFrameIntervals = False
+4153.1008 	DATA 	Keypress: equal
+4154.0339 	EXP 	UpperText: autoDraw = False
+4154.0339 	EXP 	UpperBrackets: autoDraw = False
+4154.0339 	EXP 	TrialCrossHair: autoDraw = False
+4154.0506 	EXP 	LowerText: autoDraw = True
+4154.0506 	EXP 	LowerBrackets: autoDraw = True
+4154.0506 	EXP 	RestCrossHair: autoDraw = True
+4154.0673 	EXP 	LowerText: autoDraw = False
+4154.0673 	EXP 	LowerBrackets: autoDraw = False
+4155.1019 	DATA 	Keypress: equal
+4157.1025 	DATA 	Keypress: equal
+4158.0867 	EXP 	New trial (rep=0, index=48): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 4.4489999999999998, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.4489999999999998, 'StimSet': 'MYQJWH', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.4489999999999998, 'Correct': 7}
+4158.1049 	EXP 	window1: recordFrameIntervals = False
+4158.1190 	EXP 	TopUpperLine: autoDraw = False
+4158.1190 	EXP 	BotUpperLine: autoDraw = False
+4158.1190 	EXP 	TopLowerLine: autoDraw = False
+4158.1190 	EXP 	BotLowerLine: autoDraw = False
+4158.1190 	EXP 	RestCrossHair: autoDraw = False
+4158.1190 	EXP 	TopUpperLine: autoDraw = False
+4158.1190 	EXP 	UpperText: autoDraw = False
+4158.1190 	EXP 	UpperBrackets: autoDraw = False
+4158.1190 	EXP 	BotUpperLine: autoDraw = False
+4158.1190 	EXP 	TopLowerLine: autoDraw = False
+4158.1190 	EXP 	LowerText: autoDraw = False
+4158.1190 	EXP 	LowerBrackets: autoDraw = False
+4158.1190 	EXP 	BotLowerLine: autoDraw = False
+4158.1190 	EXP 	TrialCrossHair: autoDraw = False
+4158.1190 	EXP 	RestCrossHair: autoDraw = False
+4158.1190 	EXP 	UpperText: text = ' M Y Q J W H '
+4158.1190 	EXP 	UpperBrackets: text = '{           }'
+4158.1190 	EXP 	LowerText: text = '   '
+4158.1190 	EXP 	LowerBrackets: text = ''
+4158.1190 	EXP 	TopUpperLine: autoDraw = True
+4158.1190 	EXP 	UpperText: autoDraw = True
+4158.1190 	EXP 	UpperBrackets: autoDraw = True
+4158.1190 	EXP 	BotUpperLine: autoDraw = True
+4158.1190 	EXP 	TopLowerLine: autoDraw = True
+4158.1190 	EXP 	BotLowerLine: autoDraw = True
+4158.1190 	EXP 	TrialCrossHair: autoDraw = True
+4158.1192 	EXP 	window1: recordFrameIntervals = False
+4159.0910 	DATA 	Keypress: equal
+4160.1031 	EXP 	UpperText: autoDraw = False
+4160.1031 	EXP 	UpperBrackets: autoDraw = False
+4160.1031 	EXP 	TrialCrossHair: autoDraw = False
+4160.1198 	EXP 	LowerText: autoDraw = True
+4160.1198 	EXP 	LowerBrackets: autoDraw = True
+4160.1198 	EXP 	RestCrossHair: autoDraw = True
+4160.1364 	EXP 	LowerText: autoDraw = False
+4160.1364 	EXP 	LowerBrackets: autoDraw = False
+4161.1041 	DATA 	Keypress: equal
+4163.1051 	DATA 	Keypress: equal
+4164.5391 	EXP 	New trial (rep=0, index=49): {'RetDur': 0, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 3, 'ProbeDurITI': 6.9199999999999999, 'ProbeDur': 2, 'ProbeStart': 2, 'TrialDur': 4, 'ITI': 4.9199999999999999, 'StimSet': 'JKDHQN', 'RetStart': 2, 'ProbeLet': 'gbxdtm', 'TrialITIDur': 8.9199999999999999, 'Correct': 6}
+4164.5714 	EXP 	window1: recordFrameIntervals = False
+4164.5879 	EXP 	TopUpperLine: autoDraw = False
+4164.5879 	EXP 	BotUpperLine: autoDraw = False
+4164.5879 	EXP 	TopLowerLine: autoDraw = False
+4164.5879 	EXP 	BotLowerLine: autoDraw = False
+4164.5879 	EXP 	RestCrossHair: autoDraw = False
+4164.5879 	EXP 	TopUpperLine: autoDraw = False
+4164.5879 	EXP 	UpperText: autoDraw = False
+4164.5879 	EXP 	UpperBrackets: autoDraw = False
+4164.5879 	EXP 	BotUpperLine: autoDraw = False
+4164.5879 	EXP 	TopLowerLine: autoDraw = False
+4164.5879 	EXP 	LowerText: autoDraw = False
+4164.5879 	EXP 	LowerBrackets: autoDraw = False
+4164.5879 	EXP 	BotLowerLine: autoDraw = False
+4164.5879 	EXP 	TrialCrossHair: autoDraw = False
+4164.5879 	EXP 	RestCrossHair: autoDraw = False
+4164.5879 	EXP 	UpperText: text = ' J K D H Q N '
+4164.5879 	EXP 	UpperBrackets: text = '    { }      '
+4164.5879 	EXP 	LowerText: text = ' g b x d t m '
+4164.5879 	EXP 	LowerBrackets: text = '      { }    '
+4164.5879 	EXP 	TopUpperLine: autoDraw = True
+4164.5879 	EXP 	UpperText: autoDraw = True
+4164.5879 	EXP 	UpperBrackets: autoDraw = True
+4164.5879 	EXP 	BotUpperLine: autoDraw = True
+4164.5879 	EXP 	TopLowerLine: autoDraw = True
+4164.5879 	EXP 	BotLowerLine: autoDraw = True
+4164.5879 	EXP 	TrialCrossHair: autoDraw = True
+4164.5883 	EXP 	window1: recordFrameIntervals = False
+4165.3742 	DATA 	Keypress: equal
+4166.5552 	EXP 	UpperText: autoDraw = False
+4166.5552 	EXP 	UpperBrackets: autoDraw = False
+4166.5719 	EXP 	LowerText: autoDraw = True
+4166.5719 	EXP 	LowerBrackets: autoDraw = True
+4167.1061 	DATA 	Keypress: equal
+4167.2393 	DATA 	Keypress: 7
+4168.5554 	EXP 	LowerText: autoDraw = False
+4168.5554 	EXP 	LowerBrackets: autoDraw = False
+4168.5554 	EXP 	TrialCrossHair: autoDraw = False
+4168.5720 	EXP 	RestCrossHair: autoDraw = True
+4169.1065 	DATA 	Keypress: equal
+4171.1068 	DATA 	Keypress: equal
+4173.1076 	DATA 	Keypress: equal
+4173.4580 	EXP 	New trial (rep=0, index=50): {'RetDur': 5, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 2345, 'ProbeDurITI': 6.0529999999999999, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0529999999999999, 'StimSet': 'DTQJWX', 'RetStart': 2, 'ProbeLet': 'fhqlrm', 'TrialITIDur': 13.052999999999999, 'Correct': 6}
+4173.4938 	EXP 	window1: recordFrameIntervals = False
+4173.5067 	EXP 	TopUpperLine: autoDraw = False
+4173.5067 	EXP 	BotUpperLine: autoDraw = False
+4173.5067 	EXP 	TopLowerLine: autoDraw = False
+4173.5067 	EXP 	BotLowerLine: autoDraw = False
+4173.5067 	EXP 	RestCrossHair: autoDraw = False
+4173.5067 	EXP 	TopUpperLine: autoDraw = False
+4173.5067 	EXP 	UpperText: autoDraw = False
+4173.5067 	EXP 	UpperBrackets: autoDraw = False
+4173.5067 	EXP 	BotUpperLine: autoDraw = False
+4173.5067 	EXP 	TopLowerLine: autoDraw = False
+4173.5067 	EXP 	LowerText: autoDraw = False
+4173.5067 	EXP 	LowerBrackets: autoDraw = False
+4173.5067 	EXP 	BotLowerLine: autoDraw = False
+4173.5067 	EXP 	TrialCrossHair: autoDraw = False
+4173.5067 	EXP 	RestCrossHair: autoDraw = False
+4173.5067 	EXP 	UpperText: text = ' D T Q J W X '
+4173.5067 	EXP 	UpperBrackets: text = '  {       }  '
+4173.5067 	EXP 	LowerText: text = ' f h q l r m '
+4173.5067 	EXP 	LowerBrackets: text = '    { }      '
+4173.5067 	EXP 	TopUpperLine: autoDraw = True
+4173.5067 	EXP 	UpperText: autoDraw = True
+4173.5067 	EXP 	UpperBrackets: autoDraw = True
+4173.5067 	EXP 	BotUpperLine: autoDraw = True
+4173.5067 	EXP 	TopLowerLine: autoDraw = True
+4173.5067 	EXP 	BotLowerLine: autoDraw = True
+4173.5067 	EXP 	TrialCrossHair: autoDraw = True
+4173.5069 	EXP 	window1: recordFrameIntervals = False
+4175.1079 	DATA 	Keypress: equal
+4175.4740 	EXP 	UpperText: autoDraw = False
+4175.4740 	EXP 	UpperBrackets: autoDraw = False
+4177.1089 	DATA 	Keypress: equal
+4179.1099 	DATA 	Keypress: equal
+4180.4758 	EXP 	LowerText: autoDraw = True
+4180.4758 	EXP 	LowerBrackets: autoDraw = True
+4181.1103 	DATA 	Keypress: equal
+4181.8108 	DATA 	Keypress: 8
+4182.4765 	EXP 	LowerText: autoDraw = False
+4182.4765 	EXP 	LowerBrackets: autoDraw = False
+4182.4765 	EXP 	TrialCrossHair: autoDraw = False
+4182.4765 	EXP 	RestCrossHair: autoDraw = True
+4183.1109 	DATA 	Keypress: equal
+4185.1118 	DATA 	Keypress: equal
+4186.5122 	EXP 	New trial (rep=0, index=51): {'RetDur': 5, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.3650000000000002, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.3650000000000002, 'StimSet': 'NQWRGT', 'RetStart': 2, 'ProbeLet': 'lmjhky', 'TrialITIDur': 13.365, 'Correct': 7}
+4186.5465 	EXP 	window1: recordFrameIntervals = False
+4186.5613 	EXP 	TopUpperLine: autoDraw = False
+4186.5613 	EXP 	BotUpperLine: autoDraw = False
+4186.5613 	EXP 	TopLowerLine: autoDraw = False
+4186.5613 	EXP 	BotLowerLine: autoDraw = False
+4186.5613 	EXP 	RestCrossHair: autoDraw = False
+4186.5613 	EXP 	TopUpperLine: autoDraw = False
+4186.5613 	EXP 	UpperText: autoDraw = False
+4186.5613 	EXP 	UpperBrackets: autoDraw = False
+4186.5613 	EXP 	BotUpperLine: autoDraw = False
+4186.5613 	EXP 	TopLowerLine: autoDraw = False
+4186.5613 	EXP 	LowerText: autoDraw = False
+4186.5613 	EXP 	LowerBrackets: autoDraw = False
+4186.5613 	EXP 	BotLowerLine: autoDraw = False
+4186.5613 	EXP 	TrialCrossHair: autoDraw = False
+4186.5613 	EXP 	RestCrossHair: autoDraw = False
+4186.5613 	EXP 	UpperText: text = ' N Q W R G T '
+4186.5613 	EXP 	UpperBrackets: text = '{           }'
+4186.5613 	EXP 	LowerText: text = ' l m j h k y '
+4186.5613 	EXP 	LowerBrackets: text = '      { }    '
+4186.5613 	EXP 	TopUpperLine: autoDraw = True
+4186.5613 	EXP 	UpperText: autoDraw = True
+4186.5613 	EXP 	UpperBrackets: autoDraw = True
+4186.5613 	EXP 	BotUpperLine: autoDraw = True
+4186.5613 	EXP 	TopLowerLine: autoDraw = True
+4186.5613 	EXP 	BotLowerLine: autoDraw = True
+4186.5613 	EXP 	TrialCrossHair: autoDraw = True
+4186.5616 	EXP 	window1: recordFrameIntervals = False
+4187.3492 	DATA 	Keypress: equal
+4188.5288 	EXP 	UpperText: autoDraw = False
+4188.5288 	EXP 	UpperBrackets: autoDraw = False
+4189.1131 	DATA 	Keypress: equal
+4191.1139 	DATA 	Keypress: equal
+4193.1144 	DATA 	Keypress: equal
+4193.5306 	EXP 	LowerText: autoDraw = True
+4193.5306 	EXP 	LowerBrackets: autoDraw = True
+4195.1154 	DATA 	Keypress: equal
+4195.1988 	DATA 	Keypress: 8
+4195.5312 	EXP 	LowerText: autoDraw = False
+4195.5312 	EXP 	LowerBrackets: autoDraw = False
+4195.5312 	EXP 	TrialCrossHair: autoDraw = False
+4195.5312 	EXP 	RestCrossHair: autoDraw = True
+4197.1159 	DATA 	Keypress: equal
+4199.1166 	DATA 	Keypress: equal
+4199.8678 	EXP 	New trial (rep=0, index=52): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 56, 'ProbeDurITI': 4.1219999999999999, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.1219999999999999, 'StimSet': 'KLMWHB', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.122, 'Correct': 7}
+4199.8866 	EXP 	window1: recordFrameIntervals = False
+4199.8997 	EXP 	TopUpperLine: autoDraw = False
+4199.8997 	EXP 	BotUpperLine: autoDraw = False
+4199.8997 	EXP 	TopLowerLine: autoDraw = False
+4199.8997 	EXP 	BotLowerLine: autoDraw = False
+4199.8997 	EXP 	RestCrossHair: autoDraw = False
+4199.8997 	EXP 	TopUpperLine: autoDraw = False
+4199.8997 	EXP 	UpperText: autoDraw = False
+4199.8997 	EXP 	UpperBrackets: autoDraw = False
+4199.8997 	EXP 	BotUpperLine: autoDraw = False
+4199.8997 	EXP 	TopLowerLine: autoDraw = False
+4199.8997 	EXP 	LowerText: autoDraw = False
+4199.8997 	EXP 	LowerBrackets: autoDraw = False
+4199.8997 	EXP 	BotLowerLine: autoDraw = False
+4199.8997 	EXP 	TrialCrossHair: autoDraw = False
+4199.8997 	EXP 	RestCrossHair: autoDraw = False
+4199.8997 	EXP 	UpperText: text = ' K L M W H B '
+4199.8997 	EXP 	UpperBrackets: text = '        {   }'
+4199.8997 	EXP 	LowerText: text = '   '
+4199.8997 	EXP 	LowerBrackets: text = ''
+4199.8997 	EXP 	TopUpperLine: autoDraw = True
+4199.8997 	EXP 	UpperText: autoDraw = True
+4199.8997 	EXP 	UpperBrackets: autoDraw = True
+4199.8997 	EXP 	BotUpperLine: autoDraw = True
+4199.8997 	EXP 	TopLowerLine: autoDraw = True
+4199.8997 	EXP 	BotLowerLine: autoDraw = True
+4199.8997 	EXP 	TrialCrossHair: autoDraw = True
+4199.9000 	EXP 	window1: recordFrameIntervals = False
+4201.1175 	DATA 	Keypress: equal
+4201.8837 	EXP 	UpperText: autoDraw = False
+4201.8837 	EXP 	UpperBrackets: autoDraw = False
+4203.1180 	DATA 	Keypress: equal
+4205.1189 	DATA 	Keypress: equal
+4206.8856 	EXP 	LowerText: autoDraw = True
+4206.8856 	EXP 	LowerBrackets: autoDraw = True
+4206.8856 	EXP 	TrialCrossHair: autoDraw = False
+4206.8856 	EXP 	RestCrossHair: autoDraw = True
+4206.9022 	EXP 	LowerText: autoDraw = False
+4206.9022 	EXP 	LowerBrackets: autoDraw = False
+4207.1195 	DATA 	Keypress: equal
+4209.1203 	DATA 	Keypress: equal
+4210.9880 	EXP 	New trial (rep=0, index=53): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 23456, 'ProbeDurITI': 6.0489999999999995, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0489999999999995, 'StimSet': 'RBXYLJ', 'RetStart': 2, 'ProbeLet': 'bqhgkm', 'TrialITIDur': 13.049000000000001, 'Correct': 6}
+4211.0192 	EXP 	window1: recordFrameIntervals = False
+4211.0370 	EXP 	TopUpperLine: autoDraw = False
+4211.0370 	EXP 	BotUpperLine: autoDraw = False
+4211.0370 	EXP 	TopLowerLine: autoDraw = False
+4211.0370 	EXP 	BotLowerLine: autoDraw = False
+4211.0370 	EXP 	RestCrossHair: autoDraw = False
+4211.0370 	EXP 	TopUpperLine: autoDraw = False
+4211.0370 	EXP 	UpperText: autoDraw = False
+4211.0370 	EXP 	UpperBrackets: autoDraw = False
+4211.0370 	EXP 	BotUpperLine: autoDraw = False
+4211.0370 	EXP 	TopLowerLine: autoDraw = False
+4211.0370 	EXP 	LowerText: autoDraw = False
+4211.0370 	EXP 	LowerBrackets: autoDraw = False
+4211.0370 	EXP 	BotLowerLine: autoDraw = False
+4211.0370 	EXP 	TrialCrossHair: autoDraw = False
+4211.0370 	EXP 	RestCrossHair: autoDraw = False
+4211.0370 	EXP 	UpperText: text = ' R B X Y L J '
+4211.0370 	EXP 	UpperBrackets: text = '  {         }'
+4211.0370 	EXP 	LowerText: text = ' b q h g k m '
+4211.0370 	EXP 	LowerBrackets: text = '{ }          '
+4211.0370 	EXP 	TopUpperLine: autoDraw = True
+4211.0370 	EXP 	UpperText: autoDraw = True
+4211.0370 	EXP 	UpperBrackets: autoDraw = True
+4211.0370 	EXP 	BotUpperLine: autoDraw = True
+4211.0370 	EXP 	TopLowerLine: autoDraw = True
+4211.0370 	EXP 	BotLowerLine: autoDraw = True
+4211.0370 	EXP 	TrialCrossHair: autoDraw = True
+4211.0373 	EXP 	window1: recordFrameIntervals = False
+4211.8219 	DATA 	Keypress: equal
+4213.0044 	EXP 	UpperText: autoDraw = False
+4213.0044 	EXP 	UpperBrackets: autoDraw = False
+4213.1217 	DATA 	Keypress: equal
+4215.1224 	DATA 	Keypress: equal
+4217.1231 	DATA 	Keypress: equal
+4218.0062 	EXP 	LowerText: autoDraw = True
+4218.0062 	EXP 	LowerBrackets: autoDraw = True
+4218.7569 	DATA 	Keypress: 7
+4219.1238 	DATA 	Keypress: equal
+4220.0069 	EXP 	LowerText: autoDraw = False
+4220.0069 	EXP 	LowerBrackets: autoDraw = False
+4220.0069 	EXP 	TrialCrossHair: autoDraw = False
+4220.0069 	EXP 	RestCrossHair: autoDraw = True
+4221.1246 	DATA 	Keypress: equal
+4223.1253 	DATA 	Keypress: equal
+4224.0261 	EXP 	New trial (rep=0, index=54): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 12, 'ProbeDurITI': 6.1859999999999999, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.1859999999999999, 'StimSet': 'JXBMFD', 'RetStart': 2, 'ProbeLet': 'jtngqh', 'TrialITIDur': 13.186, 'Correct': 6}
+4224.0546 	EXP 	window1: recordFrameIntervals = False
+4224.0750 	EXP 	TopUpperLine: autoDraw = False
+4224.0750 	EXP 	BotUpperLine: autoDraw = False
+4224.0750 	EXP 	TopLowerLine: autoDraw = False
+4224.0750 	EXP 	BotLowerLine: autoDraw = False
+4224.0750 	EXP 	RestCrossHair: autoDraw = False
+4224.0750 	EXP 	TopUpperLine: autoDraw = False
+4224.0750 	EXP 	UpperText: autoDraw = False
+4224.0750 	EXP 	UpperBrackets: autoDraw = False
+4224.0750 	EXP 	BotUpperLine: autoDraw = False
+4224.0750 	EXP 	TopLowerLine: autoDraw = False
+4224.0750 	EXP 	LowerText: autoDraw = False
+4224.0750 	EXP 	LowerBrackets: autoDraw = False
+4224.0750 	EXP 	BotLowerLine: autoDraw = False
+4224.0750 	EXP 	TrialCrossHair: autoDraw = False
+4224.0750 	EXP 	RestCrossHair: autoDraw = False
+4224.0750 	EXP 	UpperText: text = ' J X B M F D '
+4224.0750 	EXP 	UpperBrackets: text = '{   }        '
+4224.0750 	EXP 	LowerText: text = ' j t n g q h '
+4224.0750 	EXP 	LowerBrackets: text = '{ }          '
+4224.0750 	EXP 	TopUpperLine: autoDraw = True
+4224.0750 	EXP 	UpperText: autoDraw = True
+4224.0750 	EXP 	UpperBrackets: autoDraw = True
+4224.0750 	EXP 	BotUpperLine: autoDraw = True
+4224.0750 	EXP 	TopLowerLine: autoDraw = True
+4224.0750 	EXP 	BotLowerLine: autoDraw = True
+4224.0750 	EXP 	TrialCrossHair: autoDraw = True
+4224.0754 	EXP 	window1: recordFrameIntervals = False
+4225.1261 	DATA 	Keypress: equal
+4226.0424 	EXP 	UpperText: autoDraw = False
+4226.0424 	EXP 	UpperBrackets: autoDraw = False
+4227.1268 	DATA 	Keypress: equal
+4229.1277 	DATA 	Keypress: equal
+4231.0442 	EXP 	LowerText: autoDraw = True
+4231.0442 	EXP 	LowerBrackets: autoDraw = True
+4231.1284 	DATA 	Keypress: equal
+4231.7808 	DATA 	Keypress: 7
+4233.0449 	EXP 	LowerText: autoDraw = False
+4233.0449 	EXP 	LowerBrackets: autoDraw = False
+4233.0449 	EXP 	TrialCrossHair: autoDraw = False
+4233.0449 	EXP 	RestCrossHair: autoDraw = True
+4233.1287 	DATA 	Keypress: equal
+4235.1294 	DATA 	Keypress: equal
+4237.1301 	DATA 	Keypress: equal
+4237.2139 	EXP 	New trial (rep=0, index=55): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 4, 'ProbeDurITI': 4.2939999999999996, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.2939999999999996, 'StimSet': 'WGHTRM', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.2939999999999996, 'Correct': 7}
+4237.2341 	EXP 	window1: recordFrameIntervals = False
+4237.2630 	EXP 	TopUpperLine: autoDraw = False
+4237.2630 	EXP 	BotUpperLine: autoDraw = False
+4237.2630 	EXP 	TopLowerLine: autoDraw = False
+4237.2630 	EXP 	BotLowerLine: autoDraw = False
+4237.2630 	EXP 	RestCrossHair: autoDraw = False
+4237.2630 	EXP 	TopUpperLine: autoDraw = False
+4237.2630 	EXP 	UpperText: autoDraw = False
+4237.2630 	EXP 	UpperBrackets: autoDraw = False
+4237.2630 	EXP 	BotUpperLine: autoDraw = False
+4237.2630 	EXP 	TopLowerLine: autoDraw = False
+4237.2630 	EXP 	LowerText: autoDraw = False
+4237.2630 	EXP 	LowerBrackets: autoDraw = False
+4237.2630 	EXP 	BotLowerLine: autoDraw = False
+4237.2630 	EXP 	TrialCrossHair: autoDraw = False
+4237.2630 	EXP 	RestCrossHair: autoDraw = False
+4237.2630 	EXP 	UpperText: text = ' W G H T R M '
+4237.2630 	EXP 	UpperBrackets: text = '      { }    '
+4237.2630 	EXP 	LowerText: text = '   '
+4237.2630 	EXP 	LowerBrackets: text = ''
+4237.2630 	EXP 	TopUpperLine: autoDraw = True
+4237.2630 	EXP 	UpperText: autoDraw = True
+4237.2630 	EXP 	UpperBrackets: autoDraw = True
+4237.2630 	EXP 	BotUpperLine: autoDraw = True
+4237.2630 	EXP 	TopLowerLine: autoDraw = True
+4237.2630 	EXP 	BotLowerLine: autoDraw = True
+4237.2630 	EXP 	TrialCrossHair: autoDraw = True
+4237.2632 	EXP 	window1: recordFrameIntervals = False
+4239.1310 	DATA 	Keypress: equal
+4239.2306 	EXP 	UpperText: autoDraw = False
+4239.2306 	EXP 	UpperBrackets: autoDraw = False
+4239.2306 	EXP 	TrialCrossHair: autoDraw = False
+4239.2472 	EXP 	LowerText: autoDraw = True
+4239.2472 	EXP 	LowerBrackets: autoDraw = True
+4239.2472 	EXP 	RestCrossHair: autoDraw = True
+4239.2639 	EXP 	LowerText: autoDraw = False
+4239.2639 	EXP 	LowerBrackets: autoDraw = False
+4241.1319 	DATA 	Keypress: equal
+4243.1329 	DATA 	Keypress: equal
+4243.5000 	EXP 	New trial (rep=0, index=56): {'RetDur': 0, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 12345, 'ProbeDurITI': 4.0209999999999999, 'ProbeDur': 0, 'ProbeStart': 2, 'TrialDur': 2, 'ITI': 4.0209999999999999, 'StimSet': 'FMGYRL', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 6.0209999999999999, 'Correct': 7}
+4243.5171 	EXP 	window1: recordFrameIntervals = False
+4243.5325 	EXP 	TopUpperLine: autoDraw = False
+4243.5325 	EXP 	BotUpperLine: autoDraw = False
+4243.5325 	EXP 	TopLowerLine: autoDraw = False
+4243.5325 	EXP 	BotLowerLine: autoDraw = False
+4243.5325 	EXP 	RestCrossHair: autoDraw = False
+4243.5325 	EXP 	TopUpperLine: autoDraw = False
+4243.5325 	EXP 	UpperText: autoDraw = False
+4243.5325 	EXP 	UpperBrackets: autoDraw = False
+4243.5325 	EXP 	BotUpperLine: autoDraw = False
+4243.5325 	EXP 	TopLowerLine: autoDraw = False
+4243.5325 	EXP 	LowerText: autoDraw = False
+4243.5325 	EXP 	LowerBrackets: autoDraw = False
+4243.5325 	EXP 	BotLowerLine: autoDraw = False
+4243.5325 	EXP 	TrialCrossHair: autoDraw = False
+4243.5325 	EXP 	RestCrossHair: autoDraw = False
+4243.5325 	EXP 	UpperText: text = ' F M G Y R L '
+4243.5325 	EXP 	UpperBrackets: text = '{         }  '
+4243.5325 	EXP 	LowerText: text = '   '
+4243.5325 	EXP 	LowerBrackets: text = ''
+4243.5325 	EXP 	TopUpperLine: autoDraw = True
+4243.5325 	EXP 	UpperText: autoDraw = True
+4243.5325 	EXP 	UpperBrackets: autoDraw = True
+4243.5325 	EXP 	BotUpperLine: autoDraw = True
+4243.5325 	EXP 	TopLowerLine: autoDraw = True
+4243.5325 	EXP 	BotLowerLine: autoDraw = True
+4243.5325 	EXP 	TrialCrossHair: autoDraw = True
+4243.5327 	EXP 	window1: recordFrameIntervals = False
+4245.1339 	DATA 	Keypress: equal
+4245.5167 	EXP 	UpperText: autoDraw = False
+4245.5167 	EXP 	UpperBrackets: autoDraw = False
+4245.5167 	EXP 	TrialCrossHair: autoDraw = False
+4245.5333 	EXP 	LowerText: autoDraw = True
+4245.5333 	EXP 	LowerBrackets: autoDraw = True
+4245.5333 	EXP 	RestCrossHair: autoDraw = True
+4245.5501 	EXP 	LowerText: autoDraw = False
+4245.5501 	EXP 	LowerBrackets: autoDraw = False
+4247.1346 	DATA 	Keypress: equal
+4249.1352 	DATA 	Keypress: equal
+4249.5192 	EXP 	New trial (rep=0, index=57): {'RetDur': 5, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 1234, 'ProbeDurITI': 7.0220000000000002, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 5.0220000000000002, 'StimSet': 'NBRLGF', 'RetStart': 2, 'ProbeLet': 'yqrtdk', 'TrialITIDur': 14.022, 'Correct': 6}
+4249.5508 	EXP 	window1: recordFrameIntervals = False
+4249.5680 	EXP 	TopUpperLine: autoDraw = False
+4249.5680 	EXP 	BotUpperLine: autoDraw = False
+4249.5680 	EXP 	TopLowerLine: autoDraw = False
+4249.5680 	EXP 	BotLowerLine: autoDraw = False
+4249.5680 	EXP 	RestCrossHair: autoDraw = False
+4249.5680 	EXP 	TopUpperLine: autoDraw = False
+4249.5680 	EXP 	UpperText: autoDraw = False
+4249.5680 	EXP 	UpperBrackets: autoDraw = False
+4249.5680 	EXP 	BotUpperLine: autoDraw = False
+4249.5680 	EXP 	TopLowerLine: autoDraw = False
+4249.5680 	EXP 	LowerText: autoDraw = False
+4249.5680 	EXP 	LowerBrackets: autoDraw = False
+4249.5680 	EXP 	BotLowerLine: autoDraw = False
+4249.5680 	EXP 	TrialCrossHair: autoDraw = False
+4249.5680 	EXP 	RestCrossHair: autoDraw = False
+4249.5680 	EXP 	UpperText: text = ' N B R L G F '
+4249.5680 	EXP 	UpperBrackets: text = '{       }    '
+4249.5680 	EXP 	LowerText: text = ' y q r t d k '
+4249.5680 	EXP 	LowerBrackets: text = '    { }      '
+4249.5680 	EXP 	TopUpperLine: autoDraw = True
+4249.5680 	EXP 	UpperText: autoDraw = True
+4249.5680 	EXP 	UpperBrackets: autoDraw = True
+4249.5680 	EXP 	BotUpperLine: autoDraw = True
+4249.5680 	EXP 	TopLowerLine: autoDraw = True
+4249.5680 	EXP 	BotLowerLine: autoDraw = True
+4249.5680 	EXP 	TrialCrossHair: autoDraw = True
+4249.5682 	EXP 	window1: recordFrameIntervals = False
+4251.1360 	DATA 	Keypress: equal
+4251.5354 	EXP 	UpperText: autoDraw = False
+4251.5354 	EXP 	UpperBrackets: autoDraw = False
+4253.1366 	DATA 	Keypress: equal
+4255.1373 	DATA 	Keypress: equal
+4256.5373 	EXP 	LowerText: autoDraw = True
+4256.5373 	EXP 	LowerBrackets: autoDraw = True
+4257.1380 	DATA 	Keypress: equal
+4257.8221 	DATA 	Keypress: 7
+4258.5380 	EXP 	LowerText: autoDraw = False
+4258.5380 	EXP 	LowerBrackets: autoDraw = False
+4258.5380 	EXP 	TrialCrossHair: autoDraw = False
+4258.5380 	EXP 	RestCrossHair: autoDraw = True
+4259.1390 	DATA 	Keypress: equal
+4261.1397 	DATA 	Keypress: equal
+4263.1406 	DATA 	Keypress: equal
+4263.5410 	EXP 	New trial (rep=0, index=58): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 456, 'ProbeDurITI': 6.4629999999999992, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.4630000000000001, 'StimSet': 'RLDNYJ', 'RetStart': 2, 'ProbeLet': 'mqfkxh', 'TrialITIDur': 13.462999999999999, 'Correct': 7}
+4263.5709 	EXP 	window1: recordFrameIntervals = False
+4263.5901 	EXP 	TopUpperLine: autoDraw = False
+4263.5901 	EXP 	BotUpperLine: autoDraw = False
+4263.5901 	EXP 	TopLowerLine: autoDraw = False
+4263.5901 	EXP 	BotLowerLine: autoDraw = False
+4263.5901 	EXP 	RestCrossHair: autoDraw = False
+4263.5901 	EXP 	TopUpperLine: autoDraw = False
+4263.5901 	EXP 	UpperText: autoDraw = False
+4263.5901 	EXP 	UpperBrackets: autoDraw = False
+4263.5901 	EXP 	BotUpperLine: autoDraw = False
+4263.5901 	EXP 	TopLowerLine: autoDraw = False
+4263.5901 	EXP 	LowerText: autoDraw = False
+4263.5901 	EXP 	LowerBrackets: autoDraw = False
+4263.5901 	EXP 	BotLowerLine: autoDraw = False
+4263.5901 	EXP 	TrialCrossHair: autoDraw = False
+4263.5901 	EXP 	RestCrossHair: autoDraw = False
+4263.5901 	EXP 	UpperText: text = ' R L D N Y J '
+4263.5901 	EXP 	UpperBrackets: text = '      {     }'
+4263.5901 	EXP 	LowerText: text = ' m q f k x h '
+4263.5901 	EXP 	LowerBrackets: text = '{ }          '
+4263.5901 	EXP 	TopUpperLine: autoDraw = True
+4263.5901 	EXP 	UpperText: autoDraw = True
+4263.5901 	EXP 	UpperBrackets: autoDraw = True
+4263.5901 	EXP 	BotUpperLine: autoDraw = True
+4263.5901 	EXP 	TopLowerLine: autoDraw = True
+4263.5901 	EXP 	BotLowerLine: autoDraw = True
+4263.5901 	EXP 	TrialCrossHair: autoDraw = True
+4263.5903 	EXP 	window1: recordFrameIntervals = False
+4265.1416 	DATA 	Keypress: equal
+4265.5575 	EXP 	UpperText: autoDraw = False
+4265.5575 	EXP 	UpperBrackets: autoDraw = False
+4267.1427 	DATA 	Keypress: equal
+4269.1431 	DATA 	Keypress: equal
+4270.5593 	EXP 	LowerText: autoDraw = True
+4270.5593 	EXP 	LowerBrackets: autoDraw = True
+4271.1437 	DATA 	Keypress: equal
+4271.7102 	DATA 	Keypress: 8
+4272.5593 	EXP 	LowerText: autoDraw = False
+4272.5593 	EXP 	LowerBrackets: autoDraw = False
+4272.5593 	EXP 	TrialCrossHair: autoDraw = False
+4272.5593 	EXP 	RestCrossHair: autoDraw = True
+4273.1439 	DATA 	Keypress: equal
+4275.1443 	DATA 	Keypress: equal
+4276.9955 	EXP 	New trial (rep=0, index=59): {'RetDur': 5, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 345, 'ProbeDurITI': 6.8329999999999993, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.8330000000000002, 'StimSet': 'JGTWRX', 'RetStart': 2, 'ProbeLet': 'kdwbnq', 'TrialITIDur': 13.833, 'Correct': 6}
+4277.0289 	EXP 	window1: recordFrameIntervals = False
+4277.0441 	EXP 	TopUpperLine: autoDraw = False
+4277.0441 	EXP 	BotUpperLine: autoDraw = False
+4277.0441 	EXP 	TopLowerLine: autoDraw = False
+4277.0441 	EXP 	BotLowerLine: autoDraw = False
+4277.0441 	EXP 	RestCrossHair: autoDraw = False
+4277.0441 	EXP 	TopUpperLine: autoDraw = False
+4277.0441 	EXP 	UpperText: autoDraw = False
+4277.0441 	EXP 	UpperBrackets: autoDraw = False
+4277.0441 	EXP 	BotUpperLine: autoDraw = False
+4277.0441 	EXP 	TopLowerLine: autoDraw = False
+4277.0441 	EXP 	LowerText: autoDraw = False
+4277.0441 	EXP 	LowerBrackets: autoDraw = False
+4277.0441 	EXP 	BotLowerLine: autoDraw = False
+4277.0441 	EXP 	TrialCrossHair: autoDraw = False
+4277.0441 	EXP 	RestCrossHair: autoDraw = False
+4277.0441 	EXP 	UpperText: text = ' J G T W R X '
+4277.0441 	EXP 	UpperBrackets: text = '    {     }  '
+4277.0441 	EXP 	LowerText: text = ' k d w b n q '
+4277.0441 	EXP 	LowerBrackets: text = '    { }      '
+4277.0441 	EXP 	TopUpperLine: autoDraw = True
+4277.0441 	EXP 	UpperText: autoDraw = True
+4277.0441 	EXP 	UpperBrackets: autoDraw = True
+4277.0441 	EXP 	BotUpperLine: autoDraw = True
+4277.0441 	EXP 	TopLowerLine: autoDraw = True
+4277.0441 	EXP 	BotLowerLine: autoDraw = True
+4277.0441 	EXP 	TrialCrossHair: autoDraw = True
+4277.0443 	EXP 	window1: recordFrameIntervals = False
+4277.8316 	DATA 	Keypress: equal
+4279.0115 	EXP 	UpperText: autoDraw = False
+4279.0115 	EXP 	UpperBrackets: autoDraw = False
+4279.1455 	DATA 	Keypress: equal
+4281.1464 	DATA 	Keypress: equal
+4283.1470 	DATA 	Keypress: equal
+4284.0133 	EXP 	LowerText: autoDraw = True
+4284.0133 	EXP 	LowerBrackets: autoDraw = True
+4285.1477 	DATA 	Keypress: equal
+4285.7311 	DATA 	Keypress: 7
+4286.0139 	EXP 	LowerText: autoDraw = False
+4286.0139 	EXP 	LowerBrackets: autoDraw = False
+4286.0139 	EXP 	TrialCrossHair: autoDraw = False
+4286.0139 	EXP 	RestCrossHair: autoDraw = True
+4287.1482 	DATA 	Keypress: equal
+4289.1493 	DATA 	Keypress: equal
+4290.8340 	EXP 	New trial (rep=0, index=60): {'RetDur': 5, 'BotBrack': 0, 'StimDur': 2, 'UpBrack': 1234, 'ProbeDurITI': 4.2690000000000001, 'ProbeDur': 0, 'ProbeStart': 7, 'TrialDur': 7, 'ITI': 4.2690000000000001, 'StimSet': 'JGQFDT', 'RetStart': 2, 'ProbeLet': ' ', 'TrialITIDur': 11.269, 'Correct': 6}
+4290.8537 	EXP 	window1: recordFrameIntervals = False
+4290.8658 	EXP 	TopUpperLine: autoDraw = False
+4290.8658 	EXP 	BotUpperLine: autoDraw = False
+4290.8658 	EXP 	TopLowerLine: autoDraw = False
+4290.8658 	EXP 	BotLowerLine: autoDraw = False
+4290.8658 	EXP 	RestCrossHair: autoDraw = False
+4290.8658 	EXP 	TopUpperLine: autoDraw = False
+4290.8658 	EXP 	UpperText: autoDraw = False
+4290.8658 	EXP 	UpperBrackets: autoDraw = False
+4290.8658 	EXP 	BotUpperLine: autoDraw = False
+4290.8658 	EXP 	TopLowerLine: autoDraw = False
+4290.8658 	EXP 	LowerText: autoDraw = False
+4290.8658 	EXP 	LowerBrackets: autoDraw = False
+4290.8658 	EXP 	BotLowerLine: autoDraw = False
+4290.8658 	EXP 	TrialCrossHair: autoDraw = False
+4290.8658 	EXP 	RestCrossHair: autoDraw = False
+4290.8658 	EXP 	UpperText: text = ' J G Q F D T '
+4290.8658 	EXP 	UpperBrackets: text = '{       }    '
+4290.8658 	EXP 	LowerText: text = '   '
+4290.8658 	EXP 	LowerBrackets: text = ''
+4290.8658 	EXP 	TopUpperLine: autoDraw = True
+4290.8658 	EXP 	UpperText: autoDraw = True
+4290.8658 	EXP 	UpperBrackets: autoDraw = True
+4290.8658 	EXP 	BotUpperLine: autoDraw = True
+4290.8658 	EXP 	TopLowerLine: autoDraw = True
+4290.8658 	EXP 	BotLowerLine: autoDraw = True
+4290.8658 	EXP 	TrialCrossHair: autoDraw = True
+4290.8661 	EXP 	window1: recordFrameIntervals = False
+4291.6561 	DATA 	Keypress: equal
+4292.8498 	EXP 	UpperText: autoDraw = False
+4292.8498 	EXP 	UpperBrackets: autoDraw = False
+4293.1508 	DATA 	Keypress: equal
+4295.1512 	DATA 	Keypress: equal
+4297.1523 	DATA 	Keypress: equal
+4297.8516 	EXP 	LowerText: autoDraw = True
+4297.8516 	EXP 	LowerBrackets: autoDraw = True
+4297.8516 	EXP 	TrialCrossHair: autoDraw = False
+4297.8516 	EXP 	RestCrossHair: autoDraw = True
+4297.8683 	EXP 	LowerText: autoDraw = False
+4297.8683 	EXP 	LowerBrackets: autoDraw = False
+4299.1530 	DATA 	Keypress: equal
+4301.1535 	DATA 	Keypress: equal
+4302.1043 	EXP 	New trial (rep=0, index=61): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.0970000000000004, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0969999999999995, 'StimSet': 'RFTXJW', 'RetStart': 2, 'ProbeLet': 'jbkygd', 'TrialITIDur': 13.097000000000001, 'Correct': 6}
+4302.1353 	EXP 	window1: recordFrameIntervals = False
+4302.1530 	EXP 	TopUpperLine: autoDraw = False
+4302.1530 	EXP 	BotUpperLine: autoDraw = False
+4302.1530 	EXP 	TopLowerLine: autoDraw = False
+4302.1530 	EXP 	BotLowerLine: autoDraw = False
+4302.1530 	EXP 	RestCrossHair: autoDraw = False
+4302.1530 	EXP 	TopUpperLine: autoDraw = False
+4302.1530 	EXP 	UpperText: autoDraw = False
+4302.1530 	EXP 	UpperBrackets: autoDraw = False
+4302.1530 	EXP 	BotUpperLine: autoDraw = False
+4302.1530 	EXP 	TopLowerLine: autoDraw = False
+4302.1530 	EXP 	LowerText: autoDraw = False
+4302.1530 	EXP 	LowerBrackets: autoDraw = False
+4302.1530 	EXP 	BotLowerLine: autoDraw = False
+4302.1530 	EXP 	TrialCrossHair: autoDraw = False
+4302.1530 	EXP 	RestCrossHair: autoDraw = False
+4302.1530 	EXP 	UpperText: text = ' R F T X J W '
+4302.1530 	EXP 	UpperBrackets: text = '{           }'
+4302.1530 	EXP 	LowerText: text = ' j b k y g d '
+4302.1530 	EXP 	LowerBrackets: text = '{ }          '
+4302.1530 	EXP 	TopUpperLine: autoDraw = True
+4302.1530 	EXP 	UpperText: autoDraw = True
+4302.1530 	EXP 	UpperBrackets: autoDraw = True
+4302.1530 	EXP 	BotUpperLine: autoDraw = True
+4302.1530 	EXP 	TopLowerLine: autoDraw = True
+4302.1530 	EXP 	BotLowerLine: autoDraw = True
+4302.1530 	EXP 	TrialCrossHair: autoDraw = True
+4302.1533 	EXP 	window1: recordFrameIntervals = False
+4303.1542 	DATA 	Keypress: equal
+4304.1204 	EXP 	UpperText: autoDraw = False
+4304.1204 	EXP 	UpperBrackets: autoDraw = False
+4305.1550 	DATA 	Keypress: equal
+4307.1557 	DATA 	Keypress: equal
+4309.1223 	EXP 	LowerText: autoDraw = True
+4309.1223 	EXP 	LowerBrackets: autoDraw = True
+4309.1567 	DATA 	Keypress: equal
+4310.2734 	DATA 	Keypress: 7
+4311.1230 	EXP 	LowerText: autoDraw = False
+4311.1230 	EXP 	LowerBrackets: autoDraw = False
+4311.1230 	EXP 	TrialCrossHair: autoDraw = False
+4311.1230 	EXP 	RestCrossHair: autoDraw = True
+4311.1570 	DATA 	Keypress: equal
+4313.1579 	DATA 	Keypress: equal
+4315.1588 	DATA 	Keypress: equal
+4315.1922 	EXP 	New trial (rep=0, index=62): {'RetDur': 5, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 123456, 'ProbeDurITI': 6.4210000000000003, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.4210000000000003, 'StimSet': 'MHFQNW', 'RetStart': 2, 'ProbeLet': 'bhxygr', 'TrialITIDur': 13.420999999999999, 'Correct': 6}
+4315.2235 	EXP 	window1: recordFrameIntervals = False
+4315.2411 	EXP 	TopUpperLine: autoDraw = False
+4315.2411 	EXP 	BotUpperLine: autoDraw = False
+4315.2411 	EXP 	TopLowerLine: autoDraw = False
+4315.2411 	EXP 	BotLowerLine: autoDraw = False
+4315.2411 	EXP 	RestCrossHair: autoDraw = False
+4315.2411 	EXP 	TopUpperLine: autoDraw = False
+4315.2411 	EXP 	UpperText: autoDraw = False
+4315.2411 	EXP 	UpperBrackets: autoDraw = False
+4315.2411 	EXP 	BotUpperLine: autoDraw = False
+4315.2411 	EXP 	TopLowerLine: autoDraw = False
+4315.2411 	EXP 	LowerText: autoDraw = False
+4315.2411 	EXP 	LowerBrackets: autoDraw = False
+4315.2411 	EXP 	BotLowerLine: autoDraw = False
+4315.2411 	EXP 	TrialCrossHair: autoDraw = False
+4315.2411 	EXP 	RestCrossHair: autoDraw = False
+4315.2411 	EXP 	UpperText: text = ' M H F Q N W '
+4315.2411 	EXP 	UpperBrackets: text = '{           }'
+4315.2411 	EXP 	LowerText: text = ' b h x y g r '
+4315.2411 	EXP 	LowerBrackets: text = '  { }        '
+4315.2411 	EXP 	TopUpperLine: autoDraw = True
+4315.2411 	EXP 	UpperText: autoDraw = True
+4315.2411 	EXP 	UpperBrackets: autoDraw = True
+4315.2411 	EXP 	BotUpperLine: autoDraw = True
+4315.2411 	EXP 	TopLowerLine: autoDraw = True
+4315.2411 	EXP 	BotLowerLine: autoDraw = True
+4315.2411 	EXP 	TrialCrossHair: autoDraw = True
+4315.2415 	EXP 	window1: recordFrameIntervals = False
+4317.1594 	DATA 	Keypress: equal
+4317.2084 	EXP 	UpperText: autoDraw = False
+4317.2084 	EXP 	UpperBrackets: autoDraw = False
+4319.1601 	DATA 	Keypress: equal
+4321.1609 	DATA 	Keypress: equal
+4322.2103 	EXP 	LowerText: autoDraw = True
+4322.2103 	EXP 	LowerBrackets: autoDraw = True
+4323.1617 	DATA 	Keypress: equal
+4323.1779 	DATA 	Keypress: 7
+4324.2110 	EXP 	LowerText: autoDraw = False
+4324.2110 	EXP 	LowerBrackets: autoDraw = False
+4324.2110 	EXP 	TrialCrossHair: autoDraw = False
+4324.2110 	EXP 	RestCrossHair: autoDraw = True
+4325.1620 	DATA 	Keypress: equal
+4327.1628 	DATA 	Keypress: equal
+4328.6134 	EXP 	New trial (rep=0, index=63): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 234, 'ProbeDurITI': 6.0129999999999999, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0129999999999999, 'StimSet': 'RJQXFY', 'RetStart': 2, 'ProbeLet': 'qhnmbw', 'TrialITIDur': 13.013, 'Correct': 6}
+4328.6423 	EXP 	window1: recordFrameIntervals = False
+4328.6624 	EXP 	TopUpperLine: autoDraw = False
+4328.6624 	EXP 	BotUpperLine: autoDraw = False
+4328.6624 	EXP 	TopLowerLine: autoDraw = False
+4328.6624 	EXP 	BotLowerLine: autoDraw = False
+4328.6624 	EXP 	RestCrossHair: autoDraw = False
+4328.6624 	EXP 	TopUpperLine: autoDraw = False
+4328.6624 	EXP 	UpperText: autoDraw = False
+4328.6624 	EXP 	UpperBrackets: autoDraw = False
+4328.6624 	EXP 	BotUpperLine: autoDraw = False
+4328.6624 	EXP 	TopLowerLine: autoDraw = False
+4328.6624 	EXP 	LowerText: autoDraw = False
+4328.6624 	EXP 	LowerBrackets: autoDraw = False
+4328.6624 	EXP 	BotLowerLine: autoDraw = False
+4328.6624 	EXP 	TrialCrossHair: autoDraw = False
+4328.6624 	EXP 	RestCrossHair: autoDraw = False
+4328.6624 	EXP 	UpperText: text = ' R J Q X F Y '
+4328.6624 	EXP 	UpperBrackets: text = '  {     }    '
+4328.6624 	EXP 	LowerText: text = ' q h n m b w '
+4328.6624 	EXP 	LowerBrackets: text = '{ }          '
+4328.6624 	EXP 	TopUpperLine: autoDraw = True
+4328.6624 	EXP 	UpperText: autoDraw = True
+4328.6624 	EXP 	UpperBrackets: autoDraw = True
+4328.6624 	EXP 	BotUpperLine: autoDraw = True
+4328.6624 	EXP 	TopLowerLine: autoDraw = True
+4328.6624 	EXP 	BotLowerLine: autoDraw = True
+4328.6624 	EXP 	TrialCrossHair: autoDraw = True
+4328.6626 	EXP 	window1: recordFrameIntervals = False
+4329.4450 	DATA 	Keypress: equal
+4330.6298 	EXP 	UpperText: autoDraw = False
+4330.6298 	EXP 	UpperBrackets: autoDraw = False
+4331.1643 	DATA 	Keypress: equal
+4333.1649 	DATA 	Keypress: equal
+4335.1657 	DATA 	Keypress: equal
+4335.6316 	EXP 	LowerText: autoDraw = True
+4335.6316 	EXP 	LowerBrackets: autoDraw = True
+4337.0499 	DATA 	Keypress: 7
+4337.1666 	DATA 	Keypress: equal
+4337.6323 	EXP 	LowerText: autoDraw = False
+4337.6323 	EXP 	LowerBrackets: autoDraw = False
+4337.6323 	EXP 	TrialCrossHair: autoDraw = False
+4337.6323 	EXP 	RestCrossHair: autoDraw = True
+4339.1671 	DATA 	Keypress: equal
+4341.1678 	DATA 	Keypress: equal
+4341.6188 	EXP 	New trial (rep=0, index=64): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 234, 'ProbeDurITI': 6.7510000000000003, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.7510000000000003, 'StimSet': 'GBTKQH', 'RetStart': 2, 'ProbeLet': 'dfljwy', 'TrialITIDur': 13.750999999999999, 'Correct': 7}
+4341.6562 	EXP 	window1: recordFrameIntervals = False
+4341.6838 	EXP 	TopUpperLine: autoDraw = False
+4341.6838 	EXP 	BotUpperLine: autoDraw = False
+4341.6838 	EXP 	TopLowerLine: autoDraw = False
+4341.6838 	EXP 	BotLowerLine: autoDraw = False
+4341.6838 	EXP 	RestCrossHair: autoDraw = False
+4341.6838 	EXP 	TopUpperLine: autoDraw = False
+4341.6838 	EXP 	UpperText: autoDraw = False
+4341.6838 	EXP 	UpperBrackets: autoDraw = False
+4341.6838 	EXP 	BotUpperLine: autoDraw = False
+4341.6838 	EXP 	TopLowerLine: autoDraw = False
+4341.6838 	EXP 	LowerText: autoDraw = False
+4341.6838 	EXP 	LowerBrackets: autoDraw = False
+4341.6838 	EXP 	BotLowerLine: autoDraw = False
+4341.6838 	EXP 	TrialCrossHair: autoDraw = False
+4341.6838 	EXP 	RestCrossHair: autoDraw = False
+4341.6838 	EXP 	UpperText: text = ' G B T K Q H '
+4341.6838 	EXP 	UpperBrackets: text = '  {     }    '
+4341.6838 	EXP 	LowerText: text = ' d f l j w y '
+4341.6838 	EXP 	LowerBrackets: text = '        { }  '
+4341.6838 	EXP 	TopUpperLine: autoDraw = True
+4341.6838 	EXP 	UpperText: autoDraw = True
+4341.6838 	EXP 	UpperBrackets: autoDraw = True
+4341.6838 	EXP 	BotUpperLine: autoDraw = True
+4341.6838 	EXP 	TopLowerLine: autoDraw = True
+4341.6838 	EXP 	BotLowerLine: autoDraw = True
+4341.6838 	EXP 	TrialCrossHair: autoDraw = True
+4341.6840 	EXP 	window1: recordFrameIntervals = False
+4343.1689 	DATA 	Keypress: equal
+4343.6347 	EXP 	UpperText: autoDraw = False
+4343.6347 	EXP 	UpperBrackets: autoDraw = False
+4345.1696 	DATA 	Keypress: equal
+4347.1707 	DATA 	Keypress: equal
+4348.6372 	EXP 	LowerText: autoDraw = True
+4348.6372 	EXP 	LowerBrackets: autoDraw = True
+4349.1720 	DATA 	Keypress: equal
+4349.9577 	DATA 	Keypress: 8
+4350.6379 	EXP 	LowerText: autoDraw = False
+4350.6379 	EXP 	LowerBrackets: autoDraw = False
+4350.6379 	EXP 	TrialCrossHair: autoDraw = False
+4350.6379 	EXP 	RestCrossHair: autoDraw = True
+4351.1724 	DATA 	Keypress: equal
+4353.1729 	DATA 	Keypress: equal
+4355.1737 	DATA 	Keypress: equal
+4355.3738 	EXP 	New trial (rep=0, index=65): {'RetDur': 5, 'BotBrack': 2, 'StimDur': 2, 'UpBrack': 34, 'ProbeDurITI': 6.1840000000000002, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.1840000000000002, 'StimSet': 'BLDJFM', 'RetStart': 2, 'ProbeLet': 'yjhtwq', 'TrialITIDur': 13.184000000000001, 'Correct': 6}
+4355.4038 	EXP 	window1: recordFrameIntervals = False
+4355.4228 	EXP 	TopUpperLine: autoDraw = False
+4355.4228 	EXP 	BotUpperLine: autoDraw = False
+4355.4228 	EXP 	TopLowerLine: autoDraw = False
+4355.4228 	EXP 	BotLowerLine: autoDraw = False
+4355.4228 	EXP 	RestCrossHair: autoDraw = False
+4355.4228 	EXP 	TopUpperLine: autoDraw = False
+4355.4228 	EXP 	UpperText: autoDraw = False
+4355.4228 	EXP 	UpperBrackets: autoDraw = False
+4355.4228 	EXP 	BotUpperLine: autoDraw = False
+4355.4228 	EXP 	TopLowerLine: autoDraw = False
+4355.4228 	EXP 	LowerText: autoDraw = False
+4355.4228 	EXP 	LowerBrackets: autoDraw = False
+4355.4228 	EXP 	BotLowerLine: autoDraw = False
+4355.4228 	EXP 	TrialCrossHair: autoDraw = False
+4355.4228 	EXP 	RestCrossHair: autoDraw = False
+4355.4228 	EXP 	UpperText: text = ' B L D J F M '
+4355.4228 	EXP 	UpperBrackets: text = '    {   }    '
+4355.4228 	EXP 	LowerText: text = ' y j h t w q '
+4355.4228 	EXP 	LowerBrackets: text = '  { }        '
+4355.4228 	EXP 	TopUpperLine: autoDraw = True
+4355.4228 	EXP 	UpperText: autoDraw = True
+4355.4228 	EXP 	UpperBrackets: autoDraw = True
+4355.4228 	EXP 	BotUpperLine: autoDraw = True
+4355.4228 	EXP 	TopLowerLine: autoDraw = True
+4355.4228 	EXP 	BotLowerLine: autoDraw = True
+4355.4228 	EXP 	TrialCrossHair: autoDraw = True
+4355.4230 	EXP 	window1: recordFrameIntervals = False
+4357.1744 	DATA 	Keypress: equal
+4357.3903 	EXP 	UpperText: autoDraw = False
+4357.3903 	EXP 	UpperBrackets: autoDraw = False
+4359.1748 	DATA 	Keypress: equal
+4361.1760 	DATA 	Keypress: equal
+4362.3922 	EXP 	LowerText: autoDraw = True
+4362.3922 	EXP 	LowerBrackets: autoDraw = True
+4363.1765 	DATA 	Keypress: equal
+4364.3271 	DATA 	Keypress: 7
+4364.3930 	EXP 	LowerText: autoDraw = False
+4364.3930 	EXP 	LowerBrackets: autoDraw = False
+4364.3930 	EXP 	TrialCrossHair: autoDraw = False
+4364.3930 	EXP 	RestCrossHair: autoDraw = True
+4365.1773 	DATA 	Keypress: equal
+4367.1783 	DATA 	Keypress: equal
+4368.5624 	EXP 	New trial (rep=0, index=66): {'RetDur': 5, 'BotBrack': 4, 'StimDur': 2, 'UpBrack': 12345, 'ProbeDurITI': 6.3720000000000008, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.3719999999999999, 'StimSet': 'JRGXFB', 'RetStart': 2, 'ProbeLet': 'htlkqm', 'TrialITIDur': 13.372, 'Correct': 7}
+4368.5923 	EXP 	window1: recordFrameIntervals = False
+4368.6113 	EXP 	TopUpperLine: autoDraw = False
+4368.6113 	EXP 	BotUpperLine: autoDraw = False
+4368.6113 	EXP 	TopLowerLine: autoDraw = False
+4368.6113 	EXP 	BotLowerLine: autoDraw = False
+4368.6113 	EXP 	RestCrossHair: autoDraw = False
+4368.6113 	EXP 	TopUpperLine: autoDraw = False
+4368.6113 	EXP 	UpperText: autoDraw = False
+4368.6113 	EXP 	UpperBrackets: autoDraw = False
+4368.6113 	EXP 	BotUpperLine: autoDraw = False
+4368.6113 	EXP 	TopLowerLine: autoDraw = False
+4368.6113 	EXP 	LowerText: autoDraw = False
+4368.6113 	EXP 	LowerBrackets: autoDraw = False
+4368.6113 	EXP 	BotLowerLine: autoDraw = False
+4368.6113 	EXP 	TrialCrossHair: autoDraw = False
+4368.6113 	EXP 	RestCrossHair: autoDraw = False
+4368.6113 	EXP 	UpperText: text = ' J R G X F B '
+4368.6113 	EXP 	UpperBrackets: text = '{         }  '
+4368.6113 	EXP 	LowerText: text = ' h t l k q m '
+4368.6113 	EXP 	LowerBrackets: text = '      { }    '
+4368.6113 	EXP 	TopUpperLine: autoDraw = True
+4368.6113 	EXP 	UpperText: autoDraw = True
+4368.6113 	EXP 	UpperBrackets: autoDraw = True
+4368.6113 	EXP 	BotUpperLine: autoDraw = True
+4368.6113 	EXP 	TopLowerLine: autoDraw = True
+4368.6113 	EXP 	BotLowerLine: autoDraw = True
+4368.6113 	EXP 	TrialCrossHair: autoDraw = True
+4368.6116 	EXP 	window1: recordFrameIntervals = False
+4369.3950 	DATA 	Keypress: equal
+4370.5787 	EXP 	UpperText: autoDraw = False
+4370.5787 	EXP 	UpperBrackets: autoDraw = False
+4371.1798 	DATA 	Keypress: equal
+4373.1805 	DATA 	Keypress: equal
+4375.1808 	DATA 	Keypress: equal
+4375.5800 	EXP 	LowerText: autoDraw = True
+4375.5800 	EXP 	LowerBrackets: autoDraw = True
+4377.1808 	DATA 	Keypress: equal
+4377.2476 	DATA 	Keypress: 8
+4377.5801 	EXP 	LowerText: autoDraw = False
+4377.5801 	EXP 	LowerBrackets: autoDraw = False
+4377.5801 	EXP 	TrialCrossHair: autoDraw = False
+4377.5801 	EXP 	RestCrossHair: autoDraw = True
+4379.1817 	DATA 	Keypress: equal
+4381.1826 	DATA 	Keypress: equal
+4381.9329 	EXP 	New trial (rep=0, index=67): {'RetDur': 5, 'BotBrack': 5, 'StimDur': 2, 'UpBrack': 23456, 'ProbeDurITI': 7.4129999999999994, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 5.4129999999999994, 'StimSet': 'XBRTGY', 'RetStart': 2, 'ProbeLet': 'fkwnjd', 'TrialITIDur': 14.413, 'Correct': 7}
+4381.9650 	EXP 	window1: recordFrameIntervals = False
+4381.9819 	EXP 	TopUpperLine: autoDraw = False
+4381.9819 	EXP 	BotUpperLine: autoDraw = False
+4381.9819 	EXP 	TopLowerLine: autoDraw = False
+4381.9819 	EXP 	BotLowerLine: autoDraw = False
+4381.9819 	EXP 	RestCrossHair: autoDraw = False
+4381.9819 	EXP 	TopUpperLine: autoDraw = False
+4381.9819 	EXP 	UpperText: autoDraw = False
+4381.9819 	EXP 	UpperBrackets: autoDraw = False
+4381.9819 	EXP 	BotUpperLine: autoDraw = False
+4381.9819 	EXP 	TopLowerLine: autoDraw = False
+4381.9819 	EXP 	LowerText: autoDraw = False
+4381.9819 	EXP 	LowerBrackets: autoDraw = False
+4381.9819 	EXP 	BotLowerLine: autoDraw = False
+4381.9819 	EXP 	TrialCrossHair: autoDraw = False
+4381.9819 	EXP 	RestCrossHair: autoDraw = False
+4381.9819 	EXP 	UpperText: text = ' X B R T G Y '
+4381.9819 	EXP 	UpperBrackets: text = '  {         }'
+4381.9819 	EXP 	LowerText: text = ' f k w n j d '
+4381.9819 	EXP 	LowerBrackets: text = '        { }  '
+4381.9819 	EXP 	TopUpperLine: autoDraw = True
+4381.9819 	EXP 	UpperText: autoDraw = True
+4381.9819 	EXP 	UpperBrackets: autoDraw = True
+4381.9819 	EXP 	BotUpperLine: autoDraw = True
+4381.9819 	EXP 	TopLowerLine: autoDraw = True
+4381.9819 	EXP 	BotLowerLine: autoDraw = True
+4381.9819 	EXP 	TrialCrossHair: autoDraw = True
+4381.9822 	EXP 	window1: recordFrameIntervals = False
+4383.1832 	DATA 	Keypress: equal
+4383.9493 	EXP 	UpperText: autoDraw = False
+4383.9493 	EXP 	UpperBrackets: autoDraw = False
+4385.1836 	DATA 	Keypress: equal
+4387.1843 	DATA 	Keypress: equal
+4388.9511 	EXP 	LowerText: autoDraw = True
+4388.9511 	EXP 	LowerBrackets: autoDraw = True
+4389.1853 	DATA 	Keypress: equal
+4390.9518 	EXP 	LowerText: autoDraw = False
+4390.9518 	EXP 	LowerBrackets: autoDraw = False
+4390.9518 	EXP 	TrialCrossHair: autoDraw = False
+4390.9518 	EXP 	RestCrossHair: autoDraw = True
+4391.1858 	DATA 	Keypress: equal
+4391.2025 	DATA 	Keypress: 8
+4393.1866 	DATA 	Keypress: equal
+4395.1873 	DATA 	Keypress: equal
+4396.3379 	EXP 	New trial (rep=0, index=68): {'RetDur': 5, 'BotBrack': 6, 'StimDur': 2, 'UpBrack': 1234, 'ProbeDurITI': 6.2450000000000001, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.2450000000000001, 'StimSet': 'BRFTXJ', 'RetStart': 2, 'ProbeLet': 'nhgklm', 'TrialITIDur': 13.244999999999999, 'Correct': 7}
+4396.3676 	EXP 	window1: recordFrameIntervals = False
+4396.3869 	EXP 	TopUpperLine: autoDraw = False
+4396.3869 	EXP 	BotUpperLine: autoDraw = False
+4396.3869 	EXP 	TopLowerLine: autoDraw = False
+4396.3869 	EXP 	BotLowerLine: autoDraw = False
+4396.3869 	EXP 	RestCrossHair: autoDraw = False
+4396.3869 	EXP 	TopUpperLine: autoDraw = False
+4396.3869 	EXP 	UpperText: autoDraw = False
+4396.3869 	EXP 	UpperBrackets: autoDraw = False
+4396.3869 	EXP 	BotUpperLine: autoDraw = False
+4396.3869 	EXP 	TopLowerLine: autoDraw = False
+4396.3869 	EXP 	LowerText: autoDraw = False
+4396.3869 	EXP 	LowerBrackets: autoDraw = False
+4396.3869 	EXP 	BotLowerLine: autoDraw = False
+4396.3869 	EXP 	TrialCrossHair: autoDraw = False
+4396.3869 	EXP 	RestCrossHair: autoDraw = False
+4396.3869 	EXP 	UpperText: text = ' B R F T X J '
+4396.3869 	EXP 	UpperBrackets: text = '{       }    '
+4396.3869 	EXP 	LowerText: text = ' n h g k l m '
+4396.3869 	EXP 	LowerBrackets: text = '          { }'
+4396.3869 	EXP 	TopUpperLine: autoDraw = True
+4396.3869 	EXP 	UpperText: autoDraw = True
+4396.3869 	EXP 	UpperBrackets: autoDraw = True
+4396.3869 	EXP 	BotUpperLine: autoDraw = True
+4396.3869 	EXP 	TopLowerLine: autoDraw = True
+4396.3869 	EXP 	BotLowerLine: autoDraw = True
+4396.3869 	EXP 	TrialCrossHair: autoDraw = True
+4396.3871 	EXP 	window1: recordFrameIntervals = False
+4397.1814 	DATA 	Keypress: equal
+4398.3544 	EXP 	UpperText: autoDraw = False
+4398.3544 	EXP 	UpperBrackets: autoDraw = False
+4399.1887 	DATA 	Keypress: equal
+4401.1896 	DATA 	Keypress: equal
+4403.1904 	DATA 	Keypress: equal
+4403.3561 	EXP 	LowerText: autoDraw = True
+4403.3561 	EXP 	LowerBrackets: autoDraw = True
+4404.5740 	DATA 	Keypress: 8
+4405.1908 	DATA 	Keypress: equal
+4405.3568 	EXP 	LowerText: autoDraw = False
+4405.3568 	EXP 	LowerBrackets: autoDraw = False
+4405.3568 	EXP 	TrialCrossHair: autoDraw = False
+4405.3568 	EXP 	RestCrossHair: autoDraw = True
+4407.1918 	DATA 	Keypress: equal
+4409.1925 	DATA 	Keypress: equal
+4409.5761 	EXP 	New trial (rep=0, index=69): {'RetDur': 5, 'BotBrack': 1, 'StimDur': 2, 'UpBrack': 23456, 'ProbeDurITI': 6.0039999999999996, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0039999999999996, 'StimSet': 'BLNYMG', 'RetStart': 2, 'ProbeLet': 'gqdthf', 'TrialITIDur': 13.004000000000001, 'Correct': 6}
+4409.6109 	EXP 	window1: recordFrameIntervals = False
+4409.6250 	EXP 	TopUpperLine: autoDraw = False
+4409.6250 	EXP 	BotUpperLine: autoDraw = False
+4409.6250 	EXP 	TopLowerLine: autoDraw = False
+4409.6250 	EXP 	BotLowerLine: autoDraw = False
+4409.6250 	EXP 	RestCrossHair: autoDraw = False
+4409.6250 	EXP 	TopUpperLine: autoDraw = False
+4409.6250 	EXP 	UpperText: autoDraw = False
+4409.6250 	EXP 	UpperBrackets: autoDraw = False
+4409.6250 	EXP 	BotUpperLine: autoDraw = False
+4409.6250 	EXP 	TopLowerLine: autoDraw = False
+4409.6250 	EXP 	LowerText: autoDraw = False
+4409.6250 	EXP 	LowerBrackets: autoDraw = False
+4409.6250 	EXP 	BotLowerLine: autoDraw = False
+4409.6250 	EXP 	TrialCrossHair: autoDraw = False
+4409.6250 	EXP 	RestCrossHair: autoDraw = False
+4409.6250 	EXP 	UpperText: text = ' B L N Y M G '
+4409.6250 	EXP 	UpperBrackets: text = '  {         }'
+4409.6250 	EXP 	LowerText: text = ' g q d t h f '
+4409.6250 	EXP 	LowerBrackets: text = '{ }          '
+4409.6250 	EXP 	TopUpperLine: autoDraw = True
+4409.6250 	EXP 	UpperText: autoDraw = True
+4409.6250 	EXP 	UpperBrackets: autoDraw = True
+4409.6250 	EXP 	BotUpperLine: autoDraw = True
+4409.6250 	EXP 	TopLowerLine: autoDraw = True
+4409.6250 	EXP 	BotLowerLine: autoDraw = True
+4409.6250 	EXP 	TrialCrossHair: autoDraw = True
+4409.6253 	EXP 	window1: recordFrameIntervals = False
+4411.1930 	DATA 	Keypress: equal
+4411.5923 	EXP 	UpperText: autoDraw = False
+4411.5923 	EXP 	UpperBrackets: autoDraw = False
+4413.1938 	DATA 	Keypress: equal
+4415.1945 	DATA 	Keypress: equal
+4416.5942 	EXP 	LowerText: autoDraw = True
+4416.5942 	EXP 	LowerBrackets: autoDraw = True
+4417.1954 	DATA 	Keypress: equal
+4418.5948 	EXP 	LowerText: autoDraw = False
+4418.5948 	EXP 	LowerBrackets: autoDraw = False
+4418.5948 	EXP 	TrialCrossHair: autoDraw = False
+4418.5948 	EXP 	RestCrossHair: autoDraw = True
+4418.9459 	DATA 	Keypress: 8
+4419.1958 	DATA 	Keypress: equal
+4421.1966 	DATA 	Keypress: equal
+4422.5805 	EXP 	New trial (rep=0, index=70): {'RetDur': 5, 'BotBrack': 6, 'StimDur': 2, 'UpBrack': 2, 'ProbeDurITI': 6.1360000000000001, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.1360000000000001, 'StimSet': 'TMLNFQ', 'RetStart': 2, 'ProbeLet': 'dwrkxm', 'TrialITIDur': 13.135999999999999, 'Correct': 6}
+4422.6112 	EXP 	window1: recordFrameIntervals = False
+4422.6297 	EXP 	TopUpperLine: autoDraw = False
+4422.6297 	EXP 	BotUpperLine: autoDraw = False
+4422.6297 	EXP 	TopLowerLine: autoDraw = False
+4422.6297 	EXP 	BotLowerLine: autoDraw = False
+4422.6297 	EXP 	RestCrossHair: autoDraw = False
+4422.6297 	EXP 	TopUpperLine: autoDraw = False
+4422.6297 	EXP 	UpperText: autoDraw = False
+4422.6297 	EXP 	UpperBrackets: autoDraw = False
+4422.6297 	EXP 	BotUpperLine: autoDraw = False
+4422.6297 	EXP 	TopLowerLine: autoDraw = False
+4422.6297 	EXP 	LowerText: autoDraw = False
+4422.6297 	EXP 	LowerBrackets: autoDraw = False
+4422.6297 	EXP 	BotLowerLine: autoDraw = False
+4422.6297 	EXP 	TrialCrossHair: autoDraw = False
+4422.6297 	EXP 	RestCrossHair: autoDraw = False
+4422.6297 	EXP 	UpperText: text = ' T M L N F Q '
+4422.6297 	EXP 	UpperBrackets: text = '  { }        '
+4422.6297 	EXP 	LowerText: text = ' d w r k x m '
+4422.6297 	EXP 	LowerBrackets: text = '          { }'
+4422.6297 	EXP 	TopUpperLine: autoDraw = True
+4422.6297 	EXP 	UpperText: autoDraw = True
+4422.6297 	EXP 	UpperBrackets: autoDraw = True
+4422.6297 	EXP 	BotUpperLine: autoDraw = True
+4422.6297 	EXP 	TopLowerLine: autoDraw = True
+4422.6297 	EXP 	BotLowerLine: autoDraw = True
+4422.6297 	EXP 	TrialCrossHair: autoDraw = True
+4422.6300 	EXP 	window1: recordFrameIntervals = False
+4423.4139 	DATA 	Keypress: equal
+4424.5970 	EXP 	UpperText: autoDraw = False
+4424.5970 	EXP 	UpperBrackets: autoDraw = False
+4425.1981 	DATA 	Keypress: equal
+4427.1989 	DATA 	Keypress: equal
+4429.1996 	DATA 	Keypress: equal
+4429.5988 	EXP 	LowerText: autoDraw = True
+4429.5988 	EXP 	LowerBrackets: autoDraw = True
+4430.3502 	DATA 	Keypress: 7
+4431.2005 	DATA 	Keypress: equal
+4431.5995 	EXP 	LowerText: autoDraw = False
+4431.5995 	EXP 	LowerBrackets: autoDraw = False
+4431.5995 	EXP 	TrialCrossHair: autoDraw = False
+4431.5995 	EXP 	RestCrossHair: autoDraw = True
+4433.2009 	DATA 	Keypress: equal
+4435.2016 	DATA 	Keypress: equal
+4435.7192 	EXP 	New trial (rep=0, index=71): {'RetDur': 5, 'BotBrack': 3, 'StimDur': 2, 'UpBrack': 5, 'ProbeDurITI': 6.0300000000000002, 'ProbeDur': 2, 'ProbeStart': 7, 'TrialDur': 9, 'ITI': 4.0300000000000002, 'StimSet': 'XLMQBK', 'RetStart': 2, 'ProbeLet': 'fhgynw', 'TrialITIDur': 13.029999999999999, 'Correct': 7}
+4435.7545 	EXP 	window1: recordFrameIntervals = False
+4435.7676 	EXP 	TopUpperLine: autoDraw = False
+4435.7676 	EXP 	BotUpperLine: autoDraw = False
+4435.7676 	EXP 	TopLowerLine: autoDraw = False
+4435.7676 	EXP 	BotLowerLine: autoDraw = False
+4435.7676 	EXP 	RestCrossHair: autoDraw = False
+4435.7676 	EXP 	TopUpperLine: autoDraw = False
+4435.7676 	EXP 	UpperText: autoDraw = False
+4435.7676 	EXP 	UpperBrackets: autoDraw = False
+4435.7676 	EXP 	BotUpperLine: autoDraw = False
+4435.7676 	EXP 	TopLowerLine: autoDraw = False
+4435.7676 	EXP 	LowerText: autoDraw = False
+4435.7676 	EXP 	LowerBrackets: autoDraw = False
+4435.7676 	EXP 	BotLowerLine: autoDraw = False
+4435.7676 	EXP 	TrialCrossHair: autoDraw = False
+4435.7676 	EXP 	RestCrossHair: autoDraw = False
+4435.7676 	EXP 	UpperText: text = ' X L M Q B K '
+4435.7676 	EXP 	UpperBrackets: text = '        { }  '
+4435.7676 	EXP 	LowerText: text = ' f h g y n w '
+4435.7676 	EXP 	LowerBrackets: text = '    { }      '
+4435.7676 	EXP 	TopUpperLine: autoDraw = True
+4435.7676 	EXP 	UpperText: autoDraw = True
+4435.7676 	EXP 	UpperBrackets: autoDraw = True
+4435.7676 	EXP 	BotUpperLine: autoDraw = True
+4435.7676 	EXP 	TopLowerLine: autoDraw = True
+4435.7676 	EXP 	BotLowerLine: autoDraw = True
+4435.7676 	EXP 	TrialCrossHair: autoDraw = True
+4435.7678 	EXP 	window1: recordFrameIntervals = False
+4437.2023 	DATA 	Keypress: equal
+4437.7350 	EXP 	UpperText: autoDraw = False
+4437.7350 	EXP 	UpperBrackets: autoDraw = False
+4439.2032 	DATA 	Keypress: equal
+4441.2041 	DATA 	Keypress: equal
+4442.7368 	EXP 	LowerText: autoDraw = True
+4442.7368 	EXP 	LowerBrackets: autoDraw = True
+4443.2048 	DATA 	Keypress: equal
+4443.5236 	DATA 	Keypress: 8
+4444.7375 	EXP 	LowerText: autoDraw = False
+4444.7375 	EXP 	LowerBrackets: autoDraw = False
+4444.7375 	EXP 	TrialCrossHair: autoDraw = False
+4444.7375 	EXP 	RestCrossHair: autoDraw = True
+4445.2055 	DATA 	Keypress: equal
+4447.2064 	DATA 	Keypress: equal
+4448.7561 	EXP 	TopUpperLine: autoDraw = False
+4448.7561 	EXP 	BotUpperLine: autoDraw = False
+4448.7561 	EXP 	TopLowerLine: autoDraw = False
+4448.7561 	EXP 	BotLowerLine: autoDraw = False
+4448.7561 	EXP 	RestCrossHair: autoDraw = False
+4448.7561 	EXP 	TopUpperLine: autoDraw = False
+4448.7561 	EXP 	UpperText: autoDraw = False
+4448.7561 	EXP 	UpperBrackets: autoDraw = False
+4448.7561 	EXP 	BotUpperLine: autoDraw = False
+4448.7561 	EXP 	TopLowerLine: autoDraw = False
+4448.7561 	EXP 	LowerText: autoDraw = False
+4448.7561 	EXP 	LowerBrackets: autoDraw = False
+4448.7561 	EXP 	BotLowerLine: autoDraw = False
+4448.7561 	EXP 	TrialCrossHair: autoDraw = False
+4448.7561 	EXP 	RestCrossHair: autoDraw = False
+4448.7561 	EXP 	RestCrossHair: autoDraw = True
+4449.2074 	DATA 	Keypress: equal
+4451.2084 	DATA 	Keypress: equal
+4453.2090 	DATA 	Keypress: equal
+4455.2095 	DATA 	Keypress: equal

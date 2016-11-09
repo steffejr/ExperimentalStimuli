@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.80.03), Thu Oct 16 16:34:09 2014
+This experiment was created using PsychoPy2 Experiment Builder (v1.80.03), Wed 04 May 2016 02:43:01 PM EDT
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -15,6 +15,10 @@ from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, ra
 from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 
+# Ensure that relative paths start from the same directory as this script
+_thisDir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(_thisDir)
+
 # Store info about the experiment session
 expName = 'label_ang'  # from the Builder filename that created this script
 expInfo = {'participant':'', 'session':'001'}
@@ -23,13 +27,13 @@ if dlg.OK == False: core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
-# Setup filename for saving
-filename = 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
+# Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
+filename = _thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/Johannes/label_ang.psyexp',
+    originPath=u'/home/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/Johannes/label_ang.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info
@@ -41,7 +45,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=True, allowStencil=False,
+win = visual.Window(size=(1200, 1920), fullscr=True, screen=0, allowGUI=True, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -97,7 +101,7 @@ text_4 = visual.TextStim(win=win, ori=0, name='text_4',
     pos=[0, 0], height=0.1, wrapWidth=None,
     color='white', colorSpace='rgb', opacity=1,
     depth=-6.0)
-p_port = parallel.ParallelPort(address='0x0378')
+p_port = parallel.ParallelPort(address=u'/dev/parport1')
 
 # Initialize components for Routine "pleasantness_rating"
 pleasantness_ratingClock = core.Clock()
@@ -217,7 +221,7 @@ thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=2, method='random', 
-    extraInfo=expInfo, originPath=u'/Users/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/Johannes/label_ang.psyexp',
+    extraInfo=expInfo, originPath=u'/home/jason/Dropbox/SteffenerColumbia/Scripts/ExperimentalStimuli/Johannes/label_ang.psyexp',
     trialList=data.importConditions('olfacto1ang.xlsx'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
@@ -402,7 +406,7 @@ for thisTrial in trials:
             p_port.tStart = t  # underestimates by a little under one frame
             p_port.frameNStart = frameN  # exact frame index
             p_port.status = STARTED
-            win.callOnFlip(p_port.setData, int(channel))
+            win.callOnFlip(p_port.setData, int(4))
         elif p_port.status == STARTED and t >= (onset + (0.5-win.monitorFramePeriod*0.75)): #most of one frame period left
             p_port.status = STOPPED
             win.callOnFlip(p_port.setData, int(0))
